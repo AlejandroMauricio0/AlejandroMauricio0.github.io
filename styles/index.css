@@ -29,6 +29,7 @@ body {
 .size-30 {
     font-size: 30px;
 }
+
 .size-24 {
     font-size: 24px;
 }
@@ -36,6 +37,7 @@ body {
 .size-12 {
     font-size: 12px;
 }
+
 .size-10 {
     font-size: 10px;
 }
@@ -44,6 +46,12 @@ body {
 .center {
     display: grid;
     place-items: center;
+}
+
+
+.center-left {
+    display: flex;
+    align-items: center;
 }
 
 /* border */
@@ -58,4 +66,3 @@ body {
     text-align: justify;
     text-justify: inter-word;
 }
-
