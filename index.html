@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./styles/card.css">
     <link rel="stylesheet" href="./styles/skills.css">
     <link rel="stylesheet" href="./styles/scss/resume.css">
-    <link rel="stylesheet" href="./styles/navbar.css">
+    <!-- <link rel="stylesheet" href="./styles/navbar.css"> -->
 
     <!-- import html pages -->
     <link rel="import" href="./pages/social_networks.html" id="social_network">
@@ -47,18 +47,19 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-dark" id="navbar">
         <div class="container">
-            <div class="ps-5">
+            <div class="ps-2">
                 <img src="./assets/logo.svg" class="" alt="logo_AM" width="70px">
             </div>
+    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collaps navbar text-light pe-5" id="navbarScroll">
-                <ul class="navbar-t navbar-nav me-aut my-2 my-lg-0 navbar-nav-scroll"
-                    style="--bs-scroll-height: 100px;">
+    
+            <div class="collapse navbar-collapse text-center" id="navbarScroll">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scrol" style="--bs-scroll-height: 100px;">
                     <li class="nav-item pe-4">
-                        <a class="nav-link ps-4 pe-4 active text-light" aria-current="page" href="#inicio">Inicio</a>
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#inicio">Inicio</a>
                     </li>
                     <li class="nav-item pe-4">
                         <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#aboutme">Sobre mí</a>
@@ -70,16 +71,17 @@
                         <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#skills">Habilidades</a>
                     </li>
                     <li class="nav-item pe-4">
-                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#resume">Resume</a>
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#my-resume">Resume</a>
                     </li>
                     <li class="nav-item pe-4">
-                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#contact">Contacto</a>
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#contacto">Contacto</a>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
+    
+
 
 
     <div class="position-relative" id="inicio">
@@ -110,26 +112,26 @@
     <div id="about"></div>
 
     <!-- Section Services-->
-    <nav class="container-fluid center pt-5" id="services">
+    <nav class="container-fluid center pt-5" id="service">
         <h3 class="text-light text-center border-b-yellow">Services</h3>
         <div id="services" class="pt-4"></div>
     </nav>
 
     <!-- Section Skills-->
-    <nav class="container-fluid center pt-5" id="services">
+    <nav class="container-fluid center pt-5" id="skill">
         <h3 class="text-light text-center border-b-yellow">Skills</h3>
     </nav>
     <div id="skills" class="pt-4"></div>
 
 
     <!-- Section Resume-->
-    <nav class="container-fluid center pt-5" id="resume">
+    <nav class="container-fluid center pt-5" id="my-resume">
         <h3 class="text-light text-center border-b-yellow">Resumen</h3>
         <div id="resume" class="pt-4"></div>
     </nav>
 
     <!-- Section Resume-->
-    <nav class="container-fluid center pt-5" id="contact">
+    <nav class="container-fluid center pt-5" id="contacto">
         <h3 class="text-light text-center border-b-yellow">Contactame</h3>
         <div id="contact" class="pt-4 container-fluid"></div>
     </nav>
@@ -142,7 +144,7 @@
                     <p class="color-white">Copyright ©2024; Designed by Alejandro Mauricio</p>
                 </div>
             </div>
-            <div class="col-sm-9 float-end">
+            <div class="col-sm-9 ">
                 <div class="float-end">
                     <img src="./assets/logo.svg" width="60px" alt="">
                 </div>
@@ -175,6 +177,11 @@
 
     </script>
     <script>
+
+
+    
+
+
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
