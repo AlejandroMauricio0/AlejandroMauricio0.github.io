@@ -50,12 +50,12 @@
             <div class="ps-2">
                 <img src="./assets/logo.svg" class="" alt="logo_AM" width="70px">
             </div>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse text-center" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scrol" style="--bs-scroll-height: 100px;">
                     <li class="nav-item pe-4">
@@ -70,17 +70,27 @@
                     <li class="nav-item pe-4">
                         <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#skills">Habilidades</a>
                     </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#my-resume">Resume</a>
-                    </li>
+                    <!-- <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#my-resume">Resumen</a>
+                    </li> -->
                     <li class="nav-item pe-4">
                         <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#contacto">Contacto</a>
                     </li>
+                    <div class="btn-group nav-item" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Resumen
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#resume">Linea de tiempo</a></li>
+                            <li><a class="dropdown-item" href="./pages/projects/landing_restaurant/index.html">Pagina restaurante</a></li>
+                        </ul>
+                    </div>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
 
 
 
@@ -177,10 +187,6 @@
 
     </script>
     <script>
-
-
-    
-
 
         window.onscroll = function () { scrollFunction() };
 

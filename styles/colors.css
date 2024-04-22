@@ -15,9 +15,19 @@
 .bg-yellow {
     background-color: #FFC640;
 }
+.bg-coffee{
+    background-color: #462a07;
+}
 
 .bg-white {
     background-color: white;
+}
+
+.bg-988838{
+    background-color: #988838;
+}
+.bg-97976B{
+    background-color: #9a9442;
 }
 
 .bg-121D36 {
@@ -43,4 +53,18 @@
 }
 .color-blue {
     color: rgb(10, 16, 30);
+}
+.color-coffee{
+    color: #462a07  ;
+}
+
+.color-dfd7cc{
+    color: #dfd7cc;
+}
+.color-61789b{
+    color: #61789b;
+}
+
+.color-be7f2e{
+    color: #be7f2e;
 }
