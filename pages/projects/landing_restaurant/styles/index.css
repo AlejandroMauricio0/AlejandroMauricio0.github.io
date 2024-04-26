@@ -42,6 +42,7 @@ ul{
         font-size: small;
     }
 }
+
 @media (max-width: 425px) {
     .content a{
         font-size: 10px;
