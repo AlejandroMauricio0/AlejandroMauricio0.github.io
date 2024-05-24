@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.white {
+    color: white;
+}
+
+body {
+    background-image: url('../image/hojas.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    font-family: "Bellefair", 'Roboto';
+    box-shadow: inset -800px 0px 0px 0px #0d2212b6;
+}
+
+/* caja dercha */
+.box-rigth {
+    /* background-color: #0d2212b6; */
+    float: right;
+    width: 50%;
+    height: 100vh;
+}
+
+/* Tamaño de letras */
+.size {
+    font-size: 60px;
+    font-family: 'Bellefair', serif;
+    margin-bottom: -15px;
+}
+
+.RobotoSlab {
+    font-family: 'Roboto Slab', serif;
+}
+
+.justify-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/* boton estilos */
+.backcolor {
+    font-size: 20px;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+}
+
+.backcolor::hover {
+    border: #ffffff;
+    background: #ffffff;
+    transition: all 0.6s ease;
+}
+
+/* estilo boton */
+
+.btn-color {
+    width: 90%;
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #ffffff;
+    padding: 10px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+
+.btn-color::before {
+    background: #ffffff;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: red;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn3::before {
+    width: 99900px;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn3:hover::before {
+    height: 580%;
+}
+
+.back- color {
+    width: 50%;
+    height: 100vh;
+    /* background-color: rebeccapurple; */
+}
+
+
+.box-p{
+
+    margin-bottom: 10px;
+}
+
+
+.t-info{
+    width: 44%
+}
+
+/* Medias  */
+
+
+
+
+@media (max-width: 415px) and (max-height: 896px){
+    .size {
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 768px) or  (max-width: 891px){
+    .box-rigth {
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 605px) or  (max-width: 862px) or (max-width: 1250px) {
+    .size {
+        font-size: 40px;
+    }
+    .t-info{
+        width: 80%
+    }
+}
+
