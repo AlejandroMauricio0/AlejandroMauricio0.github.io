@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.background-img {
+    height: 100vh;
+    background-image: url('https://media.gq.com.mx/photos/625db17471f363f634bce022/master/pass/ejercicio-1388957838.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset -233435px 3px 1005px -1000px rgba(24, 16, 16, 0.541);
+}
+
+
+.width-10 {
+    width: 10%;
+}
+
+.width-5 {
+    width: 5%;
+}
+
+.color-red {
+    color: #DC3545;
+    /* box-shadow: outset 35px 3px 1005px -1000px gba(24, 16, 16, 0.925); */
+}
+
+/* hover card */
+.text-data {
+    opacity: 0;
+}
+
+.text-data:hover {
+    opacity: 1;
+    /* transform: scale(1.1); */
+
+    transition: all 0.3s ease-out;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pb-10 {
+    padding-bottom: 100px;
+}
+
+.pt-10 {
+    padding-top: 100px;
+    /* padding-bottom:90px; */
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bg-image-met {
+    /* height: 80vh; */
+
+    height: 100vh;
+
+    background-image: url('https://as1.ftcdn.net/v2/jpg/05/75/22/70/1000_F_575227060_nRJLVZXlOgTj8ZvBbE8wIpCjC11BCpoD.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 660px 0px 0px 0px rgba(255, 255, 255, 0.705);
+    /* border-radius: 50px 0px 0px 0px; */
+    /* box-shadow: linear-gradient(to right, #dbc9f56e, #dbc9f577); */
+    /* width: 100%; */
+    /* height: 200px; */
+}
+
+.fs-90 {
+    font-size: 50px;
+    width: 40r;
+}
+
+/* bg */
+.bg-img-black {
+    background-image: url('https://e0.pxfuel.com/wallpapers/72/748/desktop-wallpaper-pure-black-solid-black.jpg');
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-channel {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/037/228/850/non_2x/ai-generated-exercise-machines-in-a-gym-free-photo.jpg');
+    /* box-shadow: inset 760px 0px 0px 0px rgba(255, 255, 255, 0.884); */
+
+    /* filter: blur(3px); */
+    height: 60vh;
+    /* width: 100; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ptop {
+    padding-top: 7%;
+}
+
+
+@media (max-width: 1024px) {
+    #image_video {
+        display: none;
+    }
+
+}
+
+ul {
+    list-style: none;
+}
+
+.decoration {
+    text-decoration: none;
+}

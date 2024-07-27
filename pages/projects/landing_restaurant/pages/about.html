@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="about_us">
+
+        <div class="container">
+
+            <div class="center height-70-vh">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="color-white text-center"><A>OBOUT US</A></h1>
+                            <p class="color-white justify-txt mt-2 pt-5">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            </p>
+                            <button type="button" class="btn btn-outline-light ps-4 pe-4 rounded-5">Show more</button>
+                        </div>
+                        <div class="col-sm-6" id="images_about">
+
+                            <div class="z-3 position-absolute p-5 rounded-3 pt-5 mt-5">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <span>
+                                    <img class="rounded-3"
+                                        src="https://media.scoolinary.app/blog/images/2022/09/scoolinary-cocina-callejera-mexicana5.jpg"
+                                        width="45%">
+                                </span>
+                            </div>
+                            <div class="z-1 position-absolute p-5 rounded-3 m-right">
+                                <span>
+                                    <img class="rounded-3"
+                                        src="https://media.scoolinary.app/blog/images/2022/09/scoolinary-cocina-callejera-mexicana6.jpg"
+                                        width="100%" alt="">
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    // Obtener la referencia al elemento
+    var elementoImagen = document.getElementById('images_about');
+
+    // Definir función para ocultar la imagen si tiene dimensiones específicas
+    function ocultarSiDimensionesCorrectas() {
+        if (elementoImagen.width === 728 && elementoImagen.height === 1024) {
+            // Ocultar el elemento si las dimensiones son las especificadas
+            elementoImagen.style.display = 'none';
+        }
+    }
+
+    // Agregar un event listener para cuando la imagen se cargue completamente
+    elementoImagen.addEventListener('load', ocultarSiDimensionesCorrectas);
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+#standard-basic::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+#color {
+    color: black;
+}
+
+#email-helper {
+    color: rgb(0, 0, 0);
+}
+
+#name-helper {
+    color: black;
+}
+
+#lastname-helper {
+    color: black;
+}
+
+#first-name-helper {
+    color: rgb(0, 0, 0);
+}
+
+
+.bg-97ae65 {
+    background-color: #97ae658d;
+}
+
+.bg-cdd6b7{
+    background-color: #64240c;
+}
+
+
+
+.text-64240c{
+    color: #64240c;
+}
+.text-cd7e25{
+    color: #97ae65;
+}
+.login,
+.image {
+    min-height: 100vh;
+}
+
+body {
+    background-image: url('../image/cultivo.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.color {
+    color: red;
+}

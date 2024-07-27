@@ -1,0 +1,25 @@
+.bg-blue {
+    background-color: #0A1655;
+}
+
+.overlay {
+    /* filter: grayscale(50%); */
+    box-shadow: -1200px color(srgb red green blue);
+}
+
+.color-yellow {
+
+    color: #FEC70C;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-yellow{
+    background-color:  #FEC70C;
+}
+
+.color-white{
+    color: white;
+}

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background-image{
+    background-image: url('../assets/interior-restaurante_1127-3394.jpg ');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    box-shadow: inset -233435px 3px 1005px -1000px hsla(0, 0%, 10%, 0.447);
+    
+}
+
+.bg-body-tertiary{
+    box-shadow: inset -233435px 3px 1005px -1000px hwb(55 44% 11% / 0.121);
+}
+.bg-red{
+    background-color: red;
+}
+.bg-blue{
+    background-color: blue;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+
+.shadow{
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.8));
+}
+
+ul{
+    list-style: none;
+
+}
+
+@media (max-width: 776px) {
+    .content a{
+        font-size: small;
+    }
+}
+
+@media (max-width: 425px) {
+    .content a{
+        font-size: 10px;
+    }
+
+    .logo-lentras{
+        width: 100px;
+    }
+}
+
+.center-left {
+    display: flex;
+    align-items: center;
+}

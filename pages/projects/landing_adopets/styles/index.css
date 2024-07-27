@@ -1,0 +1,60 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+
+    background-image: url('../../../../assets/adopets.png');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-size: 70px;
+    background: linear-gradient(to right, #D77454, #D79576, #E4A787, #FBF3C9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ms-200 {
+    margin-left: 200px;
+
+}
+
+.ms-10 {
+    margin-left: 10%;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.mb {
+    margin-bottom: 5vh;
+}
+
+.b-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.584);
+}
+
+.mt-50{
+    margin-top: 650px;
+}
+
+@media (max-width: 1024px) {
+    .ms-200 {
+        margin-left: 6%;
+    }
+
+    #size-banner {
+        font-size: 400%;
+    }
+}

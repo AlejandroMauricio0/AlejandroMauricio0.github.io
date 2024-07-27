@@ -1,0 +1,222 @@
+body {
+  margin-top: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.bt-atn{
+  color: white;
+  text-decoration: none;
+}
+.blue-bar {
+  background-color: #0A1655;
+  border-bottom: 5px solid rgb(255, 176, 0);
+  padding: 15px;
+  color: white;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-height: 100px; */
+  width: auto;
+  /* overflow: hidden; */
+}
+
+
+#logo {
+  /* top: 60; */
+  width: 190px;
+  height: auto;
+}
+
+.right-texts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-right: 10px;
+}
+
+.right-text {
+  font-size: 16px;
+  font-style: bold;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 90px;
+  color: white;
+  font-family: 'Lalezar', system-ui;
+}
+
+.subtitle-text {
+  /* font-size: 20; */
+  color: white;
+  font-size: 35px;
+}
+
+
+/* tipo de texto */
+.text-forum {
+  font-family: 'Forum', serif;
+}
+
+
+
+/*Media querys  */
+/* pantallas largas */
+@media screen and (min-width: 2559px) {
+
+  .title {
+    font-size: 70px;
+  }
+
+  .subtitle-text {
+    font-size: 23px;
+  }
+}
+/* pantallas largas */
+@media screen and (max-width: 1212px) {
+
+  .title {
+    font-size: 70px;
+  }
+
+  .subtitle-text {
+    font-size: 23px;
+  }
+}
+
+
+/* pantalla laptops */
+@media screen and (max-width:913px) and (max-width: 1024px) {
+
+  .title {
+    font-size: 60px;
+  }
+
+  .subtitle-text {
+    font-size: 24px;
+  }
+}
+
+/* pantalla tablets  */
+@media screen  and (max-width: 768px) and (max-width:791px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-texts {
+    margin: 1px auto;
+  }
+
+  #logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 50px;
+    /*tamaño para dispositvos moviles  */
+  }
+
+  .subtitle-text {
+    font-size: 18px;
+  }
+}
+
+/* pantalla largos */
+@media screen and (min-width:375px)and (max-width: 426px) {
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle-text {
+    font-size: 12px;
+  }
+}
+
+/* panatalla medianos */
+@media screen and (min-width:314px) and (max-width: 376px) {
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle-text {
+    font-size: 10px;
+  }
+}
+
+/* panatalla medianos */
+@media screen and (max-width: 280px)  {
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle-text {
+    font-size: 10px;
+  }
+}
+
+
+/* panatalla pequeñas */
+/* @media screen and (max-width: 320px) {
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle-text {
+    font-size: 9px;
+  }
+} */
+
+
+.centered-text p {
+  font-size: 1.2em;
+  font-style: normal;
+  margin-top: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .background-image {
+    height: 50vh;
+  }
+}
+
+.custom-enlarged-image {
+  /* max-height: 25000px;  */
+  height: 980px;
+  margin: auto;
+  /* Para centrar la imagen horizontalmente */
+  display: block;
+}
+
+
+.arrow-down {
+  color: white; 
+  /* Ajusta el color según sea necesario */
+  animation: arrowAnimation 1s infinite alternate;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0%) translateY(0);
+  }
+
+  100% {
+    transform: translateX(0%) translateY(5vw);
+    /* Ajusta este valor según sea necesario */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrow-down {
+    display: none;
+  }
+}

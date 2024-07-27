@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es-Mx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio</title>
+
+    <link rel="icon" href="./assets/ico.svg" type="image/x-icon" />
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SGKD0RXK2"></script>
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <!--  incos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/colors.css">
+    <link rel="stylesheet" href="./styles/width.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/social_network.css">
+    <link rel="stylesheet" href="./styles/card.css">
+    <link rel="stylesheet" href="./styles/skills.css">
+    <link rel="stylesheet" href="./styles/scss/resume.css">
+    <!-- <link rel="stylesheet" href="./styles/navbar.css"> -->
+
+    <!-- import html pages -->
+    <link rel="import" href="./pages/social_networks.html" id="social_network">
+    <link rel="import" href="./pages/about.html" id="about_me">
+    <link rel="import" href="./pages/services.html" id="my_services">
+    <link rel="import" href="./pages/skills.html" id="my_skills">
+    <link rel="import" href="./pages/resume.html" id="my_resume">
+    <link rel="import" href="./pages/contact.html" id="my_contact">
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body onload="getVisitas()">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-dark" id="navbar">
+        <div class="container">
+            <div class="ps-2">
+                <img src="./assets/logo.svg" class="" alt="logo_AM" width="70px">
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarScroll">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scrol" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#aboutme">Sobre mí</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#skills">Habilidades</a>
+                    </li>
+                    <!-- <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#my-resume">Resumen</a>
+                    </li> -->
+                    <li class="nav-item pe-4">
+                        <a class="nav-link ps-4 pe-4 text-light" aria-current="page" href="#contacto">Contacto</a>
+                    </li>
+
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Resumen
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#resume">Linea de tiempo</a></li>
+                            <li><a class="dropdown-item" href="./pages/projects/landing_restaurant/index.html">Pagina
+                                    restaurante</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://alejandromauricio0.github.io/task_manager/">Gestor de tareas</a></li>
+                            <li><a class="dropdown-item" href="./pages/projects/landing_page_huerto/index.html">Landing
+                                    page mini huerto</a></li>
+                            <li><a class="dropdown-item"
+                                    href="./pages/projects/proyecto_gym/index.html">Gym page</a></li>
+                            <li><a class="dropdown-item"
+                                    href="./pages/projects/landing_adopets/index.html">landing Adopets</a></li>
+                            <li><a class="dropdown-item"
+                                    href="./pages/projects/LandingPage_Andrade2/pages/HomePage.html">landing Andrade</a></li>
+                                    
+                            <li><a class="dropdown-item"
+                                    href="./pages/projects/treehouses/index.html">treehouses</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="btn-group nav-item" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Resumen
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#resume">Linea de tiempo</a></li>
+                            <li><a class="dropdown-item" href="./pages/projects/landing_restaurant/index.html">Pagina
+                                    restaurante</a></li>
+                            <li><a class="dropdown-item" href="https://alejandromauricio0.github.io/task_manager/">Gestor de tareas</a></li>
+                        </ul>
+                    </div> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="position-relative" id="inicio">
+        <div class="banner">
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <div class="">
+                    <h5 class="text-light text-start lilita-one-regular">Hola soy</h5>
+                    <h1 class="text-light text-start lilita-one-regular size-50">Mauricio Alejandro</h1>
+                    <h5 class="text-light text-start">Desarrollador de Software</h5>
+                    <h6 class="text-light text-start">Front-end Developer</h6>
+                    <div class="text-center pt-4 width-100">
+                        <a href="#aboutme" type="button" class="ps-5 pe-5 btn btn-light width-100">Sobre mí</a>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute bottom-0 start-50 translate-middle-x text-light pb-4">
+
+                <div id="social"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- section about me -->
+    <nav class="container-fluid center pt-5" id="aboutme">
+        <h3 class="text-light text-center border-b-yellow">About Me</h3>
+    </nav>
+
+    <div id="about"></div>
+
+    <!-- Section Services-->
+    <nav class="container-fluid center pt-5" id="service">
+        <h3 class="text-light text-center border-b-yellow">Services</h3>
+        <div id="services" class="pt-4"></div>
+    </nav>
+
+    <!-- Section Skills-->
+    <nav class="container-fluid center pt-5" id="skill">
+        <h3 class="text-light text-center border-b-yellow">Skills</h3>
+    </nav>
+    <div id="skills" class="pt-4"></div>
+
+
+    <!-- Section Resume-->
+    <nav class="container-fluid center pt-5" id="my-resume">
+        <h3 class="text-light text-center border-b-yellow">Resumen</h3>
+        <div id="resume" class="pt-4"></div>
+    </nav>
+
+    <!-- Section Resume-->
+    <nav class="container-fluid center pt-5" id="contacto">
+        <h3 class="text-light text-center border-b-yellow">Contactame</h3>
+        <div id="contact" class="pt-4 container-fluid"></div>
+    </nav>
+
+
+    <footer class="container-fluid bg-121D36">
+        <div class="row">
+            <div class="col-sm-3  float-start">
+                <div class=" float-start height-100 center">
+                    <p class="color-white">Copyright ©2024; Designed by Alejandro Mauricio</p>
+                </div>
+            </div>
+            <div class="col-sm-9 ">
+                <div class="float-end">
+                    <img src="./assets/logo.svg" width="60px" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function loadSection(sectionId, linkId) {
+            const container = document.getElementById(sectionId);
+            const link = document.getElementById(linkId);
+
+            fetch(link.href)
+                .then(response => response.text())
+                .then(html => container.innerHTML = html);
+        }
+
+        // Cargar la sección de inicio por defecto
+        loadSection('social', 'social_network');
+        loadSection('about', 'about_me');
+        loadSection('services', 'my_services');
+        loadSection('skills', 'my_skills');
+        loadSection('resume', 'my_resume');
+        loadSection('contact', 'my_contact');
+
+    </script>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 50) {
+                document.getElementById("navbar").style.backgroundColor = "rgba(10, 16, 30)";
+            } else {
+                document.getElementById("navbar").style.backgroundColor = "transparent";
+            }
+        }
+
+    </script>
+    <script>
+        // Función para obtener y mostrar el contador de visitas desde Google Analytics
+        function mostrarContadorVisitas() {
+            // Obtener el número de visitas desde Google Analytics
+            gtag('event', 'page_view', {
+                'send_to': 'G-2SGKD0RXK2',
+                'event_callback': function () {
+                    // Obtener el número de visitas de la página actual
+                    let contador = window.gtag.q[0][1].config.page_views;
+
+                    // Mostrar el contador en el elemento con id "contador"
+                    document.getElementById('contador').textContent = contador;
+                }
+            });
+        }
+
+        // Llamar a la función para mostrar el contador de visitas al cargar la página
+        mostrarContadorVisitas();
+
+    </script>
+</body>
+
+</html>
