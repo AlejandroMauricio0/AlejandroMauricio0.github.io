@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SGKD0RXK2"></script>
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <!--  incos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- import css native -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Notes 💌</title>
+
+
+    <script src="./js/index.js"></script>
+</head>
+
+<body onload="started(); mostrarNota()">
+    <div class="container center position-relative">
+        <div class="col-sm-5">
+            <img src="./assets/head_text.svg" width="100%" alt="">
+        </div>
+
+        <div class="pt-5 pb-5 mt-5">
+            <img src="./assets/nota.svg" width="100%">
+
+            <div class="mt-5">
+                <div class="position-absolute top-50 start-50 translate-middle center">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-sm-5 text-center mt-5">
+                        <h6 class="caveat" id="notaDelDia">
+                            ...
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="jardin-de-tulipanes"></div> -->
+    <div class="position-absolute bottom-0 start-50 translate-middle-x w-100">
+        <img src="./assets/tulipanes.svg" class="img-fluid" style="width: 100%; height: auto;" alt="Tulipanes">
+    </div>
+
+</body>
+<script>
+
+
+    function started(params) {
+        let loadPage = localStorage.getItem("key")
+        console.log(loadPage);
+
+        if (loadPage == "tite") {
+            document.body.innerHTML = "";
+        } else if (loadPage == null) {
+            window.location.href = "start.html";
+
+        }
+    }
+</script>
+
+</html>
