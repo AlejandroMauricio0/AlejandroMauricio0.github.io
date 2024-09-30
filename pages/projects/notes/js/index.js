@@ -29,12 +29,13 @@ const notasBonitas = [
     "Me das un abrazo:(",
     "No soy bueno pensando en frases jsjsjs",
     "A mí siempre me va gusta todo de ti💞🙈",
-    "NoTa: me duele la cabeza jajaja 30/09/2024",
+    // "NoTa: me duele la cabeza jajaja 30/09/2024",
     "Woow, 30 notas, no havia escrito tanto en mi vida jsjsj",
     "Tome una foto a su atardecer 🌅",
     "Tantas cosas bonitas en el mundo, pero nada como tu carita y tus ojos, mailob",
     "Deje averigüé como poner musica y talvez agg musica, si se,pero es tedioso jsjs",
-    "Mi corazoncito es feliz contigo 🫂💞"
+    "Mi corazoncito es feliz contigo 🫂💞",
+"Niña de mi corazón 💘",
     // "",
 
 ];
