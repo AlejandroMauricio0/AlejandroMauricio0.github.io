@@ -25,13 +25,20 @@
     <script src="./js/index.js"></script>
 </head>
 
-<body onload="started(); mostrarNota()">
+<body onload="mostrarNota()">
+
+    <audio autoplay loop>
+        <source
+            src="https://rr1---sn-9gv7zn7y.googlevideo.com/videoplayback?expire=1728372612&ei=JIsEZ9ulHpmEjuMPveuw6Ak&ip=182.1.232.175&id=o-AErr-pNgltyR8UE_nvv_A8jBobL9-w7hoSl90_eF36k6&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AXLXGFSzbh-Hlhr1Z2WadPHmXzquAFU7qM9ZEpSHSWebNJbHvyDWONl8xym4On4B3lioQF97w5_CQEZf&vprv=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=2054384&dur=126.897&lmt=1577419077945929&keepalive=yes&fexp=24350655,51300760&c=MEDIA_CONNECT_FRONTEND&txp=5431432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgevhKWKIBeFC3Ee5QHVP0rACe_H4X-IrGyxZOWHpREFcCIB-tPhOEXLq9T95FIeHdzlaBXKwceBazHJBdalWpQLqB&rm=sn-uxa3vhnxa-2ahl7s,sn-npozl7e&rrc=79,104&req_id=b9e502fe4bf1a3ee&cmsv=e&met=1728364323,&rms=rdu,rdu&redirect_counter=2&cms_redirect=yes&ipbypass=yes&mh=O-&mip=2806:10a6:e:896c:ed4e:e8fd:a2fd:670a&mm=29&mn=sn-9gv7zn7y&ms=rdu&mt=1728363460&mv=m&mvi=1&pl=48&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=ACJ0pHgwRgIhAMt3jZdVsRitiTEeIXrtjN0qX_HsxRZbbrGPygBerFoAAiEAq7WgE5_0iTxNeJpyOBEH_EuPVSg-8ZANQNdlWQRMc3k%3D"
+            type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
     <div class="container center position-relative">
         <div class="col-sm-5">
             <img src="./assets/head_text.svg" width="100%" alt="">
         </div>
 
-        <div class="pt-5 pb-5 mt-5">
+        <div class="pt-3 center">
             <img src="./assets/nota.svg" width="100%">
 
             <div class="mt-5">
@@ -45,6 +52,7 @@
                         </h6>
                     </div>
                 </div>
+                <button type="button" class="btn btn-warning" onclick="mostrarNota();">Nueva nota 💌</button>
             </div>
         </div>
 
@@ -70,6 +78,12 @@
 
         }
     }
+
+    window.onload = function () {
+        const audio = document.getElementById('musicaFondo');
+        audio.volume = 0.01;  // Volumen inicial al 20%
+        mostrarNota();
+    };
 </script>
 
 </html>

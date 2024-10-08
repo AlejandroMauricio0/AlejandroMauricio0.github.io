@@ -1,13 +1,4 @@
 const notasBonitas = [
-    "La vida es como un libro; cada día es una nueva página en tu historia.",
-    "No cuentes los días, haz que los días cuenten.",
-    "El futuro pertenece a aquellos que creen en la belleza de sus sueños.",
-    "Cada día es una nueva oportunidad para ser la mejor versión de ti mismo.",
-    "La felicidad no es algo hecho. Viene de tus propias acciones.",
-    "Cree en ti mismo y todo será posible.",
-    "El éxito no es la clave de la felicidad. La felicidad es la clave del éxito.",
-    "Hoy es un buen día para empezar algo nuevo.",
-    "La vida es un viaje, no un destino. Disfruta el camino.",
     "Sé el cambio que deseas ver en el mundo.",
     "Te quiero 💞",
     "Eres la niña más bonita que mis ojos han visto",
@@ -21,7 +12,7 @@ const notasBonitas = [
     // "Te regalo un cupón para lo que gustes",
     "En cada momento, estoy pensando en ti:3",
     "Dato curioso: estaba despierto hasta las 4:00 am",
-    "Que ramdom lo que salga ¿no?",
+    "Que ramdom lo que salga ¿no? como te quiero<3",
     "<a href='https://youtu.be/Fraqb7wyofE?si=yWPexJRnLsuC0aCs'>clickme</a>",
     "Dime algo que te molesta de mi 🙈",
     "Ya me diras lo de tu materia de ingles:(",
@@ -34,46 +25,70 @@ const notasBonitas = [
     "Tome una foto a su atardecer 🌅",
     "Tantas cosas bonitas en el mundo, pero nada como tu carita y tus ojos, mailob",
     "Deje averigüé como poner musica y talvez agg musica, si se,pero es tedioso jsjs",
-    "Mi corazoncito es feliz contigo 🫂💞"
+    "Mi corazoncito es feliz contigo 🫂💞",
+    "I miss you :(",
+    "Espero tenga un bonito día",
+    "Desde el fondo de mi corazoncito te quiero:3",
+    "Como me encantas 🥰🥰",
+    "Niña bonita:3",
+    "Te quiero pequeña <3",
+    "Eres lo mejor que ha llegado a mi vida<3",
+    "Que bonita es mi novia🥰",
+    "Berenice la mejor niña <3",
+    "Que hermosa mi pulsera que me regalo mi novia<3",
+    "me quieres verdad?",
+    "Que me bese esa niña hermosa<3",
+    "Quiero mucho a mi noviesita linda:3",
+    "Textraño",
+    "Unos besos o queso?",
+    "Unos tutsi pop y luego unos besos a tutsi, jalas?",
+    "Que bonito es que la vida me haya premiado contigo:3",
+    "Que hermosos ojos tienes🥰",
+    "Vendito el dia que empezamos hablar :')",
+    "Eres lo que quiero para mi plan de vida",
+    "Yo ya gane contigo, mi mailob",
+    "Que hermosa niña",
+    "Como la quiero",
+    "enamorado de usted<3",
+    "Le sobra un besito pa mi:3?",
+    "Ay corazón te quiero mucho:3",
+    "Mi noviesita la más linda osi, osi :3",
+    "Feliz de tenerte a mi lado<3",
+    "Feliz de que sea mi novia<3",
+    "Feliz Feliz por nosotros<3",
+    "Feliz por que eres lo que yo deseaba:3",
+    "Tequiero como quieren los patos, patoda la vida jsjsjs",
+    "Me da un abrazo:3🫂",
+    "Te quiero muto mi niña",
+    "Coincidir contigo es lo mejor que me ha pasado:3",
+    "Aun no lo creo que este con uste niña hermosa :3",
+    "Que hermoso es poder tomar su mano 🥹🥹🥹🥹🥹",
+    "Quien me viera haciendo un sitio, para mi niña hermosa<33",
+    "Eres mi mailob",
     // "",
 
 ];
 
 function obtenerNotaSinRepetir() {
     const notasMostradas = JSON.parse(localStorage.getItem('notasMostradas')) || [];
-
-    // Filtrar las notas que no se han mostrado
     const notasDisponibles = notasBonitas.filter(nota => !notasMostradas.includes(nota));
 
     if (notasDisponibles.length === 0) {
-        // Si no hay notas disponibles, se restablecen las mostradas
         localStorage.removeItem('notasMostradas');
-        return obtenerNotaSinRepetir(); // Volver a llamar para obtener una nota nueva
+        return obtenerNotaSinRepetir();
     }
 
     const indiceAleatorio = Math.floor(Math.random() * notasDisponibles.length);
     const nuevaNota = notasDisponibles[indiceAleatorio];
 
-    // Guardar la nueva nota en las mostradas
     notasMostradas.push(nuevaNota);
     localStorage.setItem('notasMostradas', JSON.stringify(notasMostradas));
 
     return nuevaNota;
 }
 
-// Función para mostrar la nota
 function mostrarNota() {
-    const ahora = new Date().getTime(); // Obtener la hora actual en milisegundos
-    const ultimaActualizacion = localStorage.getItem('ultimaActualizacion');
-
-    // Comprobar si han pasado más de 24 horas desde la última actualización
-    if (!ultimaActualizacion || (ahora - ultimaActualizacion) > 24 * 60 * 60 * 1000) {
-        const nuevaNota = obtenerNotaSinRepetir();
-        document.getElementById('notaDelDia').textContent = nuevaNota;
-        localStorage.setItem('notaDelDia', nuevaNota); // Guardar la nueva nota
-        localStorage.setItem('ultimaActualizacion', ahora); // Actualizar la fecha de la última actualización
-    } else {
-        // Si no ha pasado 24 horas, mostrar la nota anterior
-        document.getElementById('notaDelDia').textContent = localStorage.getItem('notaDelDia');
-    }
+    const nuevaNota = obtenerNotaSinRepetir();
+    document.getElementById('notaDelDia').textContent = nuevaNota;
 }
+
