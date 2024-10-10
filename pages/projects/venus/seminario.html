@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.cdnfonts.com/css/hot-ink-freefont" rel="stylesheet">
     <title>Document</title>
@@ -35,6 +35,15 @@
         font-family: "Patua One", serif;
         font-weight: 400;
         font-style: normal;
+    }
+
+
+    .caveat-400 {
+        font-family: "Caveat", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
     }
 
     .signika-300 {
@@ -136,6 +145,11 @@
         margin-top: -75px;
     }
 
+    /* info mentor */
+    .inf-mentor {
+        margin-top: 200px;
+        margin-right: -250px;
+    }
 
     @media screen and (max-width: 768px) {
         .img-hand {
@@ -143,6 +157,15 @@
             margin-right: 20px;
             /* margin-left: 200px; */
             margin-top: 300px;
+        }
+
+        .caveat-400 {
+            font-size: 10px;
+        }
+
+        .inf-mentor {
+            margin-top: 35px;
+            margin-right: -30px;
         }
     }
 
@@ -346,7 +369,7 @@
 
 
             <div class=" ps-1 pe-1 mt-5 ">
-                <div class="row row-cols-3 row-cols-md-5 g-4">
+                <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
                     <div class="col">
                         <div class="h-100 rounded-5 " style="border: 1px solid #F700D5 ;">
                             <div class="container p-4">
@@ -405,7 +428,7 @@
                     <div class="col">
                         <div class="h-100 rounded-5 " style="border: 1px solid #E604FF;">
                             <div class="container p-4">
-                                <img src="http://venuscomitan.com/wp-content/uploads/2024/10/kit.png" width="80px" alt="">
+                                <img src="./assets/kit.png" width="80px" alt="">
                                 <h5 class="card-title pt-1 pb-2">Kit de productos </h5>
 
                                 <p class="card-text">
@@ -640,22 +663,21 @@
         <div class="bg-image-3 rounded-3 container" style="width: 90%; height:auto;">
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-sm-8 center text-dark">
+                    <div class="col-sm-5 center text-dark">
                         <div>
-                            <h1><i>Ruben Di María</i></h1>
                             <div class="center">
-                                <div class="col-sm-7 mt-4 mb-3">
-                                    <div class="pacifico-regular">
+                                <!-- <div class="col-sm-7 mt-4 mb-3">
+                                    <div class="caveat-400">
                                         <div>Experto en FN NAILS</div>
                                         <div>Couch negocios</div>
                                         <div class="text-center">+ de 25 Años de experiencia en el mundo de la belleza y
                                             los
                                             negocios</div>
                                     </div>
-                                </div>
+                                </div> -->
 
-
-                                <div class="col-sm-9" style="text-align: justify;">
+                                <div class="col-sm-10 p-3">
+                                    <h3 class="text-center"><b>Conoce tu mentor</b></h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore impedit, doloribus,
                                     deleniti
                                     id nobis, incidunt praesentium iusto accusamus accusantium tenetur beatae deserunt!
@@ -665,13 +687,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <img  class="img" src="http://venuscomitan.com/wp-content/uploads/2024/10/tutor.png" width="100%">
+                    <div class="col-sm-4 position-relative">
+                        <img class="img" src="http://venuscomitan.com/wp-content/uploads/2024/10/tutor.png"
+                            width="100%">
+                        <div class="position-absolute top-0 end-0">
+                            <div class="">
+                                <div class="inf-mentor">
+                                    <div class="center">
+                                        <div class="col-7 ">
+                                            <h4><i>Ruben Di María</i></h4>
+                                            <div class="caveat-400">
+                                                <div>Experto en FN NAILS</div>
+                                                <div>Couch negocios</div>
+                                                <div class="text-center">+ de 25 Años de experiencia en el mundo de la
+                                                    belleza y los
+                                                    negocios</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 </body>
