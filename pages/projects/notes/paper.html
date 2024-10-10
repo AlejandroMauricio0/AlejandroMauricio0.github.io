@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Notas Bonitas</title>
+</head>
+
+<body>
+
+    <div id="notas"></div>
+
+    <script>
+        const notasBonitas = [
+            "<a href='https://youtu.be/Fraqb7wyofE?si=yWPexJRnLsuC0aCs' class='button-link'>clickme</a>",
+            "Sé el cambio que deseas ver en el mundo."
+        ];
+
+        const notasDiv = document.getElementById("notas");
+        notasBonitas.forEach(nota => {
+            const p = document.createElement("p");
+            p.innerHTML = nota;
+            notasDiv.appendChild(p);
+        });
+    </script>
+
+</body>
+
+</html>

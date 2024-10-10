@@ -1,4 +1,8 @@
 const notasBonitas = [
+    "<a href='https://youtu.be/Fraqb7wyofE?si=yWPexJRnLsuC0aCs'>clickme song</a>",
+    "<a href='https://youtu.be/c5verVk180w?si=uD462Xfh66EkD4LO'>clickme :3</a>",
+    "<a href='https://youtu.be/x-0KoCAV4mc?si=occQa51xWIlZrtOO'>clickme <3 </a>",
+    "<a href='https://youtu.be/xdfik2FRhck?si=xVgvQpdxUvPOX4_7'>clickme :(</a>",
     "Sé el cambio que deseas ver en el mundo.",
     "Te quiero 💞",
     "Eres la niña más bonita que mis ojos han visto",
@@ -13,7 +17,6 @@ const notasBonitas = [
     "En cada momento, estoy pensando en ti:3",
     "Dato curioso: estaba despierto hasta las 4:00 am",
     "Que ramdom lo que salga ¿no? como te quiero<3",
-    "<a href='https://youtu.be/Fraqb7wyofE?si=yWPexJRnLsuC0aCs'>clickme</a>",
     "Dime algo que te molesta de mi 🙈",
     "Ya me diras lo de tu materia de ingles:(",
     "Quién lo diria tu y yo juntos:3",
@@ -89,6 +92,7 @@ function obtenerNotaSinRepetir() {
 
 function mostrarNota() {
     const nuevaNota = obtenerNotaSinRepetir();
-    document.getElementById('notaDelDia').textContent = nuevaNota;
+    document.getElementById('notaDelDia').innerHTML = nuevaNota;
+    // document.getElementById('notaDelDia').textContent = nuevaNota;
 }
 
