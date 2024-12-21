@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+        // Obtén el canvas y el contexto
+        const canvas = document.getElementById('myCanvas');
+        const ctx1 = canvas.getContext('2d');
+        const ctx3 = canvas.getContext('2d');
+
+        // Configura el estilo y el texto
+        ctx1.font = "900px Arial"; // Estilo de la fuente
+        ctx1.fillStyle = '#000'; // Color de relleno negro
+        ctx3.fillStyle = "#FFF"; // Color de relleno blanco
+        ctx3.shadowColor = "#FFF"; // Sombra blanca
+        ctx3.shadowBlur = 25; // Difuminado de la sombra
+
+        // Define el texto
+        const text = "I LOVE YOU";
+
+        // Calcula el ancho del texto
+        const textWidth = ctx1.measureText(text).width;
+
+        // Dibuja el texto
+        const x = (canvas.width - textWidth) / 2; // Centra horizontalmente
+        const y = canvas.height / 2; // Centra verticalmente
+
+        // Dibuja primero el texto con sombra (ctx3) y luego con el color principal (ctx1)
+        ctx3.fillText(text, x, y);
+        ctx1.fillText(text, x, y);
+    </script>
+</body>
+
+</html>

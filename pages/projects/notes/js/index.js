@@ -12,13 +12,34 @@ const notasBonitas = [
     "<a href='https://youtu.be/6AStdL1OXSA?si=gTfkDhM7ALcFFsOP'>clickme 💛</a>", //yellow
     "<a href='https://youtu.be/K8fIzBh-_sg?si=uQ8z4pzdiGsAdJkq'>clickme 💭</a>", //Te quiero tanto
     "<a href='https://youtu.be/T7rRyICsxRI?si=nsBaQtS23LV0ihiD'>clickme 🫂 </a>", //Abrazame
-    // "<a href='https://youtu.be/bWFjrEBGGHI?si=X-Cb8jfMJwNFJ2AQ'>clickme  </a>", //get you the moon
+    "<a href='https://youtu.be/bWFjrEBGGHI?si=X-Cb8jfMJwNFJ2AQ'>clickme  </a>", //get you the moon
     "<a href='https://youtu.be/sZpJ_4lj0y8?si=Sz_S1gEk7d9z83Ue'>clickme 🥰</a>", //Me enamoré de alguien que también se enamoró
     "<a href='https://youtu.be/eobk_drNVyQ?si=L1-tQ0utm86uDotm'>clickme ❤️‍🔥</a>", //por tu amor
     "<a href='https://youtu.be/rdaO-kuyyn8?si=ROvrzX-GacFHsB_7'>clickme 💝</a>", //Amor plastique
-    "<a href=''>clickme </a>", //   
 
+    "<a href='https://youtu.be/FE8KsAq8EME?si=NRPc0emgeagyy6de'>clickme 🖇️</a>", //Contigo
+    "<a href='https://youtu.be/duAFH6GKJYw?si=5omjjP0_MAB5Qjjp'>clickme 💞</a>", //Niña de mi corazon
+    "<a href='https://youtu.be/R5cbxTPZNL0?si=RsbERprGblQzrU3D'>clickme 😻</a>", //enamorado tuyo
+    "<a href='https://youtu.be/PQlG1gznMBE?si=T8BzDR2TDFex-h2h'>clickme 🧩</a>", //amor completo
+    "<a href='https://youtu.be/xovXSMcglE4?si=Xlmm7TwMUDErNDgm'>clickme 💕</a>", //Me gustas mucho Ariel Camacho
+    "<a href='https://youtu.be/urpduYPRJEA?si=Ps_i_E47-ZXLujue'>clickme 🙈</a>", //Me gustas mucho El komoander
+    "<a href='https://youtu.be/th4rbjb504c?si=mzcgyjovMYJlOwVB'>clickme 🌄</a>", //Mas alla del sol (my favorite song)
+    "<a href='https://youtu.be/2pcLD00F-Cs?si=VXR3LhUxnIAVDzqC'>clickme 🛌</a>", //Sueño guajiro
+    "<a href='https://youtu.be/VMFMbfgEq5w?si=-iWZZdrfcq9x1OXw'>clickme 🚶‍♀️</a>", //Y llegaste tu
+    "<a href='https://youtu.be/mQWOAjSffHI?si=2SMirCKhwfVVF-oE'>clickme 🎁</a>", //Te presumo
+    "<a href='https://youtu.be/03j7wTQm7KQ?si=Wk7zpDjkoj-WeVe9'>clickme 👁️‍🗨️</a>", //me gusta todo de ti
+    "<a href='https://youtu.be/-RjwFR6H7_w?si=LG8JgWdCDy6TSwle'>clickme 🧸</a>", //Regalo de Dios
+    "<a href='https://youtu.be/M0YKOq_lWSQ?si=lyPVw0Hrkn0QVoE0'>clickme 🧑‍🤝‍👩</a>", //Acurrucar
+    "<a href='https://youtu.be/7h2ryr_uUEs?si=Nx1Cw5DAQ2wxRYo2'>clickme 👄</a>", //labios rotos
+    "<a href='https://youtu.be/pnOP7wbPXqY?si=lEvh6SUJz4TW2TZH'>clickme 🫵</a>", //Tú, los elegantes
+    "<a href='https://youtu.be/oGSFLiY18N0?si=Ied04Yjv5bP-tEZa'>clickme 🐣</a>", //si volviera nacer
+    "<a href='https://youtu.be/80uJw-CvbIY?si=pUFYaxgFZW_1Iq6A'>clickme 💗</a>", //Te amo
+    "<a href='https://youtu.be/s9Hzbbe61dY?si=_HWKoazl3qBFWiBs'>clickme ❤️‍🩹</a>", //Amarte me hace bien
+    "<a href='https://youtu.be/2oooF0_1390?si=IlWNWaxDbDGVALqg'>clickme 💱</a>", //todo cambio
+    "<a href='https://youtu.be/FOh7zxne3W0?si=b9ToBgGPvIaSiHhP'>clickme ?</a>", //Mi curiosidad
+    "<a href='https://youtu.be/LLdo2f0B1JA?si=C4M0iWFEKf6TocjC'>clickme 🌃</a>", //una noche más contigo
     // "<a href=''>clickme </a>", //
+
 
     "Sé el cambio que deseas ver en el mundo.",
     "Te quiero 💞",
@@ -40,7 +61,7 @@ const notasBonitas = [
     "Me das un abrazo:(",
     "No soy bueno pensando en frases jsjsjs",
     "A mí siempre me va gusta todo de ti💞🙈",
-    // "NoTa: me duele la cabeza jajaja 30/09/2024",
+    "NoTa: me duele la cabeza jajaja 30/09/2024",
     "Woow, 30 notas, no havia escrito tanto en mi vida jsjsj",
     "Tome una foto a su atardecer 🌅",
     "Tantas cosas bonitas en el mundo, pero nada como tu carita y tus ojos, mailob",
@@ -126,12 +147,36 @@ const notasBonitas = [
     "Podrán haber muchos lugares bonitos, pero sin duda estar contigo es mi favorito🥹",
     "Que bonito es estar perdidamente enamorado de ti💘💗",
     "Me estoy enamorando de ti que ya no me veo sin ti:(",
-    "Eres como un solecito ☀️que ilumina mi vida bien bonito, no te vayas nunca de mi vida☹️",
+    "Eres como un solecito ☀️ que ilumina mi vida bien bonito, no te vayas nunca de mi vida☹️",
     "Eres tan perfecta que no necesita maquillaje, ni peinarse para verse hermosa<3 😻💘",
     "11:11 mi deseo siempre seras tú",
     "Me declaro fan de tu mirada llena de estrellas 🌃 como las noches de Van Gogh...",
+    "Cada rolita 💽 que pongo es pensado y dedicada especialmente para ti preciosa<3",
     // "",
-
+    // 2do escrito
+    "Te quiero sin limites:3",
+    "Mi mini mujer 💞",
+    "Quiero que no te alejes de mi:(",
+    "En verdad me enamore:(",
+    "Si se va, lleveme consigo<3",
+    "Quiero que juntos salgamos adelante:')",
+    "Mi rayito de sol:3☀️",
+    "Y la verdad es que si estoy enamorado<3",
+    "F-Á-T-I-M-A el nombre de mi novia hermosa<3",
+    "No sabes lo Feliz que me haces niña<3",
+    "Te Amo<p class='text-decoration-line-through'>porque</p> Te amo y punto. 💗",
+    "Eres especial para mi, solo queria recordatelo",
+    "Mientras yo exista nunca va faltar quien ame tu carita, tus ojos tu sonrisa, todo de ti <3",
+    "Estoy orgulloso de ti, sigue asi dando tode ti corazon 💗",
+    "Recuerdo los primeras salidas que tuvimos y, pienso... wow! como le abre hecho para que si me aceptara:(",
+    "Mi corazon es tuyo :3",
+    "Besos en la kola sjjs🙈",
+    "2024.10.01, se comenzo una historia, que sin duda ha sido una de las mejore que vivi",
+    "Te amito <3",
+    "Mi fatimita, te amooooooooooooooooooooooo",
+    "TQM niña bonita:(",
+    
+    // "",
 ];
 
 function obtenerNotaSinRepetir() {
