@@ -52,8 +52,10 @@
                         </h6>
                     </div>
                 </div>
-                <button type="button" class="btn btn-warning border border-dark border-2" onclick="alert();">Nueva
+                <button type="button" class="btn btn-warning border border-dark border-2" onclick="mostrarNota();">Nueva
                     nota 💌</button>
+                <button type="button" class="btn btn-warning border border-dark border-2"
+                    onclick="backHome()">Volver</button>
             </div>
         </div>
 
@@ -69,27 +71,20 @@
     import Swal from 'sweetalert2/dist/sweetalert2.js'
     import 'sweetalert2/src/sweetalert2.scss'
 
-    function started(params) {
-        let loadPage = localStorage.getItem("key")
-        console.log(loadPage);
+    // function started(params) {
+    //     let loadPage = localStorage.getItem("key")
+    //     console.log(loadPage);
 
-        if (loadPage == "tite") {
-            document.body.innerHTML = "";
-        } else if (loadPage == null) {
-            window.location.href = "start.html";
+    //     if (loadPage == "tite") {
+    //         document.body.innerHTML = "";
+    //     } else if (loadPage == null) {
+    //         window.location.href = "start.html";
 
-        }
-    }
+    //     }
+    // }
 
 
-    function alert() {
-        Swal.fire({
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'Cool'
-        })
-    }
+
 
 
     window.onload = function () {

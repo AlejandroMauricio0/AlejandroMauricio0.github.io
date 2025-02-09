@@ -21,7 +21,7 @@
     <title>Notes 💌</title>
 </head>
 
-<body onload="started()" class="hidden">
+<body>
     <div class="container center position-relative">
         <div class="col-sm-5 mt-5 center">
             <img src="./assets/text.svg" width="60%" alt="">
@@ -30,15 +30,18 @@
         <div class="pt-5 pb-5 mt-5 center">
             <div class="col-sm-5">
                 <h3 class="chewy-regular text-center">
-                    Hoy, una nueva nota te espera. Vuelve mañana para más inspiración
+                    Hoy, algo nuevo te espera. la inspiración que me das es imaginable para crear todo esto.
                 </h3>
-                <h6 class="text-center mt-5">Nota: se puede llegar a repetir, con el tiempo agregaré más notas :3</h6>
+                <h6 class="text-center mt-5">Con el tiempo agregaré más cositas :3</h6>
             </div>
         </div>
 
         <div>
+            <button type="button" class="btn btn-warning" onclick="verMemory()">Te recuerdo qué...</button>
             <button type="button" class="btn btn-primary" onclick="verNota()">Ver mi nota</button>
-            <button type="button" class="btn btn-danger" onclick="funtiDelete()">Cancelar</button>
+            <br>
+            <button type="button" class="btn btn-primary mt-2 w-100" onclick="contador()">Contador...</button>
+            <!-- <button type="button" class="btn btn-danger" onclick="funtiDelete()">Cancelar</button> -->
         </div>
     </div>
     <div class="position-absolute bottom-0 start-50 translate-middle-x">
@@ -46,34 +49,42 @@
     </div>
 
     <script>
-      
+
 
 
         function verNota() {
-            localStorage.setItem("key", "amorcito");
+            // localStorage.setItem("key", "amorcito");
             window.location.href = "notes.html";
         }
-
-        function funtiDelete() {
-            alert("No podrás ver más este sitio");
-            localStorage.setItem("key", "tite");
-            document.body.innerHTML = "";
+        function verMemory() {
+            // localStorage.setItem("key", "amorcito");
+            window.location.href = "cartas/clic_love/index.html";
+        }
+        function contador() {
+            // localStorage.setItem("key", "amorcito");
+            window.location.href = "cartas/contador/index.html";
         }
 
-        function started() {
-            let loadPage = localStorage.getItem("key");
-            console.log(loadPage);
+        // function funtiDelete() {
+        //     alert("No podrás ver más este sitio");
+        //     localStorage.setItem("key", "tite");
+        //     document.body.innerHTML = "";
+        // }
 
-            if (loadPage == "amorcito") {
-                window.location.href = "notes.html";
-            } else if (loadPage == "tite") {
-                document.body.innerHTML = "";
-            } else {
-                document.body.classList.remove('hidden');
-            }
-        }
+        // function started() {
+        //     let loadPage = localStorage.getItem("key");
+        //     console.log(loadPage);
 
-       
+        //     if (loadPage == "amorcito") {
+        //         window.location.href = "notes.html";
+        //     } else if (loadPage == "tite") {
+        //         document.body.innerHTML = "";
+        //     } else {
+        //         document.body.classList.remove('hidden');
+        //     }
+        // }
+
+
     </script>
 
 </body>

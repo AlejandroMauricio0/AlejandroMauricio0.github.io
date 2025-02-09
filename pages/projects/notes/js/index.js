@@ -175,7 +175,7 @@ const notasBonitas = [
     "Te amito <3",
     "Mi fatimita, te amooooooooooooooooooooooo",
     "TQM niña bonita:(",
-    
+
     // "",
 ];
 
@@ -203,3 +203,8 @@ function mostrarNota() {
     // document.getElementById('notaDelDia').textContent = nuevaNota;
 }
 
+
+function backHome() {
+    // localStorage.setItem("key", "amorcito");
+    window.location.href = "../notes/start.html";
+}

@@ -1,0 +1,41 @@
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right top, #f0c1e1, #ebb7e3, #e3ade6, #d9a5ea, #cb9df0);
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: url(../font/DS-DIGI.TTF);
+}
+
+.contador {
+    font-family: 'DS-Digital';
+    font-size: 6rem;
+    color: #FFF9BF;
+}
+
+/*  */
+.imagen {
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    /* Evita que interfieran con clics */
+    animation: caer 5s linear infinite;
+}
+
+@keyframes caer {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1; 
+    }
+
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
