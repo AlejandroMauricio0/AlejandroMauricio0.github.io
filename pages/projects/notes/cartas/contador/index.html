@@ -44,32 +44,33 @@
         window.location.href = "../../start.html";
     }
     function time() {
-        // modificar fecha 
-        var fechaExpiracion = new Date('March 28, 2025, 23:59:59').getTime();
+        // Fecha de expiración (puedes cambiarla)
+        var fechaExpiracion = new Date('March 28, 2025 23:59:59').getTime();
 
         var x = setInterval(function () {
             var fechaActual = new Date().getTime();
             var duracion = fechaExpiracion - fechaActual;
 
-            if (duracion < 0) {
+            // Si ya pasó la fecha
+            if (duracion <= 0) {
                 clearInterval(x);
-                document.getElementById("contador").innerHTML = 'Tu cumpleaños ha llegado <3';
+                document.getElementById("contador").innerHTML = '🎉 ¡Feliz cumpleaños amorchito, Te Amo! <3 🎂';
+                return; // ← Detiene el resto del código
             }
 
             var dias = Math.floor(duracion / (1000 * 60 * 60 * 24));
             var horas = Math.floor((duracion % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutos = Math.floor((duracion % (1000 * 60 * 60)) / (1000 * 60));
-            var segundos = Math.floor((duracion % (1000 * 60)) / 1000)
+            var segundos = Math.floor((duracion % (1000 * 60)) / 1000);
 
-
+            // Formato con ceros
             dias = (dias < 10) ? '0' + dias : dias;
             horas = (horas < 10) ? '0' + horas : horas;
             minutos = (minutos < 10) ? '0' + minutos : minutos;
             segundos = (segundos < 10) ? '0' + segundos : segundos;
 
-            document.getElementById("contador").innerHTML = `${dias}: ${horas}: ${minutos}: ${segundos}`;
-
-        });
+            document.getElementById("contador").innerHTML = `${dias}:${horas}:${minutos}:${segundos}`;
+        }, 1000); // ← importante: intervalo de 1 segundo
     }
 
     function lluviaDeImagenes() {
