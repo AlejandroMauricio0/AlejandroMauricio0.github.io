@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>LIGHT EXPERIENCE</title>
+
+<style>
+:root {
+    --red: #ed101b;
+    --black: #171717;
+    --gray: #777;
+    --light: #f7f7f7;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+button, a {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.header {
+    min-height: 75px;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.brand-name span,
+.footer h2 span {
+    color: var(--red);
+}
+
+.brand small {
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation a {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: var(--red);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 530px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background: linear-gradient(120deg, #fff 65%, #fff0f0 65%);
+}
+
+.hero-content {
+    max-width: 550px;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 82px);
+    line-height: .95;
+    letter-spacing: -4px;
+    font-weight: 900;
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: var(--red);
+}
+
+.hero-content p {
+    max-width: 430px;
+    color: var(--gray);
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 50px;
+    background: var(--red);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn-primary:hover {
+    background: #c9000b;
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    margin-top: 25px;
+    color: var(--gray);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* DECORACIÓN */
+
+.hero-decoration {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.gift-box {
+    width: 190px;
+    height: 190px;
+    border-radius: 35px;
+    background: var(--red);
+    display: grid;
+    place-items: center;
+    transform: rotate(-8deg);
+    box-shadow: 0 25px 50px #ed101b35;
+    z-index: 2;
+}
+
+.gift-box span {
+    font-size: 95px;
+}
+
+.decoration-circle {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border: 2px solid #ed101b40;
+    border-radius: 50%;
+}
+
+/* ACTIVIDADES */
+
+.activities {
+    padding: 80px 7%;
+    background: var(--light);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: clamp(32px, 5vw, 45px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.activity-card {
+    padding: 25px 20px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    transition: .25s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px #0000000d;
+}
+
+.activity-icon {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.activity-card p {
+    color: var(--gray);
+    font-size: 13px;
+    min-height: 42px;
+}
+
+.btn-link {
+    margin-top: 18px;
+    border: none;
+    background: none;
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* NOSOTROS */
+
+.about {
+    text-align: center;
+    padding: 85px 8%;
+}
+
+.about p {
+    max-width: 580px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 35px 20px;
+    background: var(--black);
+    color: white;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.footer p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer small {
+    color: #aaa;
+    font-size: 11px;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #00000099;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 20;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: white;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .header {
+        min-height: 68px;
+        padding: 12px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: white;
+        flex-direction: column;
+        gap: 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 65px 7% 45px;
+        background: linear-gradient(150deg, white 75%, #fff0f0 75%);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 13vw, 68px);
+        letter-spacing: -3px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-decoration {
+        width: 100%;
+        height: 210px;
+        margin-top: 35px;
+    }
+
+    .gift-box {
+        width: 145px;
+        height: 145px;
+    }
+
+    .gift-box span {
+        font-size: 75px;
+    }
+
+    .decoration-circle {
+        width: 195px;
+        height: 195px;
+    }
+
+    .activities {
+        padding: 60px 6%;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .activity-card {
+        padding: 20px 15px;
+    }
+
+    .activity-card h3 {
+        font-size: 16px;
+    }
+
+    .activity-card p {
+        font-size: 12px;
+    }
+
+    .about {
+        padding: 65px 8%;
+    }
+}
+
+@media (max-width: 360px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#inicio" class="brand">
+        <span class="brand-name">LIGHT<span>.</span></span>
+        <small>ABARROTES</small>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Abrir menú" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="navigation" id="navigation">
+        <a href="#inicio">Inicio</a>
+        <a href="#actividades">Actividades</a>
+        <a href="#nosotros">Nosotros</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+
+        <span class="eyebrow">ABARROTES LIGHT PRESENTA</span>
+
+        <h1>¡PARTICIPA<br><span>Y GANA!</span></h1>
+
+        <p>
+            Tenemos sorpresas preparadas para ti.
+            Descubre nuestras promociones y participa
+            en las actividades de LIGHT.
+        </p>
+
+        <a href="#actividades" class="btn-primary">
+            DESCUBRIR AHORA <span>→</span>
+        </a>
+
+        <div class="hero-note">
+            Ligero y más cerca de ti.
+        </div>
+    </div>
+
+    <div class="hero-decoration">
+        <div class="gift-box"><span>🎁</span></div>
+        <div class="decoration-circle"></div>
+    </div>
+</section>
+
+<section class="activities" id="actividades">
+
+    <div class="section-heading">
+        <span class="eyebrow">EXPERIENCIA LIGHT</span>
+        <h2>¿Qué tenemos<br>para ti?</h2>
+        <p>Explora nuestras actividades y descubre nuevas sorpresas.</p>
+    </div>
+
+    <div class="activity-grid">
+
+        <article class="activity-card">
+            <div class="activity-icon">🎁</div>
+            <h3>Promociones</h3>
+            <p>Descubre nuestras ofertas especiales.</p>
+            <button class="btn-link" data-activity="promociones">
+                Explorar →
+            </button>
+        </article>
+
+        <article class="activity-card">
+            <div class="activity-icon">🏆</div>
+            <h3>Sorteos</h3>
+            <p>Conoce las dinámicas y participa.</p>
+            <button class="btn-link" data-activity="sorteos">
+                Participar →
+            </button>
+        </article>
+
+        <article class="activity-card">
+            <div class="activity-icon">🎮</div>
+            <h3>Juegos</h3>
+            <p>Diviértete con nuestras actividades.</p>
+            <button class="btn-link" data-activity="juegos">
+                Jugar →
+            </button>
+        </article>
+
+        <article class="activity-card">
+            <div class="activity-icon">⭐</div>
+            <h3>Beneficios</h3>
+            <p>Descubre lo que LIGHT tiene para ti.</p>
+            <button class="btn-link" data-activity="beneficios">
+                Descubrir →
+            </button>
+        </article>
+
+    </div>
+</section>
+
+<section class="about" id="nosotros">
+    <span class="eyebrow">SOMOS LIGHT</span>
+    <h2>Más cerca de ti.</h2>
+    <p>
+        En LIGHT queremos ofrecerte más que productos.
+        Queremos crear experiencias, promociones y
+        momentos especiales para nuestros clientes.
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <h2>LIGHT<span>.</span></h2>
+    <p>Ligero y más cerca de ti.</p>
+    <small>© <span id="currentYear"></span> Abarrotes LIGHT.</small>
+</footer>
+
+<div class="modal" id="activityModal" aria-hidden="true">
+    <div class="modal-content" role="dialog"
+        aria-modal="true" aria-labelledby="modalTitle">
+
+        <button class="modal-close" id="modalClose"
+            aria-label="Cerrar">×</button>
+
+        <span class="activity-icon" id="modalIcon">🎁</span>
+        <h2 id="modalTitle">¡Próximamente!</h2>
+
+        <p id="modalDescription">
+            Estamos preparando algo especial para ti.
+        </p>
+
+        <button class="btn-primary" id="modalAccept">
+            ENTENDIDO
+        </button>
+    </div>
+</div>
+
+<script>
+"use strict";
+
+// ELEMENTOS
+const menuToggle = document.getElementById("menuToggle");
+const navigation = document.getElementById("navigation");
+
+const modal = document.getElementById("activityModal");
+const modalClose = document.getElementById("modalClose");
+const modalAccept = document.getElementById("modalAccept");
+
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalIcon = document.getElementById("modalIcon");
+
+
+// MENÚ MÓVIL
+menuToggle.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.textContent = isOpen ? "×" : "☰";
+});
+
+
+// CERRAR MENÚ
+navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navigation.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+
+// ACTIVIDADES
+const activities = {
+    promociones: {
+        icon: "🎁",
+        title: "Promociones LIGHT",
+        description: "Muy pronto encontrarás promociones especiales para nuestros clientes."
+    },
+    sorteos: {
+        icon: "🏆",
+        title: "Sorteos LIGHT",
+        description: "Estamos preparando dinámicas para que puedas participar y ganar."
+    },
+    juegos: {
+        icon: "🎮",
+        title: "Juega con LIGHT",
+        description: "Próximamente podrás disfrutar de juegos y retos interactivos."
+    },
+    beneficios: {
+        icon: "⭐",
+        title: "Beneficios LIGHT",
+        description: "Estamos preparando beneficios especiales para nuestros clientes."
+    }
+};
+
+
+// ABRIR MODAL
+document.querySelectorAll("[data-activity]").forEach(button => {
+    button.addEventListener("click", () => {
+        const activity = activities[button.dataset.activity];
+
+        if (!activity) return;
+
+        modalIcon.textContent = activity.icon;
+        modalTitle.textContent = activity.title;
+        modalDescription.textContent = activity.description;
+
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        modalClose.focus();
+    });
+});
+
+
+// CERRAR MODAL
+function closeModal() {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+}
+
+modalClose.addEventListener("click", closeModal);
+modalAccept.addEventListener("click", closeModal);
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeModal();
+});
+
+
+// AÑO AUTOMÁTICO
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+console.log("LIGHT EXPERIENCE iniciado correctamente.");
+</script>
+
+</body>
+</html>
