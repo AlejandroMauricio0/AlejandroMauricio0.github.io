@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320 230" role="img" aria-labelledby="t">
+  <title id="t">Cáliz con la hostia radiante y dos palomas</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8C6514"/>
+      <stop offset=".45" stop-color="#D4AF37"/>
+      <stop offset=".7" stop-color="#B8902C"/>
+      <stop offset="1" stop-color="#A67C1E"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#F3E3A6" stop-opacity=".85"/>
+      <stop offset=".55" stop-color="#EADBB0" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#EADBB0" stop-opacity="0"/>
+    </radialGradient>
+    <line id="rl" x1="160" y1="38" x2="160" y2="12"/>
+    <line id="rs" x1="160" y1="40" x2="160" y2="26"/>
+    <g id="dove">
+      <!-- paloma mirando a la derecha, en línea -->
+      <path d="M8 34 C18 27 31 25 43 27 C48 21 54 18 60 19 C63 20 65 22 68 24 L62 25 C61 31 55 37 45 39 C33 41 20 40 8 34 Z"/>
+      <path d="M8 34 L-2 27 M8 34 L-4 35 M8 34 L0 41"/>
+      <path d="M28 28 C26 15 18 6 4 1 C13 11 19 19 22 27"/>
+      <path d="M35 27 C35 15 31 7 22 2"/>
+      <path d="M41 27 C42 18 40 11 35 6"/>
+      <path d="M20 35 C28 36 38 35 46 32"/>
+      <circle cx="59.5" cy="22.5" r=".9" fill="#A67C1E" stroke="none"/>
+    </g>
+  </defs>
+
+  <circle cx="160" cy="72" r="66" fill="url(#halo)"/>
+
+  <g fill="none" stroke="url(#g)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- rayos de la hostia -->
+    <g stroke-width="1.3" transform="translate(0 0)">
+      <g id="rays">
+        <use xlink:href="#rl"/>
+        <use xlink:href="#rs" transform="rotate(15 160 72)"/>
+        <use xlink:href="#rl" transform="rotate(30 160 72)"/>
+        <use xlink:href="#rs" transform="rotate(45 160 72)"/>
+        <use xlink:href="#rl" transform="rotate(60 160 72)"/>
+        <use xlink:href="#rs" transform="rotate(75 160 72)"/>
+        <use xlink:href="#rl" transform="rotate(90 160 72)"/>
+        <use xlink:href="#rs" transform="rotate(105 160 72)"/>
+        <use xlink:href="#rl" transform="rotate(120 160 72)"/>
+        <use xlink:href="#rs" transform="rotate(135 160 72)"/>
+        <use xlink:href="#rl" transform="rotate(150 160 72)"/>
+        <use xlink:href="#rs" transform="rotate(165 160 72)"/>
+      </g>
+      <use xlink:href="#rays" transform="rotate(180 160 72)"/>
+    </g>
+
+    <!-- hostia -->
+    <circle cx="160" cy="72" r="26" fill="#FFFDF6" stroke-width="2"/>
+    <circle cx="160" cy="72" r="21" stroke-width=".9" stroke-dasharray="2 2.6"/>
+    <path d="M160 58 V86 M150 67 H170" stroke-width="2.2"/>
+
+    <!-- cáliz -->
+    <path d="M118 108 H202 C200 133 184 148 160 150 C136 148 120 133 118 108 Z" fill="#FFFDF6" stroke-width="2"/>
+    <path d="M114 108 H206" stroke-width="2.4"/>
+    <path d="M125 121 C141 128 179 128 195 121" stroke-width="1.1"/>
+    <path d="M134 135 C147 140 173 140 186 135" stroke-width=".9"/>
+    <path d="M156 150 V160 M164 150 V160" stroke-width="1.6"/>
+    <ellipse cx="160" cy="165" rx="11" ry="6" fill="#FFFDF6" stroke-width="1.8"/>
+    <path d="M156 171 C156 182 154 190 150 196 M164 171 C164 182 166 190 170 196" stroke-width="1.6"/>
+    <path d="M126 210 C138 202 146 199 150 196 H170 C174 199 182 202 194 210 Z" fill="#FFFDF6" stroke-width="2"/>
+    <path d="M120 214 H200" stroke-width="2.2"/>
+    <path d="M148 136 L160 128 L172 136 L160 144 Z" stroke-width="1"/>
+
+    <!-- palomas -->
+    <g stroke-width="1.6" fill="#FFFDF6">
+      <use xlink:href="#dove" transform="translate(48 70)"/>
+      <use xlink:href="#dove" transform="translate(272 70) scale(-1 1)"/>
+    </g>
+
+    <!-- destellos -->
+    <g stroke-width="1.1">
+      <path d="M58 38 v10 M53 43 h10"/>
+      <path d="M262 30 v8 M258 34 h8"/>
+      <path d="M88 150 v6 M85 153 h6"/>
+      <path d="M236 156 v7 M232.5 159.5 h7"/>
+    </g>
+  </g>
+</svg>

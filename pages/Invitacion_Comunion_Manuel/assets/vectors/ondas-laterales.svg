@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 640" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset=".2" stop-color="#D4AF37"/>
+      <stop offset=".6" stop-color="#A67C1E"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-linecap="round">
+    <path d="M6 0 C46 80 -10 160 30 240 C70 320 10 400 40 480 C64 545 20 600 34 640" stroke-width="1.6"/>
+    <path d="M18 0 C58 90 4 170 48 250 C86 330 26 410 58 490 C80 550 40 600 52 640" stroke-width=".9" opacity=".7"/>
+    <path d="M0 60 C30 120 2 190 20 260 C36 320 4 380 14 440" stroke-width=".7" opacity=".55"/>
+    <!-- pequeñas hojas -->
+    <path d="M30 240 C40 228 54 226 62 230 C54 238 42 242 30 240 Z" stroke-width=".9"/>
+    <path d="M40 480 C30 468 16 466 8 470 C16 478 28 482 40 480 Z" stroke-width=".9"/>
+    <path d="M24 120 C34 110 46 110 52 114 C44 121 34 123 24 120 Z" stroke-width=".8"/>
+    <circle cx="62" cy="230" r="1.6" fill="#D4AF37" stroke="none"/>
+    <circle cx="8" cy="470" r="1.6" fill="#D4AF37" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+/* ============================================================
+   Primera Comunión de Manuel · Tokens de diseño
+   ============================================================ */
+:root {
+  /* Paleta */
+  --c-bg: #F6F5F0;            /* crema suave / marfil */
+  --c-card: #FFFFFF;
+  --c-card-soft: #FAF9F5;
+  --c-footer: #EFECE4;
+  --c-gold: #A67C1E;          /* dorado cálido / ocre */
+  --c-gold-light: #D4AF37;
+  --c-gold-pale: #EADBB0;
+  --c-text: #1E1E1E;
+  --c-text-soft: #4A4A4A;
+  --c-muted: #7A7366;
+  --c-error: #A2382B;
+
+  --grad-gold: linear-gradient(120deg, #8C6514 0%, #A67C1E 25%, #D4AF37 50%, #A67C1E 75%, #8C6514 100%);
+  --grad-gold-btn: linear-gradient(135deg, #B38A28 0%, #A67C1E 55%, #8F6915 100%);
+
+  /* Tipografía */
+  --f-script: 'Great Vibes', 'Allura', cursive;
+  --f-title: 'Montserrat', 'Poppins', system-ui, sans-serif;
+  --f-body: 'Lato', 'Open Sans', system-ui, sans-serif;
+
+  --fs-xs: .78rem;
+  --fs-sm: .9rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: clamp(1.35rem, 1.1rem + 1vw, 1.7rem);
+  --fs-script: clamp(4.2rem, 3rem + 7vw, 7.5rem);
+  --fs-script-sm: clamp(2.6rem, 2rem + 3vw, 3.6rem);
+
+  --ls-title: 2px;
+  --ls-wide: 5px;
+
+  /* Espaciados */
+  --sp-1: .25rem;
+  --sp-2: .5rem;
+  --sp-3: .75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+
+  --gutter: 16px;
+  --max-w: 680px;
+  --radius: 18px;
+  --radius-sm: 10px;
+
+  /* Bordes y sombras */
+  --line-gold: 1px solid var(--c-gold-light);
+  --shadow-card: 0 10px 30px -18px rgba(110, 82, 20, .35), 0 2px 6px rgba(110, 82, 20, .05);
+  --shadow-glow: 0 0 0 6px rgba(212, 175, 55, .10), 0 0 40px rgba(212, 175, 55, .35);
+
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
