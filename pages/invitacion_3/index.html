@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¡Felices XV's Andrea! · Invitación</title>
+  <meta name="description" content="Andrea tiene el honor de invitarte a celebrar sus XV años. 14 de agosto de 2027 · Quinta Los Álamos, Pinamar.">
+  <meta name="theme-color" content="#BA417E">
+  <meta property="og:title" content="¡Felices XV's Andrea!">
+  <meta property="og:description" content="14 de agosto de 2027 · Quinta Los Álamos, Pinamar. ¡Confirma tu asistencia!">
+  <meta property="og:image" content="assets/images/andrea-columpio.jpg">
+  <link rel="icon" href="assets/sprites/corona.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400;1,500&family=Titan+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<main>
+
+  <!-- ================= 1. HEADER / HERO ================= -->
+  <header class="hero" id="inicio">
+    <!-- Marca de agua: 3 filas en marquesina con direcciones alternas -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__row marquee__row--left">
+        <div class="marquee__track"><span>QUINCE</span><span>QUINCE</span><span>QUINCE</span><span>QUINCE</span></div>
+        <div class="marquee__track"><span>QUINCE</span><span>QUINCE</span><span>QUINCE</span><span>QUINCE</span></div>
+      </div>
+      <div class="marquee__row marquee__row--right">
+        <div class="marquee__track"><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span></div>
+        <div class="marquee__track"><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span><span>AÑOS</span></div>
+      </div>
+      <div class="marquee__row marquee__row--left">
+        <div class="marquee__track"><span>ANDREA</span><span>ANDREA</span><span>ANDREA</span><span>ANDREA</span></div>
+        <div class="marquee__track"><span>ANDREA</span><span>ANDREA</span><span>ANDREA</span><span>ANDREA</span></div>
+      </div>
+    </div>
+
+    <img class="hero__crown" src="assets/sprites/corona.svg" alt="" aria-hidden="true">
+    <img class="hero__disco swing" src="assets/sprites/bola-disco.svg" alt="" aria-hidden="true">
+    <span class="sparkle sparkle--1" aria-hidden="true"></span>
+    <span class="sparkle sparkle--2" aria-hidden="true"></span>
+    <span class="sparkle sparkle--3" aria-hidden="true"></span>
+
+    <!-- Bloque de título (derecha) -->
+    <div class="hero__text">
+      <p class="hero__age">Mis XV Años</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">¡Felices</span>
+        <span class="hero__title-line">XV's</span>
+        <span class="hero__title-line hero__title-name">Andrea!</span>
+      </h1>
+    </div>
+
+    <!-- Composición fotográfica (esquina inferior izquierda) -->
+    <div class="hero__photos">
+      <figure class="photo-circle photo-circle--main">
+        <img src="assets/images/andrea-columpio.jpg"
+             onerror="this.onerror=null;this.src='assets/images/andrea-columpio.svg'"
+             alt="Andrea sentada en un columpio de flores">
+      </figure>
+      <figure class="photo-circle photo-circle--small">
+        <img src="assets/images/andrea-ramo.jpg"
+             onerror="this.onerror=null;this.src='assets/images/andrea-ramo.svg'"
+             alt="Andrea sosteniendo su ramo">
+      </figure>
+    </div>
+
+    <a class="hero__scroll" href="#invitacion" aria-label="Ver la invitación"><span aria-hidden="true">⌄</span></a>
+  </header>
+
+  <!-- ================= 2A. NOMBRE Y ANUNCIO ================= -->
+  <section class="section section--white announce" id="invitacion">
+    <div class="wave wave--top wave--d1" aria-hidden="true">
+      <svg viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0,62 C360,104 1080,20 1440,62 C1800,104 2520,20 2880,62 L2880,0 L0,0 Z" fill="#BA417E"/></svg>
+    </div>
+
+    <div class="wrap reveal">
+      <img class="announce__crown" src="assets/sprites/corona.svg" alt="" aria-hidden="true">
+      <h2 class="announce__name">Andrea!</h2>
+      <p class="announce__honor">¡Tiene el honor de invitarte!</p>
+      <hr class="divider">
+
+      <ul class="facts">
+        <li class="fact">
+          <span class="fact__label">Edad</span>
+          <span class="fact__value">Mis XV Años</span>
+        </li>
+        <li class="fact">
+          <span class="fact__label">Fecha</span>
+          <span class="fact__value">14 de Agosto de 2027</span>
+        </li>
+        <li class="fact">
+          <span class="fact__label">Lugar</span>
+          <span class="fact__value">Quinta Los Álamos, Pinamar</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 2B. AGRADECIMIENTO Y BENDICIÓN ================= -->
+  <section class="section section--white blessing">
+    <div class="wave wave--ribbon wave--slow" aria-hidden="true">
+      <svg viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 C1800,80 2520,0 2880,40 L2880,70 C2520,30 1800,110 1440,70 C1080,30 360,110 0,70 Z" fill="#FFDCEB"/></svg>
+    </div>
+
+    <div class="wrap reveal">
+      <blockquote class="quote">
+        <p>“Hace quince años nació una ilusión, hoy esa ilusión se convierte en una hermosa realidad. Doy gracias a Dios por permitirme llegar a este día tan especial y por rodearme de personas maravillosas.”</p>
+      </blockquote>
+
+      <div class="people">
+        <div class="people__group">
+          <h3 class="people__title">Con la bendición de mis padres</h3>
+          <p class="people__name">[Nombre de la Mamá]</p>
+          <p class="people__name">[Nombre del Papá]</p>
+        </div>
+        <span class="people__heart" aria-hidden="true">♥</span>
+        <div class="people__group">
+          <h3 class="people__title">Y el cariño de mis padrinos</h3>
+          <p class="people__name">[Nombre de la Madrina]</p>
+          <p class="people__name">[Nombre del Padrino]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2C. CUENTA REGRESIVA + GUARDAR FECHA ================= -->
+  <section class="section section--pink countdown" id="cuenta-regresiva">
+    <div class="wave wave--top wave--d2" aria-hidden="true">
+      <svg viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0,50 C360,14 1080,86 1440,50 C1800,14 2520,86 2880,50 L2880,0 L0,0 Z" fill="#FFFFFF"/></svg>
+    </div>
+
+    <div class="wrap reveal">
+      <h2 class="section-title">Te esperamos</h2>
+      <p class="section-kicker">Cuenta Regresiva</p>
+
+      <div class="timer" data-countdown="2027-08-14T18:00:00" role="timer" aria-label="Tiempo restante para la celebración">
+        <div class="timer__unit"><span class="timer__num" data-unit="days">00</span><span class="timer__label">Días</span></div>
+        <span class="timer__sep" aria-hidden="true">:</span>
+        <div class="timer__unit"><span class="timer__num" data-unit="hours">00</span><span class="timer__label">Horas</span></div>
+        <span class="timer__sep" aria-hidden="true">:</span>
+        <div class="timer__unit"><span class="timer__num" data-unit="minutes">00</span><span class="timer__label">Minutos</span></div>
+        <span class="timer__sep" aria-hidden="true">:</span>
+        <div class="timer__unit"><span class="timer__num" data-unit="seconds">00</span><span class="timer__label">Segundos</span></div>
+      </div>
+      <p class="timer__done" data-countdown-done hidden>¡Hoy es el gran día! 🎉</p>
+
+      <div class="calendar" data-calendar>
+        <button class="btn btn--primary" type="button" aria-expanded="false" aria-controls="calendar-menu" data-calendar-toggle>
+          <span aria-hidden="true">📅</span> Agendar en mi Calendario
+        </button>
+        <ul class="calendar__menu" id="calendar-menu" hidden>
+          <li><a href="#" target="_blank" rel="noopener" data-cal="google">Google Calendar</a></li>
+          <li><a href="#" data-cal="ics">Apple Calendar (.ics)</a></li>
+          <li><a href="#" target="_blank" rel="noopener" data-cal="outlook">Outlook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. UBICACIONES E ITINERARIO ================= -->
+  <section class="section section--white places" id="ubicaciones">
+    <div class="wave wave--top wave--d3" aria-hidden="true">
+      <svg viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0,48 C360,82 1080,14 1440,48 C1800,82 2520,14 2880,48 L2880,0 L0,0 Z" fill="#FFDCEB"/></svg>
+    </div>
+
+    <div class="wrap">
+      <h2 class="section-title reveal">¿Dónde y cuándo?</h2>
+
+      <div class="cards">
+        <article class="card reveal">
+          <img class="card__photo" src="assets/images/iglesia.jpg"
+               onerror="this.onerror=null;this.src='assets/images/iglesia.svg'"
+               alt="Fachada de la parroquia" loading="lazy">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 4v12M26 10h12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M14 30 32 16l18 14v28H14z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M27 58V44a5 5 0 0 1 10 0v14" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="32" cy="31" r="4" fill="currentColor"/></svg>
+          </div>
+          <h3 class="card__title">Ceremonia Religiosa</h3>
+          <p class="card__time">18:00 HRS</p>
+          <p class="card__place">Parroquia [Nombre de la Iglesia]</p>
+          <p class="card__address">[Calle, Número, Colonia, Ciudad]</p>
+          <a class="btn btn--primary btn--sm" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Parroquia+Pinamar">
+            <span aria-hidden="true">📍</span> Ver en Google Maps
+          </a>
+        </article>
+
+        <article class="card reveal">
+          <img class="card__photo" src="assets/images/salon.jpg"
+               onerror="this.onerror=null;this.src='assets/images/salon.svg'"
+               alt="Salón de eventos Quinta Los Álamos" loading="lazy">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><path d="M32 4v8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="32" cy="34" r="20" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M12 34h40M32 14c-8 6-8 34 0 40M32 14c8 6 8 34 0 40M15 24h34M15 44h34" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3 class="card__title">Recepción y Fiesta</h3>
+          <p class="card__time">20:00 HRS</p>
+          <p class="card__place">Quinta Los Álamos, Pinamar</p>
+          <p class="card__address">[Dirección completa del salón]</p>
+          <a class="btn btn--primary btn--sm" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Quinta+Los+%C3%81lamos+Pinamar">
+            <span aria-hidden="true">📍</span> Ver en Google Maps
+          </a>
+        </article>
+      </div>
+
+      <div class="program reveal">
+        <h3 class="program__title">Programa del evento</h3>
+        <ol class="timeline">
+          <li class="timeline__item"><span class="timeline__time">18:00 hrs</span><span class="timeline__text">Ceremonia Religiosa (Misa de Acción de Gracias).</span></li>
+          <li class="timeline__item"><span class="timeline__time">20:00 hrs</span><span class="timeline__text">Recepción y Cóctel de Bienvenida.</span></li>
+          <li class="timeline__item"><span class="timeline__time">21:00 hrs</span><span class="timeline__text">Entrada Triunfal de Andrea y Vals Familiar.</span></li>
+          <li class="timeline__item"><span class="timeline__time">21:45 hrs</span><span class="timeline__text">Brindis y Palabras de Agradecimiento.</span></li>
+          <li class="timeline__item"><span class="timeline__time">22:15 hrs</span><span class="timeline__text">Cena de Gala.</span></li>
+          <li class="timeline__item timeline__item--party"><span class="timeline__time">23:30 hrs</span><span class="timeline__text">¡Apertura de Pista y Fiesta! (Bola Disco Time).</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. GALERÍA ================= -->
+  <section class="section section--pink gallery" id="galeria">
+    <div class="wave wave--top wave--d4" aria-hidden="true">
+      <svg viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0,50 C360,16 1080,84 1440,50 C1800,16 2520,84 2880,50 L2880,0 L0,0 Z" fill="#FFFFFF"/></svg>
+    </div>
+
+    <div class="wrap">
+      <h2 class="section-title reveal">Mis Momentos</h2>
+      <blockquote class="quote quote--small reveal">
+        <p>“Cada etapa de mi vida ha estado llena de risas, sueños y aprendizaje. Gracias por ser parte de mi historia y acompañarme a escribir este nuevo capítulo.”</p>
+      </blockquote>
+
+      <div class="carousel reveal" data-carousel tabindex="0" aria-roledescription="carrusel" aria-label="Sesión de fotos XV años">
+        <div class="carousel__viewport">
+          <ul class="carousel__track">
+            <li class="carousel__slide" aria-roledescription="diapositiva">
+              <img src="assets/images/galeria-1.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-1.svg'" alt="Andrea con vestido de gala" draggable="false">
+              <span class="carousel__caption">Soñando despierta</span>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva">
+              <img src="assets/images/galeria-2.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-2.svg'" alt="Retrato de Andrea sonriendo" draggable="false">
+              <span class="carousel__caption">Mis XV</span>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva">
+              <img src="assets/images/galeria-3.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-3.svg'" alt="Andrea entre flores" draggable="false">
+              <span class="carousel__caption">Princesa por un día</span>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva">
+              <img src="assets/images/galeria-4.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-4.svg'" alt="Andrea con su corona" draggable="false">
+              <span class="carousel__caption">Brillando siempre</span>
+            </li>
+          </ul>
+        </div>
+        <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Foto anterior" data-prev>‹</button>
+        <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Foto siguiente" data-next>›</button>
+        <div class="carousel__dots"></div>
+        <p class="sr-only" aria-live="polite" data-status></p>
+      </div>
+
+      <h3 class="polaroids__title reveal">De niña a quinceañera</h3>
+      <ul class="polaroids" data-polaroids>
+        <li class="polaroid reveal">
+          <img src="assets/images/nina-1.jpg" onerror="this.onerror=null;this.src='assets/images/nina-1.svg'" alt="Andrea de bebé">
+          <span class="polaroid__caption">Mis primeros pasos</span>
+        </li>
+        <li class="polaroid reveal">
+          <img src="assets/images/nina-2.jpg" onerror="this.onerror=null;this.src='assets/images/nina-2.svg'" alt="Andrea de niña sonriendo">
+          <span class="polaroid__caption">Siempre sonriendo</span>
+        </li>
+        <li class="polaroid reveal">
+          <img src="assets/images/nina-3.jpg" onerror="this.onerror=null;this.src='assets/images/nina-3.svg'" alt="Andrea con su familia y amigos">
+          <span class="polaroid__caption">Momentos inolvidables</span>
+        </li>
+        <li class="polaroid reveal">
+          <img src="assets/images/nina-4.jpg" onerror="this.onerror=null;this.src='assets/images/nina-4.svg'" alt="Andrea en la actualidad">
+          <span class="polaroid__caption">Lista para celebrar</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 5. RSVP ================= -->
+  <section class="section section--pink rsvp" id="confirmar">
+    <div class="wrap">
+      <div class="rsvp__card reveal">
+        <h2 class="section-title">Confirma tu Asistencia</h2>
+        <p class="rsvp__intro">Tu presencia es mi mejor regalo. Por favor confirma antes del <strong>31 de julio de 2027</strong>.</p>
+
+        <form id="rsvp-form" class="form" data-whatsapp="5210000000000" novalidate>
+          <div class="field">
+            <label for="rsvp-name">Nombre completo del invitado / familia</label>
+            <input id="rsvp-name" name="name" type="text" autocomplete="name" placeholder="Ej. Familia López García" aria-describedby="err-name" required>
+            <p class="field__error" id="err-name" data-error-for="name" hidden>Escribe tu nombre para poder confirmar.</p>
+          </div>
+
+          <fieldset class="field">
+            <legend>¿Podrás acompañarnos?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="attending" value="yes" checked><span>Asistiré</span></label>
+              <label class="choice"><input type="radio" name="attending" value="no"><span>No podré asistir</span></label>
+            </div>
+          </fieldset>
+
+          <!-- Se oculta automáticamente si elige "No podré asistir" -->
+          <div class="field" data-guests>
+            <label for="rsvp-guests">Número de personas que asistirán <span class="field__opt">(pases)</span></label>
+            <div class="stepper">
+              <button class="stepper__btn" type="button" aria-label="Quitar una persona" data-step="-1">−</button>
+              <input id="rsvp-guests" name="guests" type="number" inputmode="numeric" min="1" max="10" value="1" aria-describedby="err-guests">
+              <button class="stepper__btn" type="button" aria-label="Agregar una persona" data-step="1">+</button>
+            </div>
+            <p class="field__error" id="err-guests" data-error-for="guests" hidden>Indica un número entre 1 y 10.</p>
+          </div>
+
+          <div class="field">
+            <label for="rsvp-msg">Mensaje o buenos deseos para Andrea <span class="field__opt">(Opcional)</span></label>
+            <textarea id="rsvp-msg" name="message" rows="3" maxlength="400" placeholder="¡Escríbele algo bonito!"></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit">
+            <span aria-hidden="true">💌</span> Confirmar por WhatsApp / Enviar
+          </button>
+          <p class="form__status" role="status" data-status hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. FOOTER ================= -->
+  <footer class="footer">
+    <div class="wave wave--top wave--d2" aria-hidden="true">
+      <svg viewBox="0 0 2880 100" preserveAspectRatio="none"><path d="M0,52 C360,88 1080,16 1440,52 C1800,88 2520,16 2880,52 L2880,0 L0,0 Z" fill="#FFDCEB"/></svg>
+    </div>
+    <img class="footer__disco swing" src="assets/sprites/bola-disco.svg" alt="" aria-hidden="true">
+    <div class="wrap reveal">
+      <p class="footer__thanks">¡Gracias por acompañarme en esta noche mágica!</p>
+      <p class="footer__sign">Con todo mi cariño, Andrea.</p>
+      <p class="footer__tags"><span>#LosXVDeAndrea</span> <span>#AndreaXV</span></p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="js/countdown.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/rsvp.js"></script>
+</body>
+</html>

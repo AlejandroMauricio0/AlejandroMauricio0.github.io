@@ -1,0 +1,112 @@
+/* =========================================================
+   Animaciones · XV Años Andrea
+   (solo transform / opacity para que corran en GPU)
+   ========================================================= */
+
+/* Marquesina de la marca de agua: filas en direcciones alternas */
+@keyframes marquee-left  { from { transform: translate3d(0, 0, 0); }    to { transform: translate3d(-50%, 0, 0); } }
+@keyframes marquee-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
+.marquee__row--left  { animation: marquee-left 38s linear infinite; }
+.marquee__row--right { animation: marquee-right 44s linear infinite; }
+
+/* Ondas divisoras: flujo continuo y muy sutil de izquierda a derecha,
+   como papel fino. Lineal (sin aceleraciones) y entre 12 y 15 s por ciclo.
+   La pista recorre exactamente un periodo (-50% → 0), así el bucle no se nota. */
+@keyframes wave-flow {
+  from { transform: translate3d(-50%, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+.wave svg { animation: wave-flow 14s linear infinite; will-change: transform; }
+.wave--d1 svg   { animation-duration: 15s; }
+.wave--d2 svg   { animation-duration: 13s; animation-delay: -5s; }
+.wave--d3 svg   { animation-duration: 12s; animation-delay: -8s; }
+.wave--d4 svg   { animation-duration: 14s; animation-delay: -3s; }
+.wave--slow svg { animation-duration: 15s; animation-delay: -7s; }
+
+/* Bola disco balanceándose desde su hilo */
+@keyframes swing {
+  0%, 100% { transform: rotate(-7deg); }
+  50%      { transform: rotate(7deg); }
+}
+.swing { transform-origin: 50% 0; animation: swing 4.5s ease-in-out infinite; }
+
+/* Destellos */
+@keyframes twinkle {
+  0%, 100% { opacity: .15; transform: scale(.6) rotate(0); }
+  50%      { opacity: .95; transform: scale(1.1) rotate(45deg); }
+}
+.sparkle { animation: twinkle 2.6s ease-in-out infinite; }
+.sparkle--2 { animation-delay: .8s; }
+.sparkle--3 { animation-delay: 1.5s; }
+
+/* Fotos del hero: entrada + giro oscilante continuo
+   (el acercamiento al tocar usa la propiedad `scale`, ver styles.css) */
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes sway {
+  0%, 100% { rotate: -4deg; }
+  50%      { rotate: 4deg; }
+}
+.photo-circle { animation: pop-in .9s var(--ease-bounce) both, sway 7s ease-in-out .9s infinite; }
+.photo-circle--small {
+  animation-delay: .3s, 1.2s;
+  animation-direction: normal, reverse;
+}
+
+/* Entrada del bloque de título */
+@keyframes rise {
+  from { opacity: 0; translate: 0 30px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+.hero__age { animation: rise .7s var(--ease-out) both; }
+.hero__title-line { animation: rise .8s var(--ease-out) both; }
+.hero__title-line:nth-child(2) { animation-delay: .15s; }
+.hero__title-line:nth-child(3) { animation-delay: .3s; }
+
+/* Indicador de scroll */
+@keyframes nudge {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 8px; }
+}
+.hero__scroll { animation: nudge 2s ease-in-out infinite; }
+
+/* Contador: salto del segundero */
+@keyframes bump {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.timer__num.is-bumped { animation: bump .45s var(--ease-bounce); }
+
+/* Menú calendario */
+@keyframes menu-in {
+  from { opacity: 0; translate: 0 -8px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+.calendar__menu:not([hidden]) { animation: menu-in .25s var(--ease-out); }
+
+/* Revelado al hacer scroll (carousel.js añade .js-reveal al <html>) */
+.js-reveal .reveal {
+  opacity: 0;
+  translate: 0 36px;
+  transition: opacity .8s var(--ease-out), translate .8s var(--ease-out);
+}
+.js-reveal .reveal.is-visible { opacity: 1; translate: 0 0; }
+/* Las polaroids conservan su transición de hover */
+.js-reveal .polaroid.reveal {
+  transition: opacity .8s var(--ease-out), translate .8s var(--ease-out),
+              transform .35s var(--ease-bounce), box-shadow .35s;
+}
+
+/* Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .js-reveal .reveal { opacity: 1; translate: none; }
+}

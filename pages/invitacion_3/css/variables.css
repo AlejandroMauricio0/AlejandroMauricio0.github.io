@@ -1,0 +1,57 @@
+/* =========================================================
+   Design tokens · XV Años Andrea
+   ========================================================= */
+
+/* Tipografías de marca: coloca los archivos en assets/fonts/
+   (Lazydog.woff2 / MangoAC.woff2). Si no existen, se usan los
+   respaldos de Google Fonts definidos en las pilas de abajo. */
+@font-face {
+  font-family: 'Lazydog';
+  src: url('../assets/fonts/Lazydog.woff2') format('woff2'),
+       url('../assets/fonts/Lazydog.otf') format('opentype'),
+       url('../assets/fonts/Lazydog.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mango AC';
+  src: url('../assets/fonts/MangoAC.woff2') format('woff2'),
+       url('../assets/fonts/MangoAC.otf') format('opentype'),
+       url('../assets/fonts/MangoAC.ttf') format('truetype');
+  font-display: swap;
+}
+
+:root {
+  /* Colores */
+  --magenta: #BA417E;
+  --magenta-dark: #9A2F66;
+  --rosa: #FFDCEB;
+  --blanco: #FFFFFF;
+  --texto: #2D2D2D;
+  --texto-suave: #6B5A63;
+  --acento: #F8BBD0;
+
+  /* Tipografías */
+  --font-display: 'Lazydog', 'Fredoka', 'Comic Neue', system-ui, sans-serif;
+  --font-watermark: 'Mango AC', 'Titan One', 'Fredoka', system-ui, sans-serif;
+  --font-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* Sombras */
+  --shadow-soft: 0 10px 30px rgba(186, 65, 126, .14);
+  --shadow-card: 0 18px 40px -12px rgba(122, 32, 80, .28);
+  --shadow-photo: 0 20px 45px -12px rgba(60, 0, 30, .5);
+  --shadow-polaroid: 0 12px 26px -8px rgba(45, 45, 45, .32);
+
+  /* Radios y medidas */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+  --photo-border: 8px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --max-w: 1120px;
+
+  /* Movimiento */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
+}
