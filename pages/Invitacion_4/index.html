@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bautizo de Jerónimo</title>
+  <meta name="description" content="Te invitamos a celebrar el Bautizo y el primer año de Jerónimo Pérez.">
+  <meta name="theme-color" content="#F7F6F2">
+  <script>document.documentElement.className += ' js';</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SPRITES BOTÁNICOS (acuarela) — en línea para funcionar en file://
+     ============================================================ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Borde irregular tipo acuarela -->
+    <filter id="acuarela" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="0.35"/>
+    </filter>
+
+    <radialGradient id="g-euc-a" cx="40%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#dfeae1"/><stop offset=".6" stop-color="#a8c3b0"/><stop offset="1" stop-color="#7f9f89"/>
+    </radialGradient>
+    <radialGradient id="g-euc-b" cx="45%" cy="40%" r="72%">
+      <stop offset="0" stop-color="#d6e6e2"/><stop offset=".6" stop-color="#9dbab4"/><stop offset="1" stop-color="#6f8f88"/>
+    </radialGradient>
+    <radialGradient id="g-euc-c" cx="42%" cy="36%" r="72%">
+      <stop offset="0" stop-color="#e7eee6"/><stop offset=".6" stop-color="#b7cbb9"/><stop offset="1" stop-color="#8ea892"/>
+    </radialGradient>
+    <linearGradient id="g-oli-a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b3bf98"/><stop offset="1" stop-color="#6f8460"/>
+    </linearGradient>
+    <linearGradient id="g-oli-b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4c9a2"/><stop offset="1" stop-color="#9a9a6e"/>
+    </linearGradient>
+
+    <!-- Rama de eucalipto (base en 84,318 creciendo hacia arriba) -->
+    <g id="g-euc" filter="url(#acuarela)">
+      <path d="M84 318 C78 250 92 190 84 130 C78 85 82 40 76 6" fill="none" stroke="#7d927f" stroke-width="2.4" stroke-linecap="round"/>
+      <g fill-opacity=".9">
+        <ellipse cx="57"  cy="286" rx="26" ry="23" fill="url(#g-euc-a)"/>
+        <ellipse cx="108" cy="257" rx="25" ry="22" fill="url(#g-euc-b)"/>
+        <ellipse cx="63"  cy="224" rx="23" ry="21" fill="url(#g-euc-c)"/>
+        <ellipse cx="108" cy="190" rx="22" ry="20" fill="url(#g-euc-a)"/>
+        <ellipse cx="64"  cy="157" rx="20" ry="18" fill="url(#g-euc-b)"/>
+        <ellipse cx="100" cy="125" rx="18" ry="16" fill="url(#g-euc-c)"/>
+        <ellipse cx="63"  cy="94"  rx="16" ry="14" fill="url(#g-euc-a)"/>
+        <ellipse cx="94"  cy="66"  rx="13" ry="12" fill="url(#g-euc-b)"/>
+        <ellipse cx="66"  cy="41"  rx="11" ry="10" fill="url(#g-euc-c)"/>
+        <ellipse cx="84"  cy="16"  rx="8"  ry="8"  fill="url(#g-euc-a)"/>
+      </g>
+      <path d="M82 287 L44 284 M85 258 L122 255 M85 225 L48 222 M88 191 L121 188 M84 158 L50 155 M82 126 L111 123 M80 95 L52 92 M80 67 L102 64"
+            stroke="#5f7d68" stroke-width=".8" stroke-opacity=".35" fill="none"/>
+    </g>
+
+    <!-- Rama de olivo (base en 4,60 creciendo hacia la derecha) -->
+    <g id="g-olivo" filter="url(#acuarela)">
+      <path d="M4 60 C70 52 150 40 236 28" stroke="#7b7f5a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <g fill-opacity=".92">
+        <ellipse cx="36"  cy="48"   rx="15" ry="4.2" transform="rotate(-32 36 48)"     fill="url(#g-oli-a)"/>
+        <ellipse cx="62"  cy="44.6" rx="15" ry="4.2" transform="rotate(-32 62 44.6)"   fill="url(#g-oli-b)"/>
+        <ellipse cx="88"  cy="41"   rx="15" ry="4.2" transform="rotate(-32 88 41)"     fill="url(#g-oli-a)"/>
+        <ellipse cx="114" cy="37.5" rx="15" ry="4.2" transform="rotate(-32 114 37.5)"  fill="url(#g-oli-a)"/>
+        <ellipse cx="140" cy="34"   rx="15" ry="4.2" transform="rotate(-32 140 34)"    fill="url(#g-oli-b)"/>
+        <ellipse cx="166" cy="30.3" rx="14" ry="4"   transform="rotate(-32 166 30.3)"  fill="url(#g-oli-a)"/>
+        <ellipse cx="192" cy="26.7" rx="13" ry="3.8" transform="rotate(-32 192 26.7)"  fill="url(#g-oli-a)"/>
+        <ellipse cx="218" cy="23"   rx="12" ry="3.6" transform="rotate(-32 218 23)"    fill="url(#g-oli-b)"/>
+        <ellipse cx="36"  cy="65"   rx="15" ry="4.2" transform="rotate(28 36 65)"      fill="url(#g-oli-b)"/>
+        <ellipse cx="62"  cy="61.6" rx="15" ry="4.2" transform="rotate(28 62 61.6)"    fill="url(#g-oli-a)"/>
+        <ellipse cx="88"  cy="58"   rx="15" ry="4.2" transform="rotate(28 88 58)"      fill="url(#g-oli-a)"/>
+        <ellipse cx="114" cy="54.5" rx="15" ry="4.2" transform="rotate(28 114 54.5)"   fill="url(#g-oli-b)"/>
+        <ellipse cx="140" cy="51"   rx="14" ry="4"   transform="rotate(28 140 51)"     fill="url(#g-oli-a)"/>
+        <ellipse cx="166" cy="47.3" rx="13" ry="3.8" transform="rotate(28 166 47.3)"   fill="url(#g-oli-a)"/>
+        <ellipse cx="192" cy="43.7" rx="12" ry="3.6" transform="rotate(28 192 43.7)"   fill="url(#g-oli-b)"/>
+        <ellipse cx="242" cy="27"   rx="12" ry="3.6" transform="rotate(-8 242 27)"     fill="url(#g-oli-a)"/>
+      </g>
+      <ellipse cx="78"  cy="63" rx="4.6" ry="6"   fill="#586E5C" fill-opacity=".7"/>
+      <ellipse cx="152" cy="50" rx="4.2" ry="5.6" fill="#586E5C" fill-opacity=".6"/>
+    </g>
+
+    <!-- Filigrana dorada -->
+    <g id="g-filigrana" fill="none" stroke="#B38E5D" stroke-width="1.1" stroke-linecap="round" opacity=".6">
+      <path d="M8 8 C44 16 74 38 82 76 C87 98 74 110 62 104 C52 99 56 86 66 88"/>
+      <path d="M8 8 C16 44 38 74 76 82 C98 87 110 74 104 62 C99 52 86 56 88 66"/>
+      <circle cx="120" cy="40" r="2.4" fill="#B38E5D" stroke="none"/>
+      <circle cx="40" cy="120" r="2.4" fill="#B38E5D" stroke="none"/>
+      <circle cx="132" cy="58" r="1.6" fill="#B38E5D" stroke="none"/>
+    </g>
+  </defs>
+
+  <!-- Ramo de esquina (anclado en la esquina superior izquierda) -->
+  <symbol id="s-ramo" viewBox="0 0 300 300">
+    <g transform="translate(14 14)">
+      <use href="#g-filigrana"/>
+      <use href="#g-euc"   transform="rotate(176) scale(.55) translate(-84 -318)"/>
+      <use href="#g-olivo" transform="rotate(62) scale(1.05) translate(-4 -60)"/>
+      <use href="#g-euc"   transform="rotate(144) scale(.85) translate(-84 -318)"/>
+      <use href="#g-olivo" transform="rotate(14) scale(.95) translate(-4 -60)"/>
+      <use href="#g-euc"   transform="rotate(110) scale(.7) translate(-84 -318)"/>
+    </g>
+  </symbol>
+
+  <symbol id="s-olivo" viewBox="0 0 256 90"><use href="#g-olivo"/></symbol>
+  <symbol id="s-ramita" viewBox="0 0 128 45"><use href="#g-olivo" transform="scale(.5)"/></symbol>
+  <symbol id="s-hoja" viewBox="0 0 24 10"><ellipse cx="12" cy="5" rx="11" ry="3.8" fill="url(#g-euc-a)"/></symbol>
+</svg>
+
+<main class="page">
+
+  <!-- ==================== 1. PORTADA ==================== -->
+  <header class="hero" id="inicio">
+    <div class="wash wash--1" aria-hidden="true"></div>
+    <div class="wash wash--2" aria-hidden="true"></div>
+    <div class="wash wash--3" aria-hidden="true"></div>
+
+    <svg class="corner corner--tl" aria-hidden="true"><use href="#s-ramo"/></svg>
+    <svg class="corner corner--tr" aria-hidden="true"><use href="#s-ramo"/></svg>
+
+    <div class="leaves" aria-hidden="true">
+      <svg class="leaf"><use href="#s-hoja"/></svg>
+      <svg class="leaf"><use href="#s-hoja"/></svg>
+      <svg class="leaf"><use href="#s-hoja"/></svg>
+      <svg class="leaf"><use href="#s-hoja"/></svg>
+      <svg class="leaf"><use href="#s-hoja"/></svg>
+    </div>
+
+    <p class="hero__lead hero-in" style="--d:.1s">
+      Te invitamos a celebrar con nosotros el
+      <span>Bautizo y…</span>
+    </p>
+
+    <figure class="portrait hero-in" style="--d:.3s">
+      <div class="portrait__ring">
+        <img src="assets/images/cumpleanero.jpg" alt="Retrato de Jerónimo"
+             onerror="this.onerror=null;this.src='assets/images/cumpleanero.svg'">
+      </div>
+      <svg class="portrait__olive portrait__olive--l" aria-hidden="true"><use href="#s-olivo"/></svg>
+      <svg class="portrait__olive portrait__olive--r" aria-hidden="true"><use href="#s-olivo"/></svg>
+      <figcaption class="seal">
+        <svg class="seal__sprig" aria-hidden="true"><use href="#s-ramita"/></svg>
+        <span class="seal__text">¡Mi Primer<br>Año!</span>
+      </figcaption>
+    </figure>
+
+    <h1 class="name hero-in" style="--d:.55s">Jerónimo Pérez</h1>
+
+    <section class="countdown hero-in" style="--d:.75s" aria-labelledby="cd-title">
+      <p class="countdown__label" id="cd-title">Faltan solo…</p>
+      <div class="countdown__grid" id="countdown" role="timer" aria-live="off">
+        <div class="cd"><span class="cd__num" data-unit="dias">--</span><span class="cd__lbl">Días</span></div>
+        <div class="cd"><span class="cd__num" data-unit="horas">--</span><span class="cd__lbl">Horas</span></div>
+        <div class="cd"><span class="cd__num" data-unit="minutos">--</span><span class="cd__lbl">Minutos</span></div>
+        <div class="cd"><span class="cd__num" data-unit="segundos">--</span><span class="cd__lbl">Segundos</span></div>
+      </div>
+      <p class="countdown__done" id="countdown-done" hidden>¡Hoy es el gran día!</p>
+    </section>
+
+    <a class="scroll-hint" href="#familia" aria-label="Ver más">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <!-- ==================== 2. PAPÁS Y PADRINOS ==================== -->
+  <section class="section family" id="familia" aria-labelledby="familia-title">
+    <p class="eyebrow reveal">Con la bendición de Dios</p>
+    <h2 class="title reveal" id="familia-title">y el amor de</h2>
+
+    <div class="family__grid reveal">
+      <div class="family__col">
+        <h3 class="family__role">Papás</h3>
+        <p class="family__name">Elena Paula</p>
+        <p class="family__name">Ricardo Soto</p>
+      </div>
+
+      <div class="family__cross" aria-hidden="true">
+        <span class="family__line"></span>
+        <svg viewBox="0 0 40 56">
+          <path d="M20 4 V52 M8 18 H32" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+          <path d="M20 4 V52 M8 18 H32" stroke="#fff" stroke-opacity=".35" stroke-width="1" stroke-linecap="round" fill="none" transform="translate(-.6 -.6)"/>
+        </svg>
+        <span class="family__line"></span>
+      </div>
+
+      <div class="family__col">
+        <h3 class="family__role">Padrinos</h3>
+        <p class="family__name">Claudia Álvarez</p>
+        <p class="family__name">Pedro Fernández</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span><svg><use href="#s-ramita"/></svg><span></span></div>
+
+  <!-- ==================== 3. CUÁNDO Y DÓNDE ==================== -->
+  <section class="section details" id="detalles" aria-labelledby="detalles-title">
+    <p class="eyebrow reveal">Cuándo y dónde</p>
+    <h2 class="title reveal" id="detalles-title">El gran día</h2>
+
+    <div class="date-line reveal" aria-label="Sábado 25 de diciembre a las 10:00 AM">
+      <span class="date-line__side">Sábado</span>
+      <span class="date-line__main">
+        <small>Diciembre</small>
+        <strong>25</strong>
+        <small class="date-line__year" data-year>2027</small>
+      </span>
+      <span class="date-line__side">10:00 AM</span>
+    </div>
+
+    <details class="cal reveal">
+      <summary class="btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Agendar en mi calendario
+      </summary>
+      <div class="cal__menu">
+        <a class="btn btn--ghost btn--sm" id="cal-google" href="#" target="_blank" rel="noopener">Google Calendar</a>
+        <button class="btn btn--ghost btn--sm" id="cal-ics" type="button">Apple / Outlook</button>
+      </div>
+    </details>
+
+    <article class="card place reveal">
+      <div class="place__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <h3 class="place__title">Ceremonia y celebración</h3>
+      <p class="place__address" data-address>Calle Cualquiera 123, Cualquier Lugar</p>
+      <div class="place__actions">
+        <a class="btn" id="map-google" href="#" target="_blank" rel="noopener">Ver ubicación en mapa</a>
+        <a class="btn btn--ghost" id="map-waze" href="#" target="_blank" rel="noopener">Abrir en Waze</a>
+      </div>
+    </article>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span><svg><use href="#s-ramita"/></svg><span></span></div>
+
+  <!-- ==================== 4. MENSAJE Y GALERÍA ==================== -->
+  <section class="section memories" id="galeria" aria-labelledby="galeria-title">
+    <blockquote class="message reveal">
+      <p>“Desde el día en que llegaste a nuestras vidas, llenaste nuestro hogar de luz y alegría. Hoy queremos agradecer a Dios por tu vida y celebrar cada momento a tu lado rodeados de las personas que más queremos.”</p>
+      <footer>Papá y Mamá</footer>
+    </blockquote>
+
+    <p class="eyebrow reveal">Momentos especiales</p>
+    <h2 class="title reveal" id="galeria-title">Mi primer año</h2>
+
+    <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carrusel" aria-label="Fotografías de Jerónimo" tabindex="0">
+      <div class="carousel__viewport">
+        <div class="carousel__track">
+          <figure class="slide" aria-roledescription="diapositiva" aria-label="1 de 3">
+            <img src="assets/images/galeria-1.jpg" alt="Jerónimo sonriendo" loading="lazy" draggable="false"
+                 onerror="this.onerror=null;this.src='assets/images/galeria-1.svg'">
+            <figcaption>Tu sonrisa, nuestra mayor alegría</figcaption>
+          </figure>
+          <figure class="slide" aria-roledescription="diapositiva" aria-label="2 de 3">
+            <img src="assets/images/galeria-2.jpg" alt="Jerónimo con su familia en sus primeros meses" loading="lazy" draggable="false"
+                 onerror="this.onerror=null;this.src='assets/images/galeria-2.svg'">
+            <figcaption>Nuestros primeros meses juntos</figcaption>
+          </figure>
+          <figure class="slide" aria-roledescription="diapositiva" aria-label="3 de 3">
+            <img src="assets/images/galeria-3.jpg" alt="Las manitas de Jerónimo" loading="lazy" draggable="false"
+                 onerror="this.onerror=null;this.src='assets/images/galeria-3.svg'">
+            <figcaption>Pequeños detalles, grandes amores</figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Foto siguiente">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="carousel__dots" role="tablist" aria-label="Elegir foto"></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span><svg><use href="#s-ramita"/></svg><span></span></div>
+
+  <!-- ==================== 5. LLUVIA DE SOBRES ==================== -->
+  <section class="section gifts" id="regalos" aria-labelledby="regalos-title">
+    <div class="gifts__icon reveal" aria-hidden="true">
+      <svg viewBox="0 0 48 48">
+        <rect x="7" y="13" width="34" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M8 15l16 12 16-12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M24 31.5c-2.6-1.8-4.2-3.2-4.2-5a2.1 2.1 0 0 1 4.2-.6 2.1 2.1 0 0 1 4.2.6c0 1.8-1.6 3.2-4.2 5z" fill="#B38E5D" fill-opacity=".85"/>
+      </svg>
+    </div>
+    <p class="eyebrow reveal">Mesa de regalos</p>
+    <h2 class="title reveal" id="regalos-title">Lluvia de sobres</h2>
+    <p class="gifts__text reveal">Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle con Jerónimo, contaremos con buzón de lluvia de sobres en el evento.</p>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span><svg><use href="#s-ramita"/></svg><span></span></div>
+
+  <!-- ==================== 6. RSVP ==================== -->
+  <section class="section rsvp" id="rsvp" aria-labelledby="rsvp-title">
+    <p class="eyebrow reveal">RSVP</p>
+    <h2 class="title reveal" id="rsvp-title">Confirma tu asistencia</h2>
+    <p class="rsvp__intro reveal">Por favor confírmanos antes del <strong>10 de Diciembre</strong>.</p>
+
+    <form class="card form reveal" id="rsvp-form" novalidate>
+      <div class="field">
+        <label class="field__label" for="rsvp-name">Nombre completo del invitado o familia</label>
+        <input class="field__input" id="rsvp-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Ej. Familia Martínez López" required>
+        <p class="field__error" id="err-name" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="field">
+        <legend class="field__label">¿Podrás acompañarnos?</legend>
+        <div class="choice">
+          <input type="radio" id="att-yes" name="attending" value="si">
+          <label class="choice__btn" for="att-yes">Sí, allí estaremos</label>
+          <input type="radio" id="att-no" name="attending" value="no">
+          <label class="choice__btn" for="att-no">Lo siento, no podré asistir</label>
+        </div>
+        <p class="field__error" id="err-attending" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="field" id="field-guests">
+        <label class="field__label" for="rsvp-guests">Número de personas que asistirán</label>
+        <div class="select">
+          <select class="field__input" id="rsvp-guests" name="guests">
+            <option value="1">1 persona</option>
+            <option value="2" selected>2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5+">5 o más personas</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="rsvp-msg">Mensaje o buenos deseos para Jerónimo <span>(opcional)</span></label>
+        <textarea class="field__input" id="rsvp-msg" name="message" rows="3" maxlength="300" placeholder="Escribe unas palabras con cariño…"></textarea>
+      </div>
+
+      <button class="btn btn--block" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Enviar Confirmación
+      </button>
+      <p class="form__note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+    </form>
+
+    <div class="card rsvp__done" id="rsvp-done" hidden tabindex="-1">
+      <svg class="rsvp__done-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21" fill="#D9EAE2"/><path d="M15 24.5l6 6 12-13" fill="none" stroke="#586E5C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p class="rsvp__done-title">¡Gracias, <span data-rsvp-name></span>!</p>
+      <p class="rsvp__done-text" data-rsvp-text></p>
+      <button class="btn btn--ghost btn--sm" type="button" id="rsvp-edit">Editar respuesta</button>
+    </div>
+  </section>
+
+  <!-- ==================== 7. CIERRE ==================== -->
+  <footer class="footer" id="cierre">
+    <div class="wash wash--4" aria-hidden="true"></div>
+    <svg class="corner corner--br" aria-hidden="true"><use href="#s-ramo"/></svg>
+
+    <p class="footer__script reveal">¡Te esperamos para compartir este día tan especial!</p>
+    <p class="footer__thanks reveal">Con todo nuestro cariño,<br><strong>Familia Soto Paula</strong></p>
+  </footer>
+</main>
+
+<!-- Botones flotantes -->
+<div class="fab" aria-label="Accesos rápidos">
+  <button class="fab__btn fab__btn--music" id="music-toggle" type="button" aria-pressed="false" aria-label="Reproducir música ambiental">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="currentColor"/><circle cx="16.5" cy="16" r="2.5" fill="currentColor"/></svg>
+  </button>
+  <a class="fab__btn fab__btn--wa" id="wa-help" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.5.8 1.2 1.5 2.1 2 .2.1.4.1.5 0l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.3.3.3.5 0 .5-.2 1.2-.9 1.5-.6.3-1.6.4-3.2-.3a8.4 8.4 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.1-3z" fill="currentColor"/></svg>
+  </a>
+</div>
+
+<script src="js/countdown.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/rsvp.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

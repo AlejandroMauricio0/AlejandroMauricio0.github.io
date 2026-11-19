@@ -1,0 +1,42 @@
+/* ============================================================
+   Invitación 4 · Bautizo y Primer Año de Jerónimo
+   Tokens de diseño: color, tipografía, espaciado y sombras
+   ============================================================ */
+:root {
+  /* Paleta (CLAUDE.md §1) */
+  --paper:      #F7F6F2;   /* fondo principal, papel crema */
+  --mint:       #D9EAE2;   /* acento acuarela verde menta */
+  --sage:       #586E5C;   /* primario: títulos y botones */
+  --ink:        #4A544D;   /* texto de lectura */
+  --gold:       #B38E5D;   /* detalle cálido: cruz y filetes */
+
+  /* Derivados */
+  --sage-dark:  #46594A;
+  --sage-soft:  rgba(88, 110, 92, .18);
+  --sage-line:  rgba(88, 110, 92, .32);
+  --mint-soft:  rgba(217, 234, 226, .55);
+  --gold-soft:  rgba(179, 142, 93, .45);
+  --card:       rgba(255, 255, 255, .62);
+  --bg-outer:   #E9E8E1;
+  --error:      #A5523F;
+
+  /* Tipografía */
+  --font-script: "Great Vibes", "Alex Brush", cursive;
+  --font-serif:  "Cormorant Garamond", "Times New Roman", serif;
+  --font-body:   "Montserrat", "Lato", system-ui, sans-serif;
+
+  /* Layout */
+  --page-w: 680px;
+  --space-section: clamp(56px, 12vw, 88px);
+  --radius: 22px;
+
+  /* Sombras */
+  --shadow-soft: 0 10px 30px -18px rgba(74, 84, 77, .45);
+  --shadow-photo: 0 18px 40px -22px rgba(74, 84, 77, .6);
+  --shadow-page: 0 30px 80px -40px rgba(74, 84, 77, .45), 0 0 0 1px rgba(88, 110, 92, .06);
+
+  /* Textura de papel de algodón (ruido SVG) */
+  --paper-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .4 0 0 0 0 .33 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  color-scheme: light;
+}
