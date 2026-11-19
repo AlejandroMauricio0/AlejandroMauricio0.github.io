@@ -1,0 +1,21 @@
+/* =========================================================
+   3 · CUENTA REGRESIVA
+   ========================================================= */
+.countdown .card { padding: clamp(16px, 3vw, 32px) 6px; }
+.countdown__value {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.countdown__label { display: block; margin-top: 10px; font-size: clamp(9px, 2.2vw, 11px); }
+.countdown__done {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--wax-3);
+}

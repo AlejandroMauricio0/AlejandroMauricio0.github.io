@@ -1,0 +1,30 @@
+/* =========================================================
+   10 · REGALOS
+   ========================================================= */
+.gift-card h3 {
+  margin: 14px 0 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+.gift-card > p { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+.code-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px 12px 12px 16px;
+  border: 1px dashed var(--champagne);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 249, 0.7);
+  text-align: left;
+}
+.code-row dl { margin: 0; min-width: 0; }
+.code-row dt { font-size: 10px; }
+.code-row dd { margin: 2px 0 0; font-weight: 500; letter-spacing: 0.03em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.gift-card .card__actions { margin-top: auto; padding-top: 20px; }
+.bank-details { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s var(--ease-soft); }
+.bank-details[data-open="true"] { grid-template-rows: 1fr; }
+.bank-details > div { overflow: hidden; }

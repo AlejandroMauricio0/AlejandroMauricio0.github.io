@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Valeria & Santiago · Nuestra Boda</title>
+  <meta name="description" content="Invitación a la boda de Valeria y Santiago · 17 de abril de 2027">
+  <meta name="theme-color" content="#F5F0E8">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@400;500&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F5F0E8', paper: '#C5BFA8', champagne: '#C6B49D', sage: '#A9B9A5',
+            rose: '#D9A6A0', ink: '#45413D', muted: '#968A7C', line: '#E5DDD2', wax: '#9E7621'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            label: ['Montserrat', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/envelope.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/countdown.css">
+  <link rel="stylesheet" href="css/people.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/venues.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/dress-code.css">
+  <link rel="stylesheet" href="css/gifts.css">
+  <link rel="stylesheet" href="css/rsvp.css">
+  <link rel="stylesheet" href="css/album.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/reduced-motion.css">
+</head>
+<body class="is-locked">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="sprig" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <path d="M24 44 V8"/>
+          <path d="M24 16 C 18 16, 14 12, 14 8 C 19 8, 24 11, 24 16 Z"/>
+          <path d="M24 16 C 30 16, 34 12, 34 8 C 29 8, 24 11, 24 16 Z"/>
+          <path d="M24 28 C 18 28, 14 24, 14 20 C 19 20, 24 23, 24 28 Z"/>
+          <path d="M24 28 C 30 28, 34 24, 34 20 C 29 20, 24 23, 24 28 Z"/>
+        </g>
+      </symbol>
+      <symbol id="twine" viewBox="0 0 240 22" preserveAspectRatio="none">
+        <g fill="none">
+          <path d="M0 7 H240" stroke="#8F7249" stroke-width="4.4"/>
+          <path d="M0 7 H240" stroke="#C7AA7E" stroke-width="4.4" stroke-dasharray="3 2.2"/>
+          <path d="M0 5.7 H240" stroke="#E6D3AE" stroke-width="0.9" stroke-dasharray="2 3.2" stroke-dashoffset="1" opacity="0.85"/>
+          <path d="M0 15 H240" stroke="#8F7249" stroke-width="4.4"/>
+          <path d="M0 15 H240" stroke="#C7AA7E" stroke-width="4.4" stroke-dasharray="3 2.2" stroke-dashoffset="1.3"/>
+          <path d="M0 13.7 H240" stroke="#E6D3AE" stroke-width="0.9" stroke-dasharray="2 3.2" stroke-dashoffset="2.2" opacity="0.85"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- =========================================================
+       1 · ESCENA INICIAL: SOBRE GATEFOLD
+       ========================================================= -->
+  <section class="scene" id="envelope-scene" data-state="closed" aria-label="Sobre de la invitación">
+    <div class="envelope">
+
+      <div class="envelope__inner" id="envelope-inner" inert>
+        <span class="label">Estás invitado a</span>
+        <span class="envelope__script">Nuestra Boda</span>
+        <p class="envelope__names">Valeria <em>&amp;</em> Santiago</p>
+        <span class="label">17 · 04 · 2027</span>
+        <a class="btn btn--primary btn--sm" href="#hero" id="enter-btn">Ver invitación <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="flap flap--left" aria-hidden="true">
+        <div class="flap__face flap__face--front"></div>
+        <div class="flap__face flap__face--back"></div>
+      </div>
+      <div class="flap flap--right" aria-hidden="true">
+        <div class="flap__face flap__face--front"></div>
+        <div class="flap__face flap__face--back"></div>
+      </div>
+
+      <div class="twine" aria-hidden="true">
+        <div class="twine__half twine__half--left"><svg><use href="#twine"/></svg></div>
+        <div class="twine__half twine__half--right"><svg><use href="#twine"/></svg></div>
+      </div>
+
+      <div class="seal-wrap">
+        <svg class="seal-bow" viewBox="0 0 200 120" aria-hidden="true">
+          <g fill="none" stroke-linecap="round">
+            <g stroke="#9C7E55" stroke-width="4.2">
+              <path d="M100 60 C 82 28, 40 26, 42 50 C 44 72, 80 68, 100 60"/>
+              <path d="M100 60 C 118 28, 160 26, 158 50 C 156 72, 120 68, 100 60"/>
+              <path d="M100 60 C 92 80, 84 96, 70 116"/>
+              <path d="M100 60 C 108 80, 118 96, 132 114"/>
+            </g>
+            <g stroke="#C7AA7E" stroke-width="4.2" stroke-dasharray="3 2.2">
+              <path d="M100 60 C 82 28, 40 26, 42 50 C 44 72, 80 68, 100 60"/>
+              <path d="M100 60 C 118 28, 160 26, 158 50 C 156 72, 120 68, 100 60"/>
+              <path d="M100 60 C 92 80, 84 96, 70 116"/>
+              <path d="M100 60 C 108 80, 118 96, 132 114"/>
+            </g>
+          </g>
+        </svg>
+        <svg class="bouquet" id="bouquet" viewBox="0 0 190 160" aria-hidden="true"></svg>
+
+        <button type="button" class="wax-seal" id="wax-seal" aria-controls="envelope-inner" aria-expanded="false"
+                aria-label="Romper el sello de lacre y abrir la invitación">
+          <svg viewBox="0 0 140 140" aria-hidden="true">
+            <defs>
+              <radialGradient id="wax-body" cx="36%" cy="30%" r="76%">
+                <stop offset="0%" stop-color="#E5C158"/>
+                <stop offset="34%" stop-color="#C89D3C"/>
+                <stop offset="72%" stop-color="#9E7621"/>
+                <stop offset="100%" stop-color="#6E4E0F"/>
+              </radialGradient>
+              <radialGradient id="wax-stamp" cx="60%" cy="64%" r="72%">
+                <stop offset="0%" stop-color="#C89D3C"/>
+                <stop offset="62%" stop-color="#A9802A"/>
+                <stop offset="100%" stop-color="#86621A"/>
+              </radialGradient>
+              <filter id="wax-organic" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="11" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" result="shape"/>
+                <feGaussianBlur in="shape" stdDeviation="2.6" result="bump"/>
+                <feSpecularLighting in="bump" surfaceScale="5" specularConstant="0.85" specularExponent="24" lighting-color="#FFF3D1" result="spec">
+                  <fePointLight x="34" y="22" z="110"/>
+                </feSpecularLighting>
+                <feComposite in="spec" in2="shape" operator="in" result="specClip"/>
+                <feComposite in="shape" in2="specClip" operator="arithmetic" k1="0" k2="1" k3="0.7" k4="0"/>
+              </filter>
+              <filter id="wax-sunken" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+                <feComponentTransfer in="SourceAlpha" result="inverse"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+                <feGaussianBlur in="inverse" stdDeviation="2.2" result="blurInv"/>
+                <feOffset in="blurInv" dx="2.4" dy="3" result="darkOff"/>
+                <feFlood flood-color="#3F2A05" flood-opacity="0.75"/>
+                <feComposite in2="darkOff" operator="in"/>
+                <feComposite in2="SourceAlpha" operator="in" result="innerDark"/>
+                <feOffset in="blurInv" dx="-1.8" dy="-2.2" result="lightOff"/>
+                <feFlood flood-color="#FFE7A8" flood-opacity="0.55"/>
+                <feComposite in2="lightOff" operator="in"/>
+                <feComposite in2="SourceAlpha" operator="in" result="innerLight"/>
+                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="innerDark"/><feMergeNode in="innerLight"/></feMerge>
+              </filter>
+              <filter id="wax-engrave" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+                <feComponentTransfer in="SourceAlpha" result="inverse"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+                <feGaussianBlur in="inverse" stdDeviation="0.7" result="blurInv"/>
+                <feOffset in="blurInv" dx="1" dy="1.2" result="darkOff"/>
+                <feFlood flood-color="#3A2604" flood-opacity="0.85"/>
+                <feComposite in2="darkOff" operator="in"/>
+                <feComposite in2="SourceAlpha" operator="in" result="innerDark"/>
+                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="innerDark"/></feMerge>
+              </filter>
+              <filter id="wax-soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.6"/></filter>
+            </defs>
+
+            <g filter="url(#wax-organic)">
+              <circle cx="70" cy="70" r="57" fill="url(#wax-body)"/>
+              <ellipse cx="121" cy="86" rx="10" ry="8" fill="url(#wax-body)"/>
+              <ellipse cx="26" cy="104" rx="9" ry="7" fill="url(#wax-body)"/>
+              <ellipse cx="88" cy="124" rx="11" ry="6" fill="url(#wax-body)"/>
+              <ellipse cx="40" cy="22" rx="8" ry="6" fill="url(#wax-body)"/>
+            </g>
+            <circle cx="70" cy="70" r="40" fill="url(#wax-stamp)" filter="url(#wax-sunken)"/>
+            <circle cx="70" cy="70" r="40.5" fill="none" stroke="#F0D58C" stroke-opacity="0.45" stroke-width="1"/>
+            <circle cx="70" cy="70" r="34" fill="none" stroke="#5E4209" stroke-opacity="0.35" stroke-width="0.8" stroke-dasharray="1.4 2.6"/>
+            <g filter="url(#wax-engrave)" fill="#9A7424">
+              <text x="70" y="79" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="500">V<tspan font-style="italic" font-weight="400" font-size="20" dx="1" dy="-3">&amp;</tspan><tspan dx="1" dy="3">S</tspan></text>
+            </g>
+            <path d="M34 40 C 42 27, 56 20, 70 19" fill="none" stroke="#FFF6DC" stroke-opacity="0.55" stroke-width="3.5" stroke-linecap="round" filter="url(#wax-soft)"/>
+          </svg>
+          <span class="seal-glint" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <p class="envelope__hint">Toca el sello para abrir</p>
+    </div>
+
+    <a class="scroll-cue label" href="#hero" id="scroll-cue" tabindex="-1">
+      Desliza
+      <i data-lucide="chevron-down" aria-hidden="true"></i>
+    </a>
+    <p class="sr-only" id="envelope-status" aria-live="polite"></p>
+  </section>
+
+  <!-- =========================================================
+       INVITACIÓN
+       ========================================================= -->
+  <div id="invitation" inert>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="monogram-mark" href="#envelope-scene" aria-label="Volver al inicio">V<em>&amp;</em>S</a>
+        <a class="btn btn--outline btn--sm" href="#rsvp">Confirmar</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2 · Hero -->
+      <section class="section" id="hero" aria-labelledby="hero-title">
+        <div class="wrap hero__grid">
+          <figure class="hero__figure reveal" style="margin:0 auto">
+            <div class="hero__photo photo-frame">
+              <img src="https://picsum.photos/seed/eventia-novios/880/1100" alt="Retrato de Valeria y Santiago" width="880" height="1100">
+            </div>
+            <span class="hero__sprig hero__sprig--a" aria-hidden="true"></span>
+            <span class="hero__sprig hero__sprig--b" aria-hidden="true"></span>
+          </figure>
+
+          <div class="hero__text">
+            <p class="label reveal">Nos casamos</p>
+            <h1 class="hero__names reveal" id="hero-title" style="--delay:.08s">Valeria <em>y</em> Santiago</h1>
+            <div class="hero__date reveal" style="--delay:.14s">
+              <span>Sábado</span>
+              <span>17 de abril de 2027</span>
+              <span>17:00 hrs</span>
+            </div>
+            <blockquote class="quote reveal" style="--delay:.2s">
+              <p>Hay momentos que se viven una sola vez y personas con quienes queremos compartirlos. Gracias por ser parte de nuestra historia; su compañía hará de este día algo inolvidable.</p>
+              <cite class="label">— Valeria &amp; Santiago</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · Cuenta regresiva -->
+      <section class="section section--tint" aria-labelledby="countdown-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Falta muy poco</span>
+            <h2 id="countdown-title">Cuenta <em>regresiva</em></h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--4 countdown" id="countdown" data-target="2027-04-17T17:00:00-06:00" role="timer" aria-live="off">
+            <div class="card card--center reveal"><span class="countdown__value" data-unit="days">000</span><span class="countdown__label label">Días</span></div>
+            <div class="card card--center reveal" style="--delay:.05s"><span class="countdown__value" data-unit="hours">00</span><span class="countdown__label label">Horas</span></div>
+            <div class="card card--center reveal" style="--delay:.1s"><span class="countdown__value" data-unit="minutes">00</span><span class="countdown__label label">Minutos</span></div>
+            <div class="card card--center reveal" style="--delay:.15s"><span class="countdown__value" data-unit="seconds">00</span><span class="countdown__label label">Segundos</span></div>
+          </div>
+          <p class="sr-only" id="countdown-sr" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <!-- 4 · Padres -->
+      <section class="section" aria-labelledby="parents-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Nuestros padres</span>
+            <h2 id="parents-title">Con la bendición de Dios <em>y de nuestros padres</em></h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--2">
+            <article class="card card--center card--ornate parent-card reveal">
+              <span class="icon-ring"><i data-lucide="heart" aria-hidden="true"></i></span>
+              <h3>Padres de la novia</h3>
+              <p>Roberto Hernández Ruiz</p>
+              <p class="amp">y</p>
+              <p style="margin-top:0">María Elena Castillo Vega</p>
+            </article>
+            <article class="card card--center card--ornate parent-card reveal" style="--delay:.08s">
+              <span class="icon-ring"><i data-lucide="heart" aria-hidden="true"></i></span>
+              <h3>Padres del novio</h3>
+              <p>Fernando Morales Ortiz</p>
+              <p class="amp">y</p>
+              <p style="margin-top:0">Laura Patricia Navarro Gil</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · Padrinos -->
+      <section class="section section--tint" aria-labelledby="sponsors-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Cortejo de honor</span>
+            <h2 id="sponsors-title">Padrinos <em>especiales</em></h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--2-sm grid--3">
+            <article class="card card--center role-card reveal"><span class="icon-ring"><i data-lucide="flame" aria-hidden="true"></i></span><h3>Padrinos de velación</h3><p>Jorge Ramírez &amp; Ana Lucía Torres</p></article>
+            <article class="card card--center role-card reveal" style="--delay:.05s"><span class="icon-ring"><i data-lucide="gem" aria-hidden="true"></i></span><h3>Padrinos de anillos</h3><p>Miguel Ángel Soto &amp; Daniela Ríos</p></article>
+            <article class="card card--center role-card reveal" style="--delay:.1s"><span class="icon-ring"><i data-lucide="infinity" aria-hidden="true"></i></span><h3>Padrinos de lazo</h3><p>Ricardo Flores &amp; Paola Mendoza</p></article>
+            <article class="card card--center role-card reveal"><span class="icon-ring"><i data-lucide="coins" aria-hidden="true"></i></span><h3>Padrinos de arras</h3><p>Héctor Guzmán &amp; Sofía Aguilar</p></article>
+            <article class="card card--center role-card reveal" style="--delay:.05s"><span class="icon-ring"><i data-lucide="flower-2" aria-hidden="true"></i></span><h3>Madrina de ramo</h3><p>Mariana Delgado Peña</p></article>
+            <article class="card card--center role-card reveal" style="--delay:.1s"><span class="icon-ring"><i data-lucide="cake" aria-hidden="true"></i></span><h3>Padrinos de pastel</h3><p>Andrés Vargas &amp; Regina Luna</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · Carrusel -->
+      <section class="section" aria-labelledby="gallery-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Momentos</span>
+            <h2 id="gallery-title">Nuestra <em>historia</em></h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+
+          <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carrusel" aria-label="Galería de fotos de la pareja" tabindex="0">
+            <div class="carousel__viewport" id="carousel-viewport">
+              <div class="carousel__track" id="carousel-track">
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 1"><img src="https://picsum.photos/seed/eventia-g1/800/1000" alt="Valeria y Santiago caminando juntos" loading="lazy" width="800" height="1000"></button></figure>
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 2"><img src="https://picsum.photos/seed/eventia-g2/800/1000" alt="La pareja durante la sesión de compromiso" loading="lazy" width="800" height="1000"></button></figure>
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 3"><img src="https://picsum.photos/seed/eventia-g3/800/1000" alt="Detalle del anillo de compromiso" loading="lazy" width="800" height="1000"></button></figure>
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 4"><img src="https://picsum.photos/seed/eventia-g4/800/1000" alt="Valeria y Santiago al atardecer" loading="lazy" width="800" height="1000"></button></figure>
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 5"><img src="https://picsum.photos/seed/eventia-g5/800/1000" alt="La pareja riendo en el campo" loading="lazy" width="800" height="1000"></button></figure>
+                <figure class="carousel__slide photo-frame"><button type="button" aria-label="Ampliar foto 6"><img src="https://picsum.photos/seed/eventia-g6/800/1000" alt="Valeria y Santiago tomados de la mano" loading="lazy" width="800" height="1000"></button></figure>
+              </div>
+            </div>
+            <div class="carousel__controls">
+              <button type="button" class="icon-btn" id="carousel-prev" aria-label="Foto anterior"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+              <div class="carousel__dots" id="carousel-dots" role="group" aria-label="Seleccionar posición"></div>
+              <button type="button" class="icon-btn" id="carousel-next" aria-label="Foto siguiente"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <p class="sr-only" id="carousel-status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · Ubicaciones -->
+      <section class="section section--tint" aria-labelledby="venues-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Dónde</span>
+            <h2 id="venues-title">Ceremonia <em>y</em> recepción</h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--2">
+            <article class="card venue reveal">
+              <div class="venue__photo photo-frame"><img src="https://picsum.photos/seed/eventia-iglesia/960/600" alt="Fachada de la Parroquia de San Juan Bautista" loading="lazy" width="960" height="600"></div>
+              <div class="venue__body">
+                <div class="venue__top">
+                  <span class="label">Ceremonia religiosa</span>
+                  <span class="venue__time"><i data-lucide="clock" aria-hidden="true"></i>17:00 hrs</span>
+                </div>
+                <h3>Parroquia de San Juan Bautista</h3>
+                <dl class="venue__info">
+                  <div><dt><i data-lucide="map-pin" aria-hidden="true"></i><span class="sr-only">Dirección</span></dt><dd>Jardín Hidalgo 1, Coyoacán, 04000, Ciudad de México</dd></div>
+                  <div><dt><i data-lucide="info" aria-hidden="true"></i><span class="sr-only">Referencia</span></dt><dd>Frente al Jardín Centenario, a un costado de la Casa de Cortés.</dd></div>
+                </dl>
+                <div class="venue__actions">
+                  <a class="btn btn--primary btn--sm" href="https://maps.google.com/?q=Parroquia+de+San+Juan+Bautista+Coyoacan+CDMX" target="_blank" rel="noopener"><i data-lucide="map" aria-hidden="true"></i>Maps</a>
+                  <a class="btn btn--outline btn--sm" href="https://waze.com/ul?q=Parroquia%20de%20San%20Juan%20Bautista%20Coyoacan&amp;navigate=yes" target="_blank" rel="noopener"><i data-lucide="navigation" aria-hidden="true"></i>Waze</a>
+                </div>
+              </div>
+            </article>
+            <article class="card venue reveal" style="--delay:.08s">
+              <div class="venue__photo photo-frame"><img src="https://picsum.photos/seed/eventia-hacienda/960/600" alt="Jardines de la Hacienda Los Laureles" loading="lazy" width="960" height="600"></div>
+              <div class="venue__body">
+                <div class="venue__top">
+                  <span class="label">Convivio · Recepción</span>
+                  <span class="venue__time"><i data-lucide="clock" aria-hidden="true"></i>18:30 hrs</span>
+                </div>
+                <h3>Hacienda Los Laureles</h3>
+                <dl class="venue__info">
+                  <div><dt><i data-lucide="map-pin" aria-hidden="true"></i><span class="sr-only">Dirección</span></dt><dd>Camino Real a Tlalpan 245, Tlalpan, 14000, Ciudad de México</dd></div>
+                  <div><dt><i data-lucide="info" aria-hidden="true"></i><span class="sr-only">Referencia</span></dt><dd>Estacionamiento con valet en el acceso principal.</dd></div>
+                </dl>
+                <div class="venue__actions">
+                  <a class="btn btn--primary btn--sm" href="https://maps.google.com/?q=Tlalpan+Ciudad+de+Mexico" target="_blank" rel="noopener"><i data-lucide="map" aria-hidden="true"></i>Maps</a>
+                  <a class="btn btn--outline btn--sm" href="https://waze.com/ul?q=Tlalpan%20Ciudad%20de%20Mexico&amp;navigate=yes" target="_blank" rel="noopener"><i data-lucide="navigation" aria-hidden="true"></i>Waze</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · Itinerario -->
+      <section class="section" aria-labelledby="timeline-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">El gran día</span>
+            <h2 id="timeline-title">Itinerario</h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <ol class="timeline">
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="church" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">17:00 hrs</span><span class="timeline__title">Ceremonia</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="martini" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">18:30 hrs</span><span class="timeline__title">Cóctel de bienvenida</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="door-open" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">19:30 hrs</span><span class="timeline__title">Recepción</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="utensils" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">20:00 hrs</span><span class="timeline__title">Cena</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="heart" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">21:30 hrs</span><span class="timeline__title">Primer baile</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="wine" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">21:45 hrs</span><span class="timeline__title">Brindis</span></div></li>
+            <li class="timeline__item reveal"><span class="timeline__node"><i data-lucide="music" aria-hidden="true"></i></span><div class="card timeline__card"><span class="timeline__time">22:00 hrs</span><span class="timeline__title">Fiesta</span></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 9 · Dress code -->
+      <section class="section section--tint" aria-labelledby="dress-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Dress code · Etiqueta formal</span>
+            <h2 id="dress-title">Código de <em>vestimenta</em></h2>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--2">
+            <article class="card card--center card--ornate dress-card reveal">
+              <svg class="dress-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 4 L19 10 M29 4 L29 10"/>
+                <path d="M19 10 C19 14 21 16 24 16 C27 16 29 14 29 10"/>
+                <path d="M19 10 L17 20 L20 22 L18 26 L30 26 L28 22 L31 20 L29 10"/>
+                <path d="M18 26 C14 32 11 38 9 44 H39 C37 38 34 32 30 26"/>
+              </svg>
+              <h3>Ellas</h3>
+              <span class="label dress-tag">Vestido largo · Formal</span>
+              <p>Vestido largo de noche. Con cariño, reservamos el blanco y marfil para la novia.</p>
+              <div class="swatches" role="list" aria-label="Paleta sugerida para ellas">
+                <span class="swatch" role="listitem" style="background:#A9B9A5" aria-label="Verde salvia"></span>
+                <span class="swatch" role="listitem" style="background:#D9A6A0" aria-label="Rosa empolvado"></span>
+                <span class="swatch" role="listitem" style="background:#7C8B9A" aria-label="Azul pizarra"></span>
+                <span class="swatch" role="listitem" style="background:#8C6F5A" aria-label="Terracota suave"></span>
+                <span class="swatch swatch--avoid" role="listitem" style="background:#FFFFFF" aria-label="Blanco, reservado para la novia"></span>
+                <span class="swatch swatch--avoid" role="listitem" style="background:#F3EBDD" aria-label="Marfil, reservado para la novia"></span>
+              </div>
+              <span class="swatch-legend">Los tonos tachados quedan reservados para la novia.</span>
+            </article>
+            <article class="card card--center card--ornate dress-card reveal" style="--delay:.08s">
+              <svg class="dress-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 6 L24 12 L31 6"/>
+                <path d="M17 6 C12 7 8 9 7 12 L5 42 H20 L24 14 L28 42 H43 L41 12 C40 9 36 7 31 6"/>
+                <path d="M24 12 L21.5 15 L24 29 L26.5 15 Z"/>
+                <path d="M20 42 L17 20 M28 42 L31 20"/>
+              </svg>
+              <h3>Ellos</h3>
+              <span class="label dress-tag">Traje formal · Smoking</span>
+              <p>Traje oscuro o smoking, camisa blanca y corbata o moño.</p>
+              <div class="swatches" role="list" aria-label="Tonos sugeridos para ellos">
+                <span class="swatch" role="listitem" style="background:#2E2B29" aria-label="Negro"></span>
+                <span class="swatch" role="listitem" style="background:#2F3A4A" aria-label="Azul marino"></span>
+                <span class="swatch" role="listitem" style="background:#55524E" aria-label="Gris carbón"></span>
+                <span class="swatch" role="listitem" style="background:#6B5B4E" aria-label="Café moca"></span>
+              </div>
+              <span class="swatch-legend">Tonos oscuros y sobrios.</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 · Mesa de regalos -->
+      <section class="section" aria-labelledby="gifts-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Detalles</span>
+            <h2 id="gifts-title">Mesa de <em>regalos</em></h2>
+            <p>Su presencia es nuestro mejor regalo. Si desean tener un detalle con nosotros, aquí les compartimos algunas opciones.</p>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+          <div class="grid grid--3">
+            <article class="card gift-card reveal">
+              <span class="icon-ring icon-ring--wax"><i data-lucide="mail" aria-hidden="true"></i></span>
+              <h3>Lluvia de sobres</h3>
+              <p>Habrá un buzón en la recepción. Si lo prefieres, también puedes hacer una transferencia.</p>
+              <div class="bank-details" id="bank-details" data-open="false">
+                <div>
+                  <div class="code-row"><dl><dt class="label">Titular · BBVA</dt><dd>Valeria Hernández Castillo</dd></dl></div>
+                  <div class="code-row">
+                    <dl><dt class="label">CLABE</dt><dd id="bank-clabe">012 180 01234567890 1</dd></dl>
+                    <button type="button" class="btn btn--ghost" data-copy-target="bank-clabe" aria-label="Copiar CLABE"><i data-lucide="copy" aria-hidden="true"></i>Copiar</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card__actions">
+                <button type="button" class="btn btn--outline btn--block" id="bank-toggle" aria-expanded="false" aria-controls="bank-details"><i data-lucide="eye" aria-hidden="true"></i><span>Ver datos bancarios</span></button>
+              </div>
+            </article>
+            <article class="card gift-card reveal" style="--delay:.06s">
+              <span class="icon-ring icon-ring--wax"><i data-lucide="gift" aria-hidden="true"></i></span>
+              <h3>Liverpool</h3>
+              <p>Mesa de regalos en tienda departamental.</p>
+              <div class="code-row">
+                <dl><dt class="label">Número de evento</dt><dd id="gift-liverpool">51234567</dd></dl>
+                <button type="button" class="btn btn--ghost" data-copy-target="gift-liverpool" aria-label="Copiar número de evento de Liverpool"><i data-lucide="copy" aria-hidden="true"></i>Copiar</button>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--outline btn--block" href="https://mesaderegalos.liverpool.com.mx/" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i>Ir a la mesa</a>
+              </div>
+            </article>
+            <article class="card gift-card reveal" style="--delay:.12s">
+              <span class="icon-ring icon-ring--wax"><i data-lucide="shopping-bag" aria-hidden="true"></i></span>
+              <h3>Mesa digital</h3>
+              <p>Lista de regalos en línea con envío a domicilio.</p>
+              <div class="code-row">
+                <dl><dt class="label">Código de lista</dt><dd id="gift-digital">VS-2027-BODA</dd></dl>
+                <button type="button" class="btn btn--ghost" data-copy-target="gift-digital" aria-label="Copiar código de la mesa digital"><i data-lucide="copy" aria-hidden="true"></i>Copiar</button>
+              </div>
+              <div class="card__actions">
+                <a class="btn btn--outline btn--block" href="https://www.amazon.com.mx/wedding" target="_blank" rel="noopener"><i data-lucide="external-link" aria-hidden="true"></i>Ver lista</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · RSVP -->
+      <section class="section section--tint" id="rsvp" aria-labelledby="rsvp-title">
+        <div class="wrap--narrow">
+          <div class="section-head reveal">
+            <span class="label">Confirma tu asistencia</span>
+            <h2 id="rsvp-title">¿Nos <em>acompañas?</em></h2>
+            <p>Te agradeceremos confirmar antes del 15 de marzo de 2027.</p>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+
+          <div id="rsvp-container" class="reveal">
+            <form class="card rsvp-card rsvp-form" id="rsvp-form" novalidate>
+              <div class="field-row">
+                <div class="field">
+                  <label class="label" for="rsvp-name">Nombre completo</label>
+                  <input class="input" id="rsvp-name" name="name" type="text" autocomplete="name" placeholder="Ej. Ana López Martínez" required minlength="3" aria-describedby="rsvp-name-error">
+                  <p class="field-error" id="rsvp-name-error" aria-live="polite"></p>
+                </div>
+                <div class="field" id="rsvp-guests-field">
+                  <label class="label" for="rsvp-guests">Número de pases</label>
+                  <select class="input" id="rsvp-guests" name="guests">
+                    <option value="1">1 pase</option>
+                    <option value="2" selected>2 pases</option>
+                    <option value="3">3 pases</option>
+                    <option value="4">4 pases</option>
+                    <option value="5">5 pases</option>
+                  </select>
+                </div>
+              </div>
+
+              <fieldset class="field">
+                <legend class="label">Asistencia</legend>
+                <div class="choice-group">
+                  <label class="choice">
+                    <input type="radio" name="attendance" value="yes" required aria-describedby="rsvp-attendance-error">
+                    <span><i data-lucide="circle-check" aria-hidden="true"></i>Asistiré con mucho gusto</span>
+                  </label>
+                  <label class="choice choice--decline">
+                    <input type="radio" name="attendance" value="no" aria-describedby="rsvp-attendance-error">
+                    <span><i data-lucide="circle-x" aria-hidden="true"></i>No podré asistir</span>
+                  </label>
+                </div>
+                <p class="field-error" id="rsvp-attendance-error" aria-live="polite"></p>
+              </fieldset>
+
+              <div class="field">
+                <label class="label" for="rsvp-message">Mensaje para los novios · opcional</label>
+                <textarea class="input" id="rsvp-message" name="message" maxlength="400" placeholder="Tus buenos deseos o restricciones alimenticias"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--block"><i data-lucide="send" aria-hidden="true"></i>Enviar confirmación</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 · Álbum colaborativo -->
+      <section class="section" aria-labelledby="album-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="label">Comparte el momento</span>
+            <h2 id="album-title">Álbum <em>colaborativo</em></h2>
+            <p>Captura instantes durante la boda o sube tus recuerdos favoritos; aparecerán al instante en el muro.</p>
+            <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          </div>
+
+          <div class="album-actions reveal">
+            <button type="button" class="btn btn--primary" id="camera-open"><i data-lucide="camera" aria-hidden="true"></i>Abrir cámara</button>
+            <label class="btn btn--outline file-btn">
+              <i data-lucide="image-plus" aria-hidden="true"></i>Subir desde galería
+              <input type="file" id="album-upload" accept="image/*" multiple aria-label="Subir fotos desde la galería">
+            </label>
+            <input type="file" id="album-camera-fallback" accept="image/*" capture="environment" class="sr-only" tabindex="-1" aria-hidden="true">
+          </div>
+          <p class="album-status" id="album-status" aria-live="polite"></p>
+          <div class="album-grid" id="album-grid" aria-label="Muro de fotos del evento"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 13 · Footer -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="monogram reveal" aria-hidden="true">V<em>&amp;</em>S</div>
+        <p class="footer__message reveal">¡Los esperamos para celebrar juntos este día inolvidable!</p>
+        <p class="footer__names reveal">Valeria <em>&amp;</em> Santiago</p>
+        <p class="label reveal">Sábado 17 · Abril · 2027</p>
+        <div class="ornament" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+        <p class="label footer__credit">Hecho con amor · Eventia</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Vista ampliada de la foto">
+    <button type="button" class="icon-btn lightbox__close" id="lightbox-close" aria-label="Cerrar"><i data-lucide="x" aria-hidden="true"></i></button>
+    <button type="button" class="icon-btn lightbox__prev" id="lightbox-prev" aria-label="Foto anterior"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" src="data:," alt="">
+      <figcaption class="lightbox__caption label" id="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="icon-btn lightbox__next" id="lightbox-next" aria-label="Foto siguiente"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+  </dialog>
+
+  <!-- Cámara en vivo -->
+  <dialog class="camera" id="camera" aria-labelledby="camera-title">
+    <h2 class="sr-only" id="camera-title">Cámara del álbum</h2>
+    <div class="camera__frame">
+      <video id="camera-video" playsinline muted autoplay></video>
+      <span class="camera__flash" id="camera-flash" aria-hidden="true"></span>
+      <p class="camera__status" id="camera-status" aria-live="polite"></p>
+    </div>
+    <div class="camera__bar">
+      <button type="button" class="icon-btn" id="camera-close" aria-label="Cerrar cámara"><i data-lucide="x" aria-hidden="true"></i></button>
+      <button type="button" class="camera__shutter" id="camera-shutter" aria-label="Tomar foto" disabled><span></span></button>
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="camera__count" id="camera-count" aria-live="polite"></span>
+        <button type="button" class="icon-btn" id="camera-switch" aria-label="Cambiar entre cámara frontal y trasera" hidden><i data-lucide="switch-camera" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <template id="tpl-pass">
+    <div class="rsvp-result">
+      <article class="pass" aria-label="Pase de acceso digital">
+        <div class="pass__top">
+          <span class="label">Pase de acceso</span>
+          <p class="pass__names">Valeria <em>&amp;</em> Santiago</p>
+          <span class="label">17 · Abril · 2027 · 17:00 hrs</span>
+        </div>
+        <div class="pass__cut" aria-hidden="true"></div>
+        <div class="pass__body">
+          <div class="pass__qr" data-qr role="img" aria-label="Código QR del pase"></div>
+          <dl class="pass__details">
+            <div><dt class="label">Invitado</dt><dd data-field="name"></dd></div>
+            <div><dt class="label">Lugares</dt><dd data-field="guests"></dd></div>
+            <div><dt class="label">Folio</dt><dd class="mono" data-field="folio"></dd></div>
+          </dl>
+        </div>
+      </article>
+      <div class="result-actions">
+        <button type="button" class="btn btn--primary" data-action="download"><i data-lucide="download" aria-hidden="true"></i>Descargar pase</button>
+        <button type="button" class="btn btn--outline" data-action="reset"><i data-lucide="pencil" aria-hidden="true"></i>Modificar respuesta</button>
+      </div>
+      <p class="result-note">Presenta este código en la entrada de la recepción.</p>
+    </div>
+  </template>
+
+  <template id="tpl-decline">
+    <div class="rsvp-result">
+      <article class="decline-card">
+        <span class="icon-ring"><i data-lucide="heart" aria-hidden="true"></i></span>
+        <h3 data-field="title"></h3>
+        <p>Lamentamos mucho que no puedas acompañarnos en este día tan especial. Gracias de corazón por tu respuesta y tus buenos deseos; te llevaremos en nuestros pensamientos.</p>
+        <p class="label" style="margin-top:20px;font-style:normal;font-family:var(--font-label);font-size:11px">Con cariño, Valeria &amp; Santiago</p>
+      </article>
+      <div class="result-actions">
+        <button type="button" class="btn btn--outline" data-action="reset"><i data-lucide="pencil" aria-hidden="true"></i>Modificar respuesta</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/envelope.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/gifts.js"></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/album.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

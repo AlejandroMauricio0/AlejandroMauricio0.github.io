@@ -1,0 +1,24 @@
+/* =========================================================
+   Movimiento reducido
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .envelope { animation: none; }
+  .scene[data-state] .seal-wrap,
+  .scene[data-state] .twine__half--left,
+  .scene[data-state] .twine__half--right,
+  .scene[data-state] .flap--left,
+  .scene[data-state] .flap--right,
+  .scene[data-state] .flap__face--front::after { animation: none; }
+  .scene .seal-wrap, .scene .twine, .scene .flap { transition: opacity 0.4s linear; }
+  .scene[data-state="opening"] .seal-wrap,
+  .scene[data-state="opening"] .twine,
+  .scene[data-state="opening"] .flap,
+  .scene[data-state="opened"] .flap { opacity: 0; }
+  .seal-glint::before, .envelope__hint, .scroll-cue svg { animation: none; }
+  html.js .reveal { opacity: 1; }
+  html.js .reveal.is-visible { animation: none; }
+  .wax-seal, .btn, .carousel__track, .carousel__slide img, .venue__photo img { transition: none; }
+  .wax-seal:hover, .wax-seal:focus-visible { transform: none; }
+  .rsvp-result, .album-grid button, .lightbox[open], .camera[open], .camera__flash.is-active { animation: none; }
+}

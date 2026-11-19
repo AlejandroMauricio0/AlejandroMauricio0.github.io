@@ -1,0 +1,33 @@
+/* =========================================================
+   9 · DRESS CODE
+   ========================================================= */
+.dress-card .dress-icon { width: 56px; height: 56px; color: var(--sage); }
+.dress-card h3 {
+  margin: 16px 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.dress-card .dress-tag { margin-top: 6px; }
+.dress-card p { margin: 12px 0 0; color: var(--muted); max-width: 36ch; }
+.swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: auto; padding-top: 22px; }
+.swatch {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.swatch--avoid::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  right: -3px;
+  height: 1.5px;
+  background: var(--rose);
+  transform: rotate(-45deg);
+}
+.swatch-legend { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }

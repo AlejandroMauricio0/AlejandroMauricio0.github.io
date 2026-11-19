@@ -1,0 +1,32 @@
+/* =========================================================
+   7 · UBICACIONES
+   ========================================================= */
+.venue { padding: 0; overflow: hidden; }
+.venue__photo { aspect-ratio: 16 / 10; overflow: hidden; }
+.venue__photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.82); transition: transform 1.2s var(--ease-soft); }
+.venue:hover .venue__photo img { transform: scale(1.04); }
+.venue__body { display: flex; flex-direction: column; flex: 1; padding: clamp(20px, 3vw, 32px); }
+.venue__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.venue__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(169, 185, 165, 0.16);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.venue__time svg { width: 14px; height: 14px; }
+.venue h3 {
+  margin: 14px 0 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+.venue__info { margin: 14px 0 0; display: grid; gap: 10px; color: var(--muted); font-size: 0.95rem; }
+.venue__info div { display: grid; grid-template-columns: 20px 1fr; gap: 8px; }
+.venue__info svg { width: 16px; height: 16px; margin-top: 4px; color: var(--sage); }
+.venue__info dd { margin: 0; }
+.venue__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: auto; padding-top: 22px; }

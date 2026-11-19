@@ -1,0 +1,26 @@
+/* =========================================================
+   4 · PADRES · 5 · PADRINOS
+   ========================================================= */
+.parent-card h3,
+.role-card h3 {
+  margin: 16px 0 0;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.parent-card p {
+  margin: 12px 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.6vw, 1.6rem);
+  line-height: 1.25;
+}
+.parent-card .amp { margin: 4px 0; font-style: italic; color: var(--wax-3); font-size: 1.1rem; }
+.role-card p {
+  margin: 8px 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  line-height: 1.25;
+}

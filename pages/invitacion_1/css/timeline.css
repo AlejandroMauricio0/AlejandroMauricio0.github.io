@@ -1,0 +1,47 @@
+/* =========================================================
+   8 · ITINERARIO
+   ========================================================= */
+.timeline { position: relative; list-style: none; margin: 0 auto; padding: 0; max-width: 760px; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  width: 1px;
+  background: var(--champagne);
+}
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 12px 0;
+}
+.timeline__node {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--champagne);
+  color: var(--wax-3);
+  box-shadow: 0 0 0 6px var(--ivory);
+}
+.timeline__node svg { width: 19px; height: 19px; stroke-width: 1.4; }
+.timeline__card { padding: 14px 20px; }
+.timeline__time { font-weight: 500; font-size: 0.92rem; color: var(--wax-3); font-variant-numeric: tabular-nums; }
+.timeline__title { display: block; font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.15; }
+@media (min-width: 768px) {
+  .timeline::before { left: 50%; transform: translateX(-50%); }
+  .timeline__item { grid-template-columns: 1fr 48px 1fr; gap: 28px; }
+  .timeline__node { grid-column: 2; grid-row: 1; }
+  .timeline__card { grid-row: 1; }
+  .timeline__item:nth-child(odd) .timeline__card { grid-column: 1; text-align: right; }
+  .timeline__item:nth-child(even) .timeline__card { grid-column: 3; }
+}
