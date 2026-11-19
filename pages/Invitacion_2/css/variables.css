@@ -1,0 +1,58 @@
+/* =========================================================
+   Design tokens — Invitación Retro Gaming (Ricardo Soto)
+   ========================================================= */
+:root {
+  /* Cielo */
+  --sky: #0058B8;
+  --sky-deep: #00449A;
+
+  /* Acentos del título */
+  --red: #E52521;
+  --yellow: #FBD000;
+  --blue: #049CD8;
+  --green: #43B047;
+
+  /* Ladrillo / bloques */
+  --brick: #D85820;
+  --brick-dark: #8A2E00;
+  --gold-dark: #C88A00;
+  --gold-light: #FFE873;
+  --rivet: #7A4A00;
+
+  /* Neutros */
+  --ink: #1A1A1A;
+  --black: #000000;
+  --white: #FFFFFF;
+  --card: #FFFFFF;
+  --muted: #4A4A4A;
+  --dialog-bg: #101848;
+
+  /* Tipografía */
+  --font-title: 'Luckiest Guy', 'Fredoka', system-ui, sans-serif;
+  --font-display: 'Fredoka', system-ui, sans-serif;
+  --font-pixel: 'Press Start 2P', ui-monospace, monospace;
+  --font-body: 'Nunito', system-ui, sans-serif;
+
+  /* Bordes y sombras duras */
+  --bw: 4px;
+  --border: var(--bw) solid var(--black);
+  --border-thin: 3px solid var(--black);
+  --shadow: 6px 6px 0 var(--black);
+  --shadow-sm: 4px 4px 0 var(--black);
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  /* Texto blanco con contorno negro (sobre azul) */
+  --outline-2:
+    -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000,
+     0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000;
+  --outline-3:
+    -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000,
+     0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000, 3px 0 0 #000,
+     5px 5px 0 #000;
+
+  /* Espaciado */
+  --gutter: 16px;
+  --stage-max: 560px;
+  --section-gap: 72px;
+}

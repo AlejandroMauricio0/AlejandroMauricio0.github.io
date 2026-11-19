@@ -1,0 +1,77 @@
+/* =========================================================
+   Animaciones retro
+   ========================================================= */
+
+/* Letras del título: rebote escalonado */
+.title .l { animation: letter-hop 2.8s steps(6) infinite; animation-delay: calc(var(--i) * .08s); }
+@keyframes letter-hop {
+  0%, 70%, 100% { transform: translateY(0); }
+  78%           { transform: translateY(-10px); }
+  86%           { transform: translateY(0); }
+}
+
+/* Flotación (estrellas, monedas) */
+.float       { animation: float 1.6s steps(4) infinite alternate; }
+.float--late { animation-delay: .4s; }
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
+}
+
+/* Moneda girando */
+.spin { animation: coin-spin 1.2s steps(6) infinite; }
+@keyframes coin-spin {
+  0%, 100% { transform: scaleX(1); }
+  50%      { transform: scaleX(.15); }
+}
+
+/* Corazón latiendo */
+.heartbeat { animation: heartbeat 1.1s steps(3) infinite; }
+@keyframes heartbeat {
+  0%, 60%, 100% { transform: scale(1) translateY(0); }
+  20%           { transform: scale(1.18) translateY(-4px); }
+}
+
+/* Estrellas parpadeando */
+.twinkle    { animation: twinkle 1.4s steps(3) infinite; }
+.twinkle--2 { animation-delay: .3s; }
+.twinkle--3 { animation-delay: .6s; }
+@keyframes twinkle {
+  0%, 100% { transform: scale(1) rotate(0); }
+  50%      { transform: scale(1.2) rotate(8deg); }
+}
+
+/* Cursor ▼ del diálogo y PRESS START */
+.blink, .scroll-hint { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Golpe de bloque “?” al cambiar los segundos */
+.qblock.is-bumped { animation: bump .25s steps(3); }
+@keyframes bump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* Nubes a la deriva */
+.cloud--1 { animation: drift 14s ease-in-out infinite alternate; }
+.cloud--2 { animation: drift 18s ease-in-out infinite alternate-reverse; }
+.cloud--3 { animation: drift 16s ease-in-out infinite alternate; }
+.cloud--4 { animation: drift 20s ease-in-out infinite alternate-reverse; }
+.cloud--5 { animation: drift 22s ease-in-out infinite alternate; }
+@keyframes drift {
+  from { transform: translateX(-24px); }
+  to   { transform: translateX(32px); }
+}
+
+/* Moneda “saltando” del bloque mini al tocarlo */
+.qblock--mini:active { animation: bump .25s steps(3); }
+
+/* Accesibilidad: movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

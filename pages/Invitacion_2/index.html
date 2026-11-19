@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¡Te invito a mi fiesta! · Ricardo Soto</title>
+  <meta name="description" content="Invitación a la fiesta de cumpleaños de Ricardo Soto. 12 de enero, 10:00 hrs.">
+  <meta name="theme-color" content="#0058B8">
+  <meta property="og:title" content="¡Te invito a mi fiesta! · Ricardo Soto">
+  <meta property="og:description" content="Nivel 7 desbloqueado. 12 de enero · 10:00 hrs. ¡Confirma tu asistencia!">
+  <meta property="og:image" content="assets/images/cumpleanero.jpg">
+  <link rel="icon" href="assets/sprites/estrella.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Luckiest+Guy&family=Nunito:wght@600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Cielo con nubes (decorativo) -->
+  <div class="sky" aria-hidden="true">
+    <img class="cloud cloud--1" src="assets/sprites/nube-pixel.svg" alt="">
+    <img class="cloud cloud--2" src="assets/sprites/nube-pixel.svg" alt="">
+    <img class="cloud cloud--3" src="assets/sprites/nube-pixel.svg" alt="">
+    <img class="cloud cloud--4" src="assets/sprites/nube-pixel.svg" alt="">
+    <img class="cloud cloud--5" src="assets/sprites/nube-pixel.svg" alt="">
+  </div>
+
+  <main class="stage">
+
+    <!-- ============ 1. HEADER / HERO ============ -->
+    <header class="hero" id="inicio">
+      <div class="hud" aria-hidden="true">
+        <span>RICARDO</span>
+        <span class="hud__coins"><img src="assets/sprites/moneda-estrella.svg" alt="">×07</span>
+        <span>WORLD 1-12</span>
+      </div>
+
+      <div class="hero__props" aria-hidden="true">
+        <div class="prop prop--stars">
+          <div class="prop__items">
+            <img class="sprite star float" src="assets/sprites/estrella.svg" alt="">
+            <img class="sprite star float float--late" src="assets/sprites/estrella.svg" alt="">
+          </div>
+          <div class="bricks bricks--3"></div>
+        </div>
+        <div class="prop prop--coin">
+          <div class="prop__items float">
+            <img class="sprite coin spin" src="assets/sprites/moneda-estrella.svg" alt="">
+          </div>
+          <div class="qblock qblock--mini"><span>?</span></div>
+        </div>
+      </div>
+
+      <h1 class="title" aria-label="Te invito a mi fiesta">
+        <span class="title__line" aria-hidden="true">
+          <span class="l c-blue" style="--i:0">T</span><span class="l c-yellow" style="--i:1">E</span>
+          <span class="gap"></span>
+          <span class="l c-red" style="--i:2">I</span><span class="l c-green" style="--i:3">N</span><span class="l c-yellow" style="--i:4">V</span><span class="l c-blue" style="--i:5">I</span><span class="l c-red" style="--i:6">T</span><span class="l c-green" style="--i:7">O</span>
+        </span>
+        <span class="title__line" aria-hidden="true">
+          <span class="l c-blue" style="--i:8">A</span>
+          <span class="gap"></span>
+          <span class="l c-green" style="--i:9">M</span><span class="l c-yellow" style="--i:10">I</span>
+          <span class="gap"></span>
+          <span class="l c-red" style="--i:11">F</span><span class="l c-blue" style="--i:12">I</span><span class="l c-yellow" style="--i:13">E</span><span class="l c-green" style="--i:14">S</span><span class="l c-red" style="--i:15">T</span><span class="l c-blue" style="--i:16">A</span>
+        </span>
+      </h1>
+
+      <p class="hero__subtitle">ESTÁS INVITADO A LA FIESTA DE:</p>
+      <p class="hero__name">RICARDO SOTO</p>
+
+      <div class="avatar">
+        <span class="avatar__tag">PLAYER 1</span>
+        <figure class="avatar__frame">
+          <img src="assets/images/cumpleanero.jpg"
+               onerror="this.onerror=null;this.src='assets/images/cumpleanero.svg'"
+               alt="Ricardo sonriendo" width="400" height="400">
+        </figure>
+        <img class="avatar__heart heartbeat" src="assets/sprites/corazon.svg" alt="" aria-hidden="true">
+        <div class="level-badge" aria-label="Nivel 7">
+          <span class="level-badge__label">LEVEL</span>
+          <span class="level-badge__num">7</span>
+        </div>
+      </div>
+      <p class="hero__age">¡Cumple <strong>7 años</strong>!</p>
+
+      <a class="scroll-hint" href="#cuenta-atras">PRESS START <span aria-hidden="true">▼</span></a>
+    </header>
+
+    <!-- ============ 2. CONTADOR REGRESIVO ============ -->
+    <section class="section" id="cuenta-atras" aria-labelledby="t-countdown">
+      <p class="stage-label">◆ STAGE 1 ◆</p>
+      <h2 class="section-title" id="t-countdown">La partida comienza en</h2>
+
+      <div class="countdown" data-countdown="2027-01-12T10:00:00" role="timer" aria-live="off">
+        <div class="countdown__item">
+          <div class="qblock"><span data-unit="days">00</span></div>
+          <span class="countdown__label">DÍAS</span>
+        </div>
+        <div class="countdown__item">
+          <div class="qblock"><span data-unit="hours">00</span></div>
+          <span class="countdown__label">HORAS</span>
+        </div>
+        <div class="countdown__item">
+          <div class="qblock"><span data-unit="minutes">00</span></div>
+          <span class="countdown__label">MIN</span>
+        </div>
+        <div class="countdown__item">
+          <div class="qblock" data-tick><span data-unit="seconds">00</span></div>
+          <span class="countdown__label">SEG</span>
+        </div>
+      </div>
+      <p class="countdown__done" data-countdown-done hidden>¡GAME START! La fiesta ya comenzó 🎉</p>
+      <div class="bricks bricks--wide" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ 3. DETALLES DEL EVENTO ============ -->
+    <section class="section" id="detalles" aria-labelledby="t-details">
+      <p class="stage-label">◆ STAGE 2 ◆</p>
+      <h2 class="section-title" id="t-details">Datos de la misión</h2>
+
+      <div class="info-grid">
+        <div class="info">
+          <article class="card info__card">
+            <svg class="pix-icon" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true">
+              <rect x="0" y="2" width="12" height="10" fill="#000"/><rect x="1" y="3" width="10" height="8" fill="#fff"/>
+              <rect x="1" y="3" width="10" height="2" fill="#E52521"/><rect x="3" y="1" width="1" height="3" fill="#000"/>
+              <rect x="8" y="1" width="1" height="3" fill="#000"/><rect x="3" y="7" width="2" height="2" fill="#049CD8"/>
+              <rect x="7" y="7" width="2" height="2" fill="#43B047"/>
+            </svg>
+            <h3 class="info__label">FECHA</h3>
+            <p class="info__value">12 DE ENERO</p>
+          </article>
+          <div class="bricks" aria-hidden="true"></div>
+        </div>
+        <div class="info">
+          <article class="card info__card">
+            <svg class="pix-icon" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true">
+              <rect x="2" y="0" width="8" height="12" fill="#000"/><rect x="0" y="2" width="12" height="8" fill="#000"/>
+              <rect x="1" y="1" width="10" height="10" fill="#000"/><rect x="3" y="1" width="6" height="10" fill="#FBD000"/>
+              <rect x="1" y="3" width="10" height="6" fill="#FBD000"/><rect x="2" y="2" width="8" height="8" fill="#FBD000"/>
+              <rect x="5" y="3" width="1" height="4" fill="#000"/><rect x="6" y="6" width="2" height="1" fill="#000"/>
+            </svg>
+            <h3 class="info__label">HORA</h3>
+            <p class="info__value">10:00 HRS</p>
+          </article>
+          <div class="bricks" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <article class="card address">
+        <svg class="pix-icon" viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true">
+          <rect x="2" y="0" width="8" height="1" fill="#000"/><rect x="1" y="1" width="10" height="6" fill="#000"/>
+          <rect x="2" y="7" width="8" height="1" fill="#000"/><rect x="3" y="8" width="6" height="1" fill="#000"/>
+          <rect x="4" y="9" width="4" height="1" fill="#000"/><rect x="5" y="10" width="2" height="2" fill="#000"/>
+          <rect x="3" y="1" width="6" height="1" fill="#E52521"/><rect x="2" y="2" width="8" height="4" fill="#E52521"/>
+          <rect x="3" y="6" width="6" height="1" fill="#E52521"/><rect x="4" y="7" width="4" height="1" fill="#E52521"/>
+          <rect x="5" y="8" width="2" height="1" fill="#E52521"/><rect x="5" y="3" width="2" height="2" fill="#fff"/>
+        </svg>
+        <h3 class="info__label">UBICACIÓN</h3>
+        <p class="address__text">EN CALLE CUALQUIERA 123, CUALQUIER LUGAR</p>
+        <a class="btn btn--blue"
+           href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Cualquiera+123"
+           target="_blank" rel="noopener">Ver mapa / Cómo llegar</a>
+      </article>
+    </section>
+
+    <!-- ============ 4. GALERÍA + MENSAJE DE LOS PADRES ============ -->
+    <section class="section" id="galeria" aria-labelledby="t-gallery">
+      <p class="stage-label">◆ STAGE 3 ◆</p>
+      <h2 class="section-title" id="t-gallery">Selecciona tu personaje</h2>
+
+      <article class="card char-card">
+        <header class="char-card__bar">
+          <span>PLAYER 1</span>
+          <span class="char-card__lives"><img src="assets/sprites/corazon.svg" alt="">×3</span>
+        </header>
+        <div class="char-card__body">
+          <figure class="char-card__photo">
+            <img src="assets/images/cumpleanero.jpg"
+                 onerror="this.onerror=null;this.src='assets/images/cumpleanero.svg'"
+                 alt="Retrato de Ricardo" width="400" height="400" loading="lazy">
+          </figure>
+          <div class="char-card__stats">
+            <p class="char-card__name">RICARDO</p>
+            <dl class="stats">
+              <div><dt>NIVEL</dt><dd>7</dd></div>
+              <div><dt>DIVERSIÓN</dt><dd><span class="bar" style="--v:100%"></span></dd></div>
+              <div><dt>ENERGÍA</dt><dd><span class="bar bar--yellow" style="--v:95%"></span></dd></div>
+              <div><dt>RISAS</dt><dd><span class="bar bar--blue" style="--v:90%"></span></dd></div>
+            </dl>
+          </div>
+        </div>
+      </article>
+
+      <div class="carousel" data-carousel aria-roledescription="carrusel" aria-label="Momentos especiales de Ricardo">
+        <div class="carousel__viewport">
+          <ul class="carousel__track">
+            <li class="carousel__slide" aria-roledescription="diapositiva" aria-label="1 de 4">
+              <img src="assets/images/galeria-1.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-1.svg'" alt="Ricardo en su primer año" loading="lazy" draggable="false">
+              <p class="carousel__caption">Nivel 1 · Mi primer año</p>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva" aria-label="2 de 4">
+              <img src="assets/images/galeria-2.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-2.svg'" alt="Ricardo dando sus primeros pasos" loading="lazy" draggable="false">
+              <p class="carousel__caption">Nivel 2 · Primeros pasos</p>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva" aria-label="3 de 4">
+              <img src="assets/images/galeria-3.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-3.svg'" alt="Ricardo en una aventura" loading="lazy" draggable="false">
+              <p class="carousel__caption">Nivel 5 · Grandes aventuras</p>
+            </li>
+            <li class="carousel__slide" aria-roledescription="diapositiva" aria-label="4 de 4">
+              <img src="assets/images/galeria-4.jpg" onerror="this.onerror=null;this.src='assets/images/galeria-4.svg'" alt="Ricardo con sus mejores amigos" loading="lazy" draggable="false">
+              <p class="carousel__caption">Nivel 6 · Mejores amigos</p>
+            </li>
+          </ul>
+        </div>
+        <div class="carousel__controls">
+          <button class="dpad dpad--left" type="button" data-prev aria-label="Foto anterior"><span aria-hidden="true">◀</span></button>
+          <div class="carousel__dots" role="group" aria-label="Elegir foto"></div>
+          <button class="dpad dpad--right" type="button" data-next aria-label="Foto siguiente"><span aria-hidden="true">▶</span></button>
+        </div>
+        <p class="sr-only" aria-live="polite" data-status></p>
+      </div>
+
+      <div class="dialog" role="note" aria-label="Mensaje de los papás">
+        <span class="dialog__speaker">PAPÁS:</span>
+        <p>Hace 7 años comenzó la aventura más bonita de nuestras vidas. Ricardo ha superado cada nivel con risas, curiosidad y mucho corazón.</p>
+        <p>Nos encantaría que nos acompañes a celebrar este nuevo nivel. ¡Gracias por ser parte de su historia y de este día tan especial!</p>
+        <span class="dialog__next blink" aria-hidden="true">▼</span>
+      </div>
+    </section>
+
+    <!-- ============ 5. RSVP ============ -->
+    <section class="section" id="confirmar" aria-labelledby="t-rsvp">
+      <p class="stage-label">◆ STAGE 4 ◆</p>
+      <h2 class="section-title" id="t-rsvp">¿Te unes a la partida?</h2>
+
+      <form class="card rsvp" id="rsvp-form" data-whatsapp="525512345678" novalidate>
+        <div class="field">
+          <label class="field__label" for="rsvp-name">NOMBRE DEL INVITADO / FAMILIA</label>
+          <input class="field__input" id="rsvp-name" name="name" type="text" autocomplete="name" maxlength="80" required placeholder="Ej. Familia Pérez">
+          <p class="field__error" data-error-for="name" hidden>Escribe tu nombre para continuar.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend class="field__label">¿ASISTIRÁS?</legend>
+          <div class="choices">
+            <label class="choice choice--yes">
+              <input type="radio" name="attending" value="yes" checked>
+              <span>¡Sí, ahí estaré!</span>
+            </label>
+            <label class="choice choice--no">
+              <input type="radio" name="attending" value="no">
+              <span>No podré asistir</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field" data-guests>
+          <legend class="field__label">¿CUÁNTAS PERSONAS ASISTIRÁN?</legend>
+          <div class="steppers">
+            <div class="stepper">
+              <span class="stepper__name" id="lbl-adults">Adultos</span>
+              <div class="stepper__ctrl">
+                <button type="button" class="stepper__btn" data-step="-1" data-target="rsvp-adults" aria-label="Menos adultos">−</button>
+                <input class="stepper__value" id="rsvp-adults" name="adults" type="number" inputmode="numeric" min="0" max="10" value="1" aria-labelledby="lbl-adults">
+                <button type="button" class="stepper__btn" data-step="1" data-target="rsvp-adults" aria-label="Más adultos">+</button>
+              </div>
+            </div>
+            <div class="stepper">
+              <span class="stepper__name" id="lbl-kids">Niños</span>
+              <div class="stepper__ctrl">
+                <button type="button" class="stepper__btn" data-step="-1" data-target="rsvp-kids" aria-label="Menos niños">−</button>
+                <input class="stepper__value" id="rsvp-kids" name="kids" type="number" inputmode="numeric" min="0" max="10" value="1" aria-labelledby="lbl-kids">
+                <button type="button" class="stepper__btn" data-step="1" data-target="rsvp-kids" aria-label="Más niños">+</button>
+              </div>
+            </div>
+          </div>
+          <p class="field__error" data-error-for="guests" hidden>Indica al menos una persona.</p>
+        </fieldset>
+
+        <button class="btn btn--green btn--block" type="submit">Confirmar asistencia</button>
+        <p class="rsvp__note">Se abrirá WhatsApp con tu mensaje listo para enviar al <strong>(55) 1234-5678</strong>.</p>
+        <p class="rsvp__status" data-status role="status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ============ 6. FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__stars" aria-hidden="true">
+        <img class="sprite star twinkle" src="assets/sprites/estrella.svg" alt="">
+        <img class="sprite star twinkle twinkle--2" src="assets/sprites/estrella.svg" alt="">
+        <img class="sprite star twinkle twinkle--3" src="assets/sprites/estrella.svg" alt="">
+      </div>
+      <p class="footer__msg">¡Gracias por ser parte de esta aventura! Te esperamos para jugar y celebrar juntos.</p>
+      <p class="footer__name">RICARDO SOTO</p>
+      <p class="footer__end">THANK YOU FOR PLAYING</p>
+    </div>
+    <div class="ground" aria-hidden="true"></div>
+  </footer>
+
+  <script src="js/countdown.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/rsvp.js"></script>
+</body>
+</html>
