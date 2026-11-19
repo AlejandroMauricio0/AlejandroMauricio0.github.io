@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" width="1120" height="660" fill="none">
+  <!-- Regiones por herramienta (usadas como sprite CSS en cutting-mat.css) -->
+  <view id="lupa" viewBox="0 0 340 340"/>
+  <view id="cuter" viewBox="356 0 510 130"/>
+  <view id="libreta" viewBox="370 100 390 550"/>
+  <view id="muestras" viewBox="780 140 330 420"/>
+
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F4F5"/>
+      <stop offset=".45" stop-color="#A1A1AA"/>
+      <stop offset=".7" stop-color="#E4E4E7"/>
+      <stop offset="1" stop-color="#71717A"/>
+    </linearGradient>
+    <radialGradient id="lens" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".28"/>
+      <stop offset=".6" stop-color="#ffffff" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#d9f0e3" stop-opacity=".14"/>
+    </radialGradient>
+    <linearGradient id="handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#27272A"/>
+      <stop offset=".5" stop-color="#3F3F46"/>
+      <stop offset="1" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F4F5"/>
+      <stop offset=".5" stop-color="#D4D4D8"/>
+      <stop offset="1" stop-color="#A1A1AA"/>
+    </linearGradient>
+    <linearGradient id="cutterBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7C65A"/>
+      <stop offset=".55" stop-color="#E9A92B"/>
+      <stop offset="1" stop-color="#C98A12"/>
+    </linearGradient>
+    <linearGradient id="kraft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D3AC80"/>
+      <stop offset=".6" stop-color="#C89F74"/>
+      <stop offset="1" stop-color="#B58A5E"/>
+    </linearGradient>
+    <linearGradient id="clipMetal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#71717A"/>
+      <stop offset=".5" stop-color="#E4E4E7"/>
+      <stop offset="1" stop-color="#71717A"/>
+    </linearGradient>
+    <clipPath id="lensClip"><circle cx="150" cy="150" r="104"/></clipPath>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+
+  <!-- ===================== LUPA DE PRECISIÓN ===================== -->
+  <g filter="url(#soft)">
+    <rect x="238" y="226" width="34" height="112" rx="14" transform="rotate(-45 255 282)" fill="url(#handle)"/>
+    <rect x="243" y="222" width="24" height="26" rx="4" transform="rotate(-45 255 235)" fill="url(#ring)"/>
+    <circle cx="150" cy="150" r="118" fill="url(#ring)"/>
+    <circle cx="150" cy="150" r="104" fill="#1E432E"/>
+    <g clip-path="url(#lensClip)">
+      <rect x="40" y="40" width="220" height="220" fill="#27533A"/>
+      <g stroke="#ffffff" stroke-opacity=".28" stroke-width="1.5">
+        <path d="M46 40V260M86 40V260M126 40V260M166 40V260M206 40V260M246 40V260"/>
+        <path d="M40 46H260M40 86H260M40 126H260M40 166H260M40 206H260M40 246H260"/>
+      </g>
+      <g stroke="#ffffff" stroke-opacity=".1"><path d="M54 40V260M62 40V260M70 40V260M78 40V260M94 40V260M102 40V260M110 40V260M118 40V260M134 40V260M142 40V260M150 40V260M158 40V260M174 40V260M182 40V260M190 40V260M198 40V260M214 40V260M222 40V260M230 40V260M238 40V260"/></g>
+      <text x="96" y="160" fill="#ffffff" fill-opacity=".7" font-family="Georgia, serif" font-style="italic" font-size="40">V&amp;M</text>
+      <circle cx="150" cy="150" r="104" fill="url(#lens)"/>
+      <path d="M78 96 A90 90 0 0 1 150 56" stroke="#fff" stroke-opacity=".55" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <circle cx="150" cy="150" r="104" stroke="#09090B" stroke-opacity=".35" stroke-width="2"/>
+  </g>
+
+  <!-- ===================== CÚTER / EXACTO ===================== -->
+  <g filter="url(#soft)">
+    <path d="M362 70 L432 46 L432 92 Z" fill="url(#blade)"/>
+    <g stroke="#71717A" stroke-width="1.2" stroke-opacity=".7">
+      <line x1="380" y1="64" x2="392" y2="84"/>
+      <line x1="396" y1="58" x2="408" y2="86"/>
+      <line x1="412" y1="53" x2="422" y2="89"/>
+    </g>
+    <rect x="426" y="38" width="420" height="62" rx="16" fill="url(#cutterBody)"/>
+    <rect x="426" y="38" width="64" height="62" rx="12" fill="#3F3F46"/>
+    <rect x="432" y="44" width="52" height="50" rx="9" fill="#52525B"/>
+    <g stroke="#B37A0F" stroke-width="3" stroke-linecap="round" stroke-opacity=".7">
+      <line x1="560" y1="50" x2="560" y2="88"/><line x1="576" y1="50" x2="576" y2="88"/>
+      <line x1="592" y1="50" x2="592" y2="88"/><line x1="608" y1="50" x2="608" y2="88"/>
+      <line x1="624" y1="50" x2="624" y2="88"/><line x1="640" y1="50" x2="640" y2="88"/>
+      <line x1="656" y1="50" x2="656" y2="88"/><line x1="672" y1="50" x2="672" y2="88"/>
+    </g>
+    <rect x="510" y="30" width="34" height="14" rx="5" fill="#27272A"/>
+    <rect x="800" y="44" width="38" height="50" rx="10" fill="#27272A" fill-opacity=".85"/>
+    <path d="M440 52 H830" stroke="#ffffff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===================== LIBRETA KRAFT CON CLIP ===================== -->
+  <g filter="url(#soft)">
+    <rect x="396" y="196" width="340" height="436" rx="10" fill="#F4F1EA"/>
+    <rect x="390" y="186" width="340" height="436" rx="10" fill="#FAFAF8"/>
+    <rect x="384" y="176" width="340" height="436" rx="12" fill="url(#kraft)"/>
+    <rect x="384" y="176" width="26" height="436" rx="8" fill="#A9825A" fill-opacity=".55"/>
+    <g fill="#8E6B47" fill-opacity=".14">
+      <circle cx="480" cy="300" r="1.4"/><circle cx="560" cy="420" r="1.2"/><circle cx="640" cy="260" r="1.5"/>
+      <circle cx="610" cy="540" r="1.3"/><circle cx="470" cy="520" r="1.1"/><circle cx="690" cy="380" r="1.4"/>
+    </g>
+    <rect x="452" y="300" width="216" height="104" rx="4" fill="#FAFAF8" fill-opacity=".92"/>
+    <rect x="460" y="308" width="200" height="88" rx="2" stroke="#18181B" stroke-opacity=".5"/>
+    <text x="560" y="346" text-anchor="middle" fill="#18181B" font-family="Georgia, serif" font-style="italic" font-size="26">Bocetos</text>
+    <text x="560" y="376" text-anchor="middle" fill="#52525B" font-family="Consolas, monospace" font-size="12" letter-spacing="3">VOL. 07 · 2027</text>
+    <path d="M440 560 H690" stroke="#8E6B47" stroke-opacity=".4" stroke-dasharray="6 6"/>
+    <!-- Clip metálico tipo binder -->
+    <path d="M512 160 L608 160 L622 214 L498 214 Z" fill="#18181B"/>
+    <path d="M512 160 L608 160 L612 176 L508 176 Z" fill="#3F3F46"/>
+    <path d="M520 160 C520 130 532 118 548 118 L572 118 C588 118 600 130 600 160" stroke="url(#clipMetal)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M532 160 C532 140 540 132 552 132 L568 132 C580 132 588 140 588 160" stroke="#A1A1AA" stroke-width="3" fill="none" stroke-opacity=".6"/>
+  </g>
+
+  <!-- ===================== TARJETAS MUESTRA ===================== -->
+  <g filter="url(#soft)">
+    <g transform="rotate(8 960 360)">
+      <rect x="850" y="190" width="220" height="300" rx="6" fill="#F6E1E4"/>
+      <rect x="864" y="204" width="192" height="272" rx="3" stroke="#B9877F" stroke-opacity=".6"/>
+      <text x="960" y="330" text-anchor="middle" fill="#8C4A5C" font-family="Georgia, serif" font-style="italic" font-size="34">Sofía</text>
+      <text x="960" y="370" text-anchor="middle" fill="#B9877F" font-family="Consolas, monospace" font-size="11" letter-spacing="3">XV · 22.05</text>
+    </g>
+    <g transform="rotate(-6 930 360)">
+      <rect x="820" y="210" width="220" height="300" rx="6" fill="#FFFDF8"/>
+      <rect x="834" y="224" width="192" height="272" rx="3" stroke="#B89A5E" stroke-opacity=".7"/>
+      <circle cx="930" cy="318" r="38" stroke="#B89A5E" stroke-width="1.5"/>
+      <text x="930" y="330" text-anchor="middle" fill="#1E432E" font-family="Georgia, serif" font-style="italic" font-size="30">V·M</text>
+      <text x="930" y="400" text-anchor="middle" fill="#18181B" font-family="Georgia, serif" font-size="20">Valeria &amp; Mateo</text>
+      <text x="930" y="428" text-anchor="middle" fill="#71717A" font-family="Consolas, monospace" font-size="11" letter-spacing="3">13 · 03 · 2027</text>
+    </g>
+  </g>
+</svg>

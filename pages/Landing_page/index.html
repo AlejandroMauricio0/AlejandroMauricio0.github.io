@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trazo &amp; Papel — Atelier Digital de Invitaciones</title>
+  <meta name="description" content="Invitaciones digitales interactivas para bodas, XV años, cumpleaños y baby showers. Diseño a medida, sobre animado con sello de lacre, música y confirmación RSVP.">
+  <meta name="theme-color" content="#1E432E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E432E'/%3E%3Cpath d='M7 12V7h5M20 7h5v5M25 20v5h-5M12 25H7v-5' stroke='white' stroke-width='2' fill='none'/%3E%3Ccircle cx='16' cy='16' r='3' fill='white'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mat: { dark: '#143020', base: '#1E432E', light: '#27533A' },
+            paper: { cream: '#FAFAF8', kraft: '#C89F74' },
+            editorial: { indigo: '#6D4AFF', 'indigo-dark': '#5434E0', soft: '#EFEBFF' }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/cutting-mat.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- ======================================================================
+     HERO — Tapete de corte y mesa de trabajo
+     ====================================================================== -->
+<header class="cutting-mat-bg overflow-hidden pb-28 sm:pb-32 lg:pb-40" id="inicio">
+  <div class="mat-ruler-corner hidden sm:block" aria-hidden="true"></div>
+  <div class="mat-ruler mat-ruler--top hidden sm:block" data-ruler="x" aria-hidden="true"></div>
+  <div class="mat-ruler mat-ruler--left hidden sm:block" data-ruler="y" aria-hidden="true"></div>
+
+  <div class="reg-target hidden md:block" style="left:50%;top:46%;translate:-50% -50%" aria-hidden="true"><span></span></div>
+  <div class="reg-target hidden md:block" style="right:40px;bottom:96px" aria-hidden="true"><span></span></div>
+  <div class="reg-target hidden md:block" style="left:46px;top:96px" aria-hidden="true"><span></span></div>
+
+  <!-- Herramientas físicas del taller (decorativas) -->
+  <div class="studio-tool studio-tool--lupa hidden lg:block" aria-hidden="true"></div>
+  <div class="studio-tool studio-tool--cuter hidden lg:block" aria-hidden="true"></div>
+  <div class="studio-tool studio-tool--libreta hidden xl:block" aria-hidden="true"></div>
+  <div class="studio-tool studio-tool--muestras hidden xl:block" aria-hidden="true"></div>
+
+  <!-- Navegación -->
+  <nav class="page-wrap relative z-20 pt-8 sm:pt-10" aria-label="Principal">
+    <div class="flex items-center justify-between gap-4">
+      <a href="#inicio" class="flex items-center gap-3 shrink-0" aria-label="Trazo &amp; Papel, inicio">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+          <path d="M3 12V3h9M26 3h9v9M35 26v9h-9M12 35H3v-9" stroke="#fff" stroke-width="1.6"/>
+          <rect x="10" y="10" width="18" height="18" rx="2" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".5"/>
+          <path d="M14 24 L24 14" stroke="#C89F74" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="19" cy="19" r="2.2" fill="#fff"/>
+        </svg>
+        <span class="leading-none">
+          <span class="block font-extrabold text-[17px] tracking-tight">Trazo &amp; Papel</span>
+          <span class="block font-mono text-[9.5px] tracking-[.28em] text-white/60 mt-1">ATELIER DIGITAL</span>
+        </span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a class="nav-link" href="#portafolio">Portafolio</a></li>
+        <li><a class="nav-link" href="#proceso">Proceso</a></li>
+        <li><a class="nav-link" href="#planes">Planes</a></li>
+        <li><a class="nav-link" href="#preguntas">Preguntas</a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <button type="button" class="btn-pill btn-pill--ghost-light hidden sm:inline-flex" data-open-demo>
+          <i data-lucide="play" class="w-4 h-4"></i> Ver Demo
+        </button>
+        <button type="button" class="btn-pill btn-pill--light" data-open-quote>Cotizar</button>
+        <button type="button" class="md:hidden grid place-items-center w-11 h-11 rounded-full border border-white/30" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu md:hidden mt-4 rounded-2xl p-3">
+      <a class="block px-4 py-3 rounded-xl hover:bg-white/10" href="#portafolio">Portafolio</a>
+      <a class="block px-4 py-3 rounded-xl hover:bg-white/10" href="#proceso">Proceso</a>
+      <a class="block px-4 py-3 rounded-xl hover:bg-white/10" href="#planes">Planes</a>
+      <a class="block px-4 py-3 rounded-xl hover:bg-white/10" href="#preguntas">Preguntas</a>
+      <button type="button" class="w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 sm:hidden" data-open-demo>Ver Demo en vivo</button>
+    </div>
+  </nav>
+
+  <!-- Contenido del hero -->
+  <div class="page-wrap relative z-10 mt-14 sm:mt-20 lg:mt-24 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-12 items-center">
+    <div class="max-w-xl min-w-0">
+      <p class="tech-label tech-label--light hero-in">Mesa 01 · Invitaciones digitales interactivas</p>
+      <h1 class="hero-in hero-in-2 mt-6 text-[40px] leading-[1.04] sm:text-6xl lg:text-[68px] font-extrabold tracking-[-0.035em]">
+        Invitaciones trazadas a mano,
+        <span class="font-serif italic font-medium text-paper-kraft tracking-normal">cortadas</span>
+        a la medida de tu historia.
+      </h1>
+      <p class="hero-in hero-in-3 mt-6 text-lg text-white/75 leading-relaxed max-w-lg">
+        Diseñamos invitaciones digitales con alma de alta papelería: sobre animado con sello de lacre, música, mapa y confirmación RSVP. Listas para compartir por WhatsApp en 3 a 5 días.
+      </p>
+      <div class="hero-in hero-in-3 mt-9 flex flex-wrap items-center gap-3">
+        <a href="#planes" class="btn-pill btn-pill--light btn-pill--lg">Ver planes y precios <i data-lucide="arrow-down-right" class="w-4 h-4"></i></a>
+        <button type="button" class="btn-pill btn-pill--ghost-light btn-pill--lg" data-open-demo>
+          <i data-lucide="mail-open" class="w-4 h-4"></i> Abrir una demo en vivo
+        </button>
+      </div>
+      <dl class="hero-in hero-in-3 mt-12 grid grid-cols-3 gap-4 max-w-md border-t border-white/15 pt-6">
+        <div><dt class="font-mono text-[10px] tracking-[.18em] text-white/50">ENTREGA</dt><dd class="mt-1 font-mono text-xl font-bold">3–5 días</dd></div>
+        <div><dt class="font-mono text-[10px] tracking-[.18em] text-white/50">ENVÍOS</dt><dd class="mt-1 font-mono text-xl font-bold">Ilimitados</dd></div>
+        <div><dt class="font-mono text-[10px] tracking-[.18em] text-white/50">DESDE</dt><dd class="mt-1 font-mono text-xl font-bold">$890</dd></div>
+      </dl>
+    </div>
+
+    <!-- Mesa de trabajo interactiva -->
+    <section class="workbench min-w-0 p-4 sm:p-6 hero-in hero-in-2" aria-labelledby="wb-title">
+      <span class="workbench__corner workbench__corner--tl" aria-hidden="true"></span>
+      <span class="workbench__corner workbench__corner--tr" aria-hidden="true"></span>
+      <span class="workbench__corner workbench__corner--bl" aria-hidden="true"></span>
+      <span class="workbench__corner workbench__corner--br" aria-hidden="true"></span>
+
+      <div class="flex items-center justify-between gap-3">
+        <h2 id="wb-title" class="font-mono text-[11px] tracking-[.2em] text-white/70">MESA DE TRABAJO · VISTA PREVIA</h2>
+        <span class="flex items-center gap-2 font-mono text-[10px] text-white/50"><span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>EN VIVO</span>
+      </div>
+
+      <div class="mt-4 -mx-1 px-1 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Tipo de evento">
+        <button type="button" class="wb-tab" role="tab" data-event="boda" aria-selected="true" aria-controls="wb-panel">+ Boda</button>
+        <button type="button" class="wb-tab" role="tab" data-event="xv" aria-selected="false" aria-controls="wb-panel" tabindex="-1">+ XV Años</button>
+        <button type="button" class="wb-tab" role="tab" data-event="cumple" aria-selected="false" aria-controls="wb-panel" tabindex="-1">+ Cumpleaños</button>
+        <button type="button" class="wb-tab" role="tab" data-event="baby" aria-selected="false" aria-controls="wb-panel" tabindex="-1">+ Baby Shower</button>
+      </div>
+
+      <div id="wb-panel" role="tabpanel" class="wb-stage mt-4 px-4 py-8 sm:py-10">
+        <span class="wb-stage__guide" style="top:10px;left:12px">A6 · 105 × 148 mm</span>
+        <span class="wb-stage__guide" style="bottom:10px;right:12px" id="wb-slug">/valeria-y-mateo</span>
+
+        <button type="button" class="invite-card block" id="wb-card" aria-label="Abrir vista previa completa de la invitación">
+          <span class="invite-card__frame" aria-hidden="true"></span>
+          <span class="invite-card__inner">
+            <span class="invite-card__kicker" data-wb="kicker">Nos casamos</span>
+            <span class="invite-card__monogram" data-wb="monogram">V&amp;M</span>
+            <span class="invite-card__names" data-wb="names">Valeria <em>&amp;</em> Mateo</span>
+            <span class="invite-card__rule" aria-hidden="true"></span>
+            <span class="invite-card__date" data-wb="dateShort">13 · 03 · 27</span>
+            <span class="invite-card__place" data-wb="city">Cuernavaca, Morelos</span>
+          </span>
+          <span class="invite-card__cta">Ver invitación completa <i data-lucide="arrow-up-right" class="w-3 h-3"></i></span>
+        </button>
+      </div>
+
+      <div class="mt-4 grid grid-cols-3 gap-3 text-white">
+        <div class="rounded-xl border border-white/10 bg-white/5 p-3">
+          <p class="font-mono text-[9.5px] tracking-[.16em] text-white/50">PALETA</p>
+          <div class="mt-2 flex -space-x-1" id="wb-swatches">
+            <span class="swatch"></span><span class="swatch"></span><span class="swatch"></span>
+          </div>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-3 min-w-0">
+          <p class="font-mono text-[9.5px] tracking-[.16em] text-white/50">FECHA</p>
+          <p class="mt-1.5 text-[13px] font-semibold truncate" data-wb="dateMini">Sáb 13 mar 2027</p>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-white/5 p-3 min-w-0">
+          <p class="font-mono text-[9.5px] tracking-[.16em] text-white/50 flex items-center gap-2">PISTA <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></p>
+          <p class="mt-1.5 text-[13px] font-semibold truncate" data-wb="track" title="">Piano nupcial</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</header>
+
+<main>
+  <div class="mat-curve" aria-hidden="true">
+    <svg viewBox="0 0 120 20" fill="none"><path d="M0 10h48M72 10h48" stroke="#A1A1AA" stroke-dasharray="3 4"/><circle cx="60" cy="10" r="6" stroke="#18181B"/><path d="M60 0v20M50 10h20" stroke="#18181B" stroke-width=".8"/></svg>
+  </div>
+
+  <!-- ====================================================================
+       BARRA DE CONFIANZA
+       ==================================================================== -->
+  <section class="bg-paper-cream pt-10 pb-16 sm:pb-20" aria-label="Especialidades">
+    <div class="page-wrap flex flex-col items-center gap-7 text-center">
+      <div class="flex flex-col sm:flex-row items-center gap-4 reveal">
+        <div class="avatar-stack flex" aria-hidden="true">
+          <span style="background:#1E432E">V</span><span style="background:#B9877F">S</span><span style="background:#6D4AFF">D</span><span style="background:#C89F74">L</span>
+        </div>
+        <p class="text-zinc-700 font-medium">Más de <strong class="font-mono text-zinc-950">500+</strong> eventos inolvidables diseñados a medida</p>
+      </div>
+      <div class="segmented-pill reveal reveal-delay-1">
+        <span><i data-lucide="gem" class="w-4 h-4 text-mat-base"></i> Bodas &amp; Civil</span>
+        <span><i data-lucide="crown" class="w-4 h-4 text-mat-base"></i> XV Años Gala</span>
+        <span><i data-lucide="party-popper" class="w-4 h-4 text-mat-base"></i> Cumpleaños &amp; Aniversarios</span>
+        <span><i data-lucide="baby" class="w-4 h-4 text-mat-base"></i> Bautizos &amp; Baby Shower</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       PROCESO
+       ==================================================================== -->
+  <section id="proceso" class="bg-paper-cream py-16 sm:py-24 border-t border-zinc-200/70">
+    <div class="page-wrap">
+      <div class="grid lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-16 items-end">
+        <div class="reveal">
+          <p class="tech-label">Proceso artesanal</p>
+          <h2 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] leading-[1.05]">Del boceto al <span class="font-serif italic font-medium">“sí, ahí estaré”</span>.</h2>
+        </div>
+        <p class="text-zinc-600 text-lg leading-relaxed reveal reveal-delay-1">Trabajamos como un taller de papelería fina: medimos, trazamos y cortamos cada detalle, pero entregamos en digital para que llegue a todos tus invitados en segundos.</p>
+      </div>
+
+      <ol class="mt-12 grid md:grid-cols-3 gap-5">
+        <li class="step-card lift reveal">
+          <div class="flex items-center justify-between">
+            <span class="step-card__num">PASO 01</span>
+            <span class="step-card__icon"><i data-lucide="swatch-book" class="w-5 h-5"></i></span>
+          </div>
+          <h3 class="mt-8 text-xl font-bold">Elección de estilo y plan</h3>
+          <p class="mt-3 text-zinc-600 leading-relaxed">Escoges una edición del portafolio o nos compartes tu idea, paleta y referencias. Eliges el plan que mejor se ajusta a tu evento.</p>
+        </li>
+        <li class="step-card lift reveal reveal-delay-1">
+          <div class="flex items-center justify-between">
+            <span class="step-card__num">PASO 02</span>
+            <span class="step-card__icon"><i data-lucide="pen-tool" class="w-5 h-5"></i></span>
+          </div>
+          <h3 class="mt-8 text-xl font-bold">Diseño y trazo a medida</h3>
+          <p class="mt-3 text-zinc-600 leading-relaxed">Componemos tipografía, monograma, música y secciones. Recibes un enlace de prueba y ajustamos los detalles contigo hasta que sea perfecta.</p>
+        </li>
+        <li class="step-card lift reveal reveal-delay-2">
+          <div class="flex items-center justify-between">
+            <span class="step-card__num">PASO 03</span>
+            <span class="step-card__icon"><i data-lucide="send" class="w-5 h-5"></i></span>
+          </div>
+          <h3 class="mt-8 text-xl font-bold">Envío y control RSVP</h3>
+          <p class="mt-3 text-zinc-600 leading-relaxed">Compartes tu enlace por WhatsApp, redes o correo y das seguimiento a cada confirmación sin hojas de cálculo ni llamadas.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       PORTAFOLIO
+       ==================================================================== -->
+  <section id="portafolio" class="bg-paper-cream pb-20 sm:pb-28">
+    <div class="page-wrap">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 reveal">
+        <div>
+          <p class="tech-label">Galería de ediciones</p>
+          <h2 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-[-0.03em]">Ediciones recientes</h2>
+        </div>
+        <p class="text-zinc-600 max-w-sm">Toca cualquier edición para abrirla como la verían tus invitados: sobre, sello, detalles y confirmación.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <button type="button" class="portfolio-card lift reveal" data-open-demo="boda">
+          <span class="portfolio-card__media" style="--media-bg:#EFE7D6">
+            <img src="assets/previews/demo-boda.webp" alt="Vista previa de la invitación Boda Editorial Clásica" loading="lazy" width="800" height="1000">
+            <span class="portfolio-card__fallback" data-fallback="boda"></span>
+            <span class="portfolio-card__badge">Boda</span>
+            <span class="portfolio-card__overlay">Abrir demo en vivo <span class="portfolio-card__go"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span></span>
+          </span>
+          <span class="block px-2 pt-5 pb-2">
+            <span class="block text-lg font-bold">Boda Editorial Clásica</span>
+            <span class="block mt-1 font-mono text-xs tracking-wider text-zinc-500">MARFIL · SALVIA · ORO VIEJO</span>
+          </span>
+        </button>
+
+        <button type="button" class="portfolio-card lift reveal reveal-delay-1" data-open-demo="xv">
+          <span class="portfolio-card__media" style="--media-bg:#F6E1E4">
+            <img src="assets/previews/demo-xv.webp" alt="Vista previa de la invitación XV Años Gala Rosa y Oro" loading="lazy" width="800" height="1000">
+            <span class="portfolio-card__fallback" data-fallback="xv"></span>
+            <span class="portfolio-card__badge">XV Años</span>
+            <span class="portfolio-card__overlay">Abrir demo en vivo <span class="portfolio-card__go"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span></span>
+          </span>
+          <span class="block px-2 pt-5 pb-2">
+            <span class="block text-lg font-bold">XV Años Gala Rosa &amp; Oro</span>
+            <span class="block mt-1 font-mono text-xs tracking-wider text-zinc-500">ROSA PALO · CHAMPAGNE · ORO</span>
+          </span>
+        </button>
+
+        <button type="button" class="portfolio-card lift reveal reveal-delay-2 sm:col-span-2 lg:col-span-1" data-open-demo="cumple">
+          <span class="portfolio-card__media" style="--media-bg:#1C2541">
+            <img src="assets/previews/demo-cumple.webp" alt="Vista previa de la invitación Cumpleaños y Cóctel Privado" loading="lazy" width="800" height="1000">
+            <span class="portfolio-card__fallback" data-fallback="cumple"></span>
+            <span class="portfolio-card__badge">Cumpleaños</span>
+            <span class="portfolio-card__overlay">Abrir demo en vivo <span class="portfolio-card__go"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span></span>
+          </span>
+          <span class="block px-2 pt-5 pb-2">
+            <span class="block text-lg font-bold">Cumpleaños &amp; Cóctel Privado</span>
+            <span class="block mt-1 font-mono text-xs tracking-wider text-zinc-500">MEDIANOCHE · ÁMBAR · MARFIL</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       PLANES — Imprenta editorial
+       ==================================================================== -->
+  <section id="planes" class="bg-white py-20 sm:py-28 border-t border-zinc-200">
+    <div class="page-wrap">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <p class="tech-label justify-center">Planes y paquetes</p>
+        <h2 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] leading-[1.05]">Un precio claro, <span class="font-serif italic font-medium">un solo pago</span>.</h2>
+        <p class="mt-5 text-zinc-600 text-lg">Sin mensualidades ni cargos ocultos. Agrega una tarjeta <em>Save the Date</em> para avisar a tus invitados con anticipación.</p>
+      </div>
+
+      <div class="mt-10 flex justify-center reveal">
+        <div class="pricing-toggle" role="group" aria-label="Modalidad de pago">
+          <button type="button" data-mode="single" aria-pressed="true">Pago Único <span class="pricing-toggle__badge">Más popular</span></button>
+          <button type="button" data-mode="std" aria-pressed="false">+ Save the Date</button>
+        </div>
+      </div>
+      <p class="mt-3 text-center font-mono text-xs text-zinc-500" id="pricing-note" aria-live="polite">Precios en MXN · pago único</p>
+
+      <div class="mt-14 grid lg:grid-cols-3 gap-10 lg:gap-6 items-stretch max-w-md lg:max-w-none mx-auto">
+
+        <!-- Esencial -->
+        <div class="crop-card-wrapper reveal" data-plan="esencial">
+          <span class="crop-mark crop-mark--tl" aria-hidden="true"></span><span class="crop-mark crop-mark--tr" aria-hidden="true"></span>
+          <span class="crop-mark crop-mark--bl" aria-hidden="true"></span><span class="crop-mark crop-mark--br" aria-hidden="true"></span>
+          <article class="price-card">
+            <p class="price-card__name">Esencial</p>
+            <p class="mt-2 text-sm text-zinc-500">Cumpleaños, bautizos y reuniones</p>
+            <p class="mt-6 flex items-baseline gap-2"><span class="price-card__price" data-price data-base="890">$890</span><span class="price-card__from">MXN</span></p>
+            <button type="button" class="btn-pill btn-pill--outline mt-6 w-full" data-quote-plan="esencial">Elegir Esencial</button>
+            <ul class="price-card__features mt-7">
+              <li class="feature-row feature-row--std" data-std-line hidden><i data-lucide="calendar-heart" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Save the Date</span>Tarjeta previa animada para enviar meses antes</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Diseño y mapa</span>Diseño responsivo + mapa de ubicación</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Confirmación RSVP</span>Directa por WhatsApp</span></li>
+              <li class="feature-row feature-row--off"><i data-lucide="minus" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Sobre y música</span>—</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Galería y vigencia</span>Hasta 6 fotos · 3 meses en línea</span></li>
+              <li class="feature-row feature-row--off"><i data-lucide="minus" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Extras exclusivos</span>—</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Gala -->
+        <div class="crop-card-wrapper crop-card-wrapper--featured reveal reveal-delay-1" data-plan="gala">
+          <span class="crop-mark crop-mark--tl" aria-hidden="true"></span><span class="crop-mark crop-mark--tr" aria-hidden="true"></span>
+          <span class="crop-mark crop-mark--bl" aria-hidden="true"></span><span class="crop-mark crop-mark--br" aria-hidden="true"></span>
+          <article class="price-card price-card--featured">
+            <span class="price-card__badge">★ Recomendado</span>
+            <p class="price-card__name text-editorial-indigo">Gala</p>
+            <p class="mt-2 text-sm text-zinc-500">Bodas y XV Años</p>
+            <p class="mt-6 flex items-baseline gap-2"><span class="price-card__price" data-price data-base="1690">$1,690</span><span class="price-card__from">MXN</span></p>
+            <button type="button" class="btn-pill btn-gala-gradient mt-6 w-full" data-quote-plan="gala">Elegir Gala <i data-lucide="sparkles" class="w-4 h-4"></i></button>
+            <ul class="price-card__features mt-7">
+              <li class="feature-row feature-row--std" data-std-line hidden><i data-lucide="calendar-heart" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Save the Date</span>Tarjeta previa animada para enviar meses antes</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Diseño y mapa</span>Diseño responsivo + mapa de ubicación</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Confirmación RSVP</span>Pases personalizados por familia</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Sobre y música</span>Sobre con sello de lacre + reproductor</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Galería y vigencia</span>Hasta 20 fotos · 12 meses en línea</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Extras exclusivos</span>Itinerario, mesa de regalos y dress code</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Atelier -->
+        <div class="crop-card-wrapper reveal reveal-delay-2" data-plan="atelier">
+          <span class="crop-mark crop-mark--tl" aria-hidden="true"></span><span class="crop-mark crop-mark--tr" aria-hidden="true"></span>
+          <span class="crop-mark crop-mark--bl" aria-hidden="true"></span><span class="crop-mark crop-mark--br" aria-hidden="true"></span>
+          <article class="price-card">
+            <p class="price-card__name">Atelier a medida</p>
+            <p class="mt-2 text-sm text-zinc-500">Eventos destino y bodas VIP</p>
+            <p class="mt-6 flex items-baseline gap-2 flex-wrap"><span class="price-card__from">Desde</span><span class="price-card__price" data-price data-base="2990">$2,990</span><span class="price-card__from">MXN</span></p>
+            <button type="button" class="btn-pill btn-pill--dark mt-6 w-full" data-quote-plan="atelier">Cotizar Atelier</button>
+            <ul class="price-card__features mt-7">
+              <li class="feature-row feature-row--std" data-std-line hidden><i data-lucide="calendar-heart" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Save the Date</span>Tarjeta previa animada para enviar meses antes</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Diseño y mapa</span>Diseño responsivo + mapa de ubicación</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Confirmación RSVP</span>Panel en tiempo real + acceso con QR</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Sobre y música</span>Personalizado desde cero</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Galería y vigencia</span>Ilimitada + dominio propio</span></li>
+              <li class="feature-row"><i data-lucide="check" class="feature-row__icon w-4 h-4"></i><span><span class="feature-row__label">Extras exclusivos</span>Monograma ilustrado + versión bilingüe</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <p class="mt-12 text-center text-sm text-zinc-500 reveal">¿Necesitas algo distinto? <button type="button" class="font-semibold text-zinc-900 underline underline-offset-4 decoration-editorial-indigo" data-open-quote>Arma tu cotización</button></p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       FAQ
+       ==================================================================== -->
+  <section id="preguntas" class="bg-paper-cream py-20 sm:py-28 border-t border-zinc-200">
+    <div class="page-wrap grid lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16">
+      <div class="reveal">
+        <p class="tech-label">Preguntas frecuentes</p>
+        <h2 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-[-0.03em] leading-[1.05]">Antes de <span class="font-serif italic font-medium">cortar</span> el papel.</h2>
+        <p class="mt-5 text-zinc-600">¿Tienes otra duda? Escríbenos desde el cotizador y te respondemos el mismo día.</p>
+        <button type="button" class="btn-pill btn-pill--dark mt-7" data-open-quote>Hablar con el atelier <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+      </div>
+
+      <div class="space-y-3 reveal reveal-delay-1">
+        <details class="faq-item" open>
+          <summary>¿Cuánto tarda en estar lista mi invitación? <span class="faq-item__toggle" aria-hidden="true"><i data-lucide="plus" class="w-4 h-4"></i></span></summary>
+          <div class="faq-item__body">Entregamos la primera versión en <strong>3 a 5 días hábiles</strong> a partir de que recibimos tus datos y fotos. El plan Atelier puede requerir unos días extra por las ilustraciones a medida.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿A cuántas personas puedo enviarla? <span class="faq-item__toggle" aria-hidden="true"><i data-lucide="plus" class="w-4 h-4"></i></span></summary>
+          <div class="faq-item__body">A todas las que quieras. El <strong>alcance es ilimitado</strong>: compartes un solo enlace por WhatsApp, redes sociales o correo, sin costo por invitado.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Puedo hacer cambios después de enviarla? <span class="faq-item__toggle" aria-hidden="true"><i data-lucide="plus" class="w-4 h-4"></i></span></summary>
+          <div class="faq-item__body">Sí. Las <strong>actualizaciones son sin costo</strong> durante la vigencia de tu plan: cambio de hora, salón o datos de la mesa de regalos. Tus invitados verán siempre la versión más reciente con el mismo enlace.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo funciona la confirmación RSVP? <span class="faq-item__toggle" aria-hidden="true"><i data-lucide="plus" class="w-4 h-4"></i></span></summary>
+          <div class="faq-item__body">En Esencial tus invitados confirman directo a tu WhatsApp. En Gala cada familia recibe un pase personalizado con el número de lugares asignados, y en Atelier tienes un panel en tiempo real con acceso por código QR el día del evento.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué es el Save the Date? <span class="faq-item__toggle" aria-hidden="true"><i data-lucide="plus" class="w-4 h-4"></i></span></summary>
+          <div class="faq-item__body">Es una tarjeta digital previa, más breve, que envías meses antes para que tus invitados reserven la fecha. Se agrega a cualquier plan por <strong>$300 MXN</strong> y conserva el mismo diseño de tu invitación.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ======================================================================
+     FOOTER
+     ====================================================================== -->
+<footer class="site-footer">
+  <div class="page-wrap py-16 sm:py-20">
+    <div class="grid lg:grid-cols-[1.4fr_1fr] gap-12 items-end border-b border-white/10 pb-12">
+      <div>
+        <p class="tech-label tech-label--light">Cotizador abierto</p>
+        <p class="mt-5 text-3xl sm:text-5xl font-extrabold tracking-[-0.03em] text-white leading-[1.08]">Tu evento merece una invitación <span class="font-serif italic font-medium text-paper-kraft">hecha a mano</span>.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 lg:justify-end">
+        <button type="button" class="btn-pill btn-pill--light btn-pill--lg" data-open-quote>Cotizar mi invitación <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
+        <button type="button" class="btn-pill btn-pill--ghost-light btn-pill--lg" data-open-demo>Ver demo</button>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row gap-6 md:items-center justify-between text-sm">
+      <div class="flex items-center gap-3">
+        <svg width="28" height="28" viewBox="0 0 38 38" fill="none" aria-hidden="true"><path d="M3 12V3h9M26 3h9v9M35 26v9h-9M12 35H3v-9" stroke="#fff" stroke-width="1.8"/><circle cx="19" cy="19" r="3" fill="#fff"/></svg>
+        <span><strong class="text-white">Trazo &amp; Papel</strong> · Atelier Digital</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-6 gap-y-2" aria-label="Pie de página">
+        <a href="#portafolio">Portafolio</a><a href="#proceso">Proceso</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a>
+      </nav>
+      <p class="font-mono text-xs text-white/50">© <span id="year">2026</span> · Hecho en México</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================================================================
+     MODAL — Vista previa en vivo
+     ====================================================================== -->
+<dialog id="demo-modal" class="tp-dialog" aria-labelledby="demo-title">
+  <div class="tp-dialog__scrim" data-dialog-backdrop>
+    <div class="tp-dialog__panel tp-dialog__panel-anim max-w-[560px]">
+      <button type="button" class="tp-dialog__close" data-close-dialog aria-label="Cerrar vista previa"><i data-lucide="x" class="w-5 h-5"></i></button>
+
+      <div class="browser-bar">
+        <span class="browser-bar__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="browser-bar__url"><i data-lucide="lock" class="w-3.5 h-3.5 shrink-0"></i><span>trazoypapel.mx/<b id="demo-url">valeria-y-mateo</b></span></span>
+      </div>
+
+      <div class="demo-invite px-5 sm:px-10 pt-9 pb-8" id="demo-invite">
+        <p class="font-mono text-[10px] tracking-[.32em] uppercase" style="color:var(--c-accent)" data-demo="kicker">Nos casamos</p>
+        <h2 id="demo-title" class="mt-3 font-serif text-4xl sm:text-5xl leading-tight" data-demo="names">Valeria &amp; Mateo</h2>
+        <p class="mt-3 text-sm opacity-75" data-demo="message">Con la bendición de nuestros padres, te invitamos a celebrar nuestro matrimonio.</p>
+
+        <div class="mt-7 demo-envelope" id="demo-envelope">
+          <div class="demo-envelope__letter" data-demo="monogram">V&amp;M</div>
+          <div class="demo-envelope__sides" aria-hidden="true"></div>
+          <div class="demo-envelope__flap" aria-hidden="true"></div>
+          <button type="button" class="wax-seal" id="wax-seal" aria-label="Romper el sello y ver los detalles" data-demo="seal">VM</button>
+        </div>
+        <p class="mt-3 font-mono text-[10px] tracking-[.2em] uppercase opacity-60" id="seal-hint">Toca el sello para abrir</p>
+
+        <div class="demo-details mt-5" id="demo-details">
+          <div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left sm:text-center">
+              <div class="demo-detail">
+                <p class="demo-detail__label">Fecha</p>
+                <p class="mt-1 font-semibold" data-demo="dateLong">Sábado 13 de marzo, 2027</p>
+                <p class="text-sm opacity-70" data-demo="time">17:00 h</p>
+              </div>
+              <div class="demo-detail">
+                <p class="demo-detail__label">Pase asignado</p>
+                <p class="mt-1 font-semibold" data-demo="pass">Familia Hernández</p>
+                <p class="text-sm opacity-70" data-demo="seats">4 lugares</p>
+              </div>
+              <div class="demo-detail">
+                <p class="demo-detail__label">Ubicación</p>
+                <p class="mt-1 font-semibold" data-demo="venue">Hacienda San Gabriel</p>
+                <p class="text-sm opacity-70" data-demo="city">Cuernavaca, Morelos</p>
+              </div>
+            </div>
+            <p class="mt-4 inline-flex items-center gap-2 text-sm opacity-80"><i data-lucide="music-2" class="w-4 h-4"></i> <span data-demo="track">Piano nupcial</span></p>
+
+            <div class="mt-6 pt-6 border-t" style="border-color:color-mix(in srgb,var(--c-accent) 40%,transparent)">
+              <p class="font-serif text-2xl italic">¿Nos acompañas?</p>
+              <div class="mt-4 flex flex-col sm:flex-row gap-3 justify-center" id="rsvp-actions">
+                <button type="button" class="demo-rsvp-btn demo-rsvp-btn--yes" data-rsvp="yes"><i data-lucide="check" class="w-4 h-4"></i> Confirmo asistencia</button>
+                <button type="button" class="demo-rsvp-btn demo-rsvp-btn--no" data-rsvp="no">No podré asistir</button>
+              </div>
+              <p class="demo-feedback mt-4" id="rsvp-feedback" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 sm:px-8 py-5 border-t border-zinc-200 bg-white rounded-b-[22px]">
+        <p class="text-sm text-zinc-600 text-center sm:text-left">Esto es una demo. ¿Te gustaría una así?</p>
+        <button type="button" class="btn-pill btn-gala-gradient w-full sm:w-auto" data-demo-to-quote>Cotizar esta invitación <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ======================================================================
+     MODAL — Cotizador
+     ====================================================================== -->
+<dialog id="quote-modal" class="tp-dialog" aria-labelledby="quote-title">
+  <div class="tp-dialog__scrim" data-dialog-backdrop>
+    <div class="quote-shell crop-card-wrapper tp-dialog__panel-anim">
+      <span class="crop-mark crop-mark--tl" aria-hidden="true"></span><span class="crop-mark crop-mark--tr" aria-hidden="true"></span>
+      <span class="crop-mark crop-mark--bl" aria-hidden="true"></span><span class="crop-mark crop-mark--br" aria-hidden="true"></span>
+      <div class="tp-dialog__panel">
+        <button type="button" class="tp-dialog__close" data-close-dialog aria-label="Cerrar cotizador"><i data-lucide="x" class="w-5 h-5"></i></button>
+
+        <!-- Formulario -->
+        <form id="quote-form" class="grid md:grid-cols-[1.35fr_1fr]" novalidate>
+          <div class="p-6 sm:p-8">
+            <p class="tech-label" style="color:var(--editorial-indigo)">Cotizador</p>
+            <h2 id="quote-title" class="mt-3 text-2xl sm:text-3xl font-extrabold tracking-tight">Cuéntanos de tu evento</h2>
+
+            <div class="mt-6 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="field-label" for="q-name">Nombre</label>
+                <input class="field-input" id="q-name" name="name" type="text" autocomplete="name" placeholder="Valeria Hernández" required>
+                <p class="field-error">Escribe tu nombre.</p>
+              </div>
+              <div>
+                <label class="field-label" for="q-phone">WhatsApp</label>
+                <input class="field-input" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="55 1234 5678" required>
+                <p class="field-error">Ingresa un número de 10 dígitos.</p>
+              </div>
+              <div>
+                <label class="field-label" for="q-event">Tipo de evento</label>
+                <select class="field-input" id="q-event" name="event">
+                  <option value="boda">Boda / Civil</option>
+                  <option value="xv">XV Años</option>
+                  <option value="cumple">Cumpleaños / Aniversario</option>
+                  <option value="baby">Bautizo / Baby Shower</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="q-date">Fecha del evento</label>
+                <input class="field-input" id="q-date" name="date" type="date">
+              </div>
+            </div>
+
+            <fieldset class="mt-6">
+              <legend class="field-label">Plan</legend>
+              <div class="grid grid-cols-3 gap-2">
+                <label class="plan-option"><input type="radio" name="plan" value="esencial"><span class="plan-option__box"><span class="block text-sm font-bold">Esencial</span><span class="block font-mono text-xs text-zinc-500 mt-1">$890</span></span></label>
+                <label class="plan-option"><input type="radio" name="plan" value="gala" checked><span class="plan-option__box"><span class="block text-sm font-bold">Gala</span><span class="block font-mono text-xs text-zinc-500 mt-1">$1,690</span></span></label>
+                <label class="plan-option"><input type="radio" name="plan" value="atelier"><span class="plan-option__box"><span class="block text-sm font-bold">Atelier</span><span class="block font-mono text-xs text-zinc-500 mt-1">desde $2,990</span></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="mt-6 space-y-2">
+              <legend class="field-label">Complementos</legend>
+              <label class="check-row"><input type="checkbox" name="std" id="q-std"><span>Save the Date previo</span><span class="check-row__price">+$300</span></label>
+              <label class="check-row" data-extra="express"><input type="checkbox" name="express"><span>Entrega express (48 h)</span><span class="check-row__price">+$390</span></label>
+              <label class="check-row" data-extra="bilingue"><input type="checkbox" name="bilingue"><span>Versión bilingüe</span><span class="check-row__price">+$450</span></label>
+              <label class="check-row" data-extra="regalos"><input type="checkbox" name="regalos"><span>Mesa de regalos + dress code</span><span class="check-row__price">+$250</span></label>
+            </fieldset>
+          </div>
+
+          <!-- Resumen -->
+          <div class="p-6 sm:p-8 md:border-l border-t md:border-t-0 border-dashed border-zinc-300 flex flex-col">
+            <div class="quote-summary p-5">
+              <p class="field-label">Inversión estimada</p>
+              <p class="flex items-baseline gap-2 flex-wrap"><span class="font-mono text-xs text-zinc-500" id="q-from" hidden>Desde</span><span class="summary-total" id="q-total" aria-live="polite">$1,690</span><span class="font-mono text-xs text-zinc-500">MXN</span></p>
+              <div class="mt-4" id="q-lines"></div>
+              <p class="mt-4 text-xs text-zinc-500 leading-relaxed">Pago único. Apartas tu fecha con el 50% y liquidas al recibir tu invitación final.</p>
+            </div>
+            <div class="mt-auto pt-6">
+              <button type="submit" class="btn-pill btn-gala-gradient btn-pill--lg w-full">Enviar cotización <i data-lucide="send" class="w-4 h-4"></i></button>
+              <p class="mt-3 text-center text-xs text-zinc-500">Te contactamos por WhatsApp en menos de 24 h.</p>
+            </div>
+          </div>
+        </form>
+
+        <!-- Estado de confirmación -->
+        <div id="quote-success" class="p-8 sm:p-12 text-center" hidden>
+          <div class="pop-in mx-auto grid place-items-center w-16 h-16 rounded-full bg-editorial-soft text-editorial-indigo"><i data-lucide="check-check" class="w-8 h-8"></i></div>
+          <p class="mt-6 tech-label justify-center" style="color:var(--editorial-indigo)">Folio <span id="q-folio">TP-0000</span></p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight">¡Gracias, <span id="q-success-name">Valeria</span>!</h2>
+          <p class="mt-3 text-zinc-600 max-w-md mx-auto" id="q-success-text">Recibimos tu solicitud. Te escribiremos por WhatsApp para comenzar a trazar tu invitación.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <button type="button" class="btn-pill btn-pill--dark" data-close-dialog>Listo</button>
+            <button type="button" class="btn-pill btn-pill--outline" id="q-new">Hacer otra cotización</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+<script src="js/workbench.js"></script>
+<script src="js/pricing.js"></script>
+<script src="js/modals.js"></script>
+</body>
+</html>

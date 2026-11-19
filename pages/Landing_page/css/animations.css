@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Microinteracciones, elevación y transiciones de estado
+   ========================================================================== */
+
+/* Elevación de tarjetas */
+.lift {
+  transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out), border-color .3s;
+}
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lift);
+}
+.crop-card-wrapper:hover .crop-mark--tl { transform: translate(-4px, -4px); }
+.crop-card-wrapper:hover .crop-mark--tr { transform: translate(4px, -4px); }
+.crop-card-wrapper:hover .crop-mark--bl { transform: translate(-4px, 4px); }
+.crop-card-wrapper:hover .crop-mark--br { transform: translate(4px, 4px); }
+
+/* Cambio de tarjeta en la mesa de trabajo */
+@keyframes card-swap {
+  0%   { opacity: 0; transform: translateY(18px) rotate(2.5deg) scale(.97); }
+  100% { opacity: 1; transform: none; }
+}
+.invite-card.is-swapping { animation: card-swap .6s var(--ease-out) both; }
+
+/* Ecualizador de la pista musical */
+@keyframes eq-bounce {
+  0%, 100% { height: 25%; }
+  50%      { height: 100%; }
+}
+.eq i { animation: eq-bounce 1s ease-in-out infinite; }
+.eq i:nth-child(2) { animation-delay: -.3s; }
+.eq i:nth-child(3) { animation-delay: -.6s; }
+.eq i:nth-child(4) { animation-delay: -.15s; }
+
+/* Precio al cambiar modalidad */
+@keyframes price-tick {
+  0%   { opacity: 0; transform: translateY(-10px); filter: blur(2px); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+.price-tick { animation: price-tick .45s var(--ease-out) both; }
+
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+.feature-row--std:not([hidden]) { animation: row-in .4s var(--ease-out) both; }
+
+/* Aparición al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+
+/* Entrada del hero */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-in { animation: hero-in .9s var(--ease-out) both; }
+.hero-in-2 { animation-delay: .12s; }
+.hero-in-3 { animation-delay: .24s; }
+
+/* Herramientas flotando suavemente */
+@keyframes tool-float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -8px; }
+}
+.studio-tool--lupa { animation: tool-float 7s ease-in-out infinite; }
+.studio-tool--muestras { animation: tool-float 9s ease-in-out -3s infinite; }
+
+/* Modales */
+@keyframes dialog-in {
+  from { opacity: 0; transform: translateY(24px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+.tp-dialog[open] .tp-dialog__panel-anim { animation: dialog-in .45s var(--ease-out) both; }
+.tp-dialog[open]::backdrop { animation: backdrop-in .3s ease both; }
+
+/* Sello de lacre: pulso de invitación a hacer clic */
+@keyframes seal-pulse {
+  0%, 100% { box-shadow: 0 6px 14px rgba(0,0,0,.35), inset 0 -3px 6px rgba(0,0,0,.25), 0 0 0 0 rgba(255,255,255,.0); }
+  50%      { box-shadow: 0 6px 14px rgba(0,0,0,.35), inset 0 -3px 6px rgba(0,0,0,.25), 0 0 0 10px rgba(255,255,255,.35); }
+}
+.wax-seal { animation: seal-pulse 2.4s ease-in-out infinite; }
+
+/* Confirmación */
+@keyframes pop-in {
+  0%   { opacity: 0; transform: scale(.85); }
+  60%  { transform: scale(1.04); }
+  100% { opacity: 1; transform: none; }
+}
+.pop-in { animation: pop-in .5s var(--ease-out) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}

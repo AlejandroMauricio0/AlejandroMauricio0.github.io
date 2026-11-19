@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Tapete de corte — fondo técnico del Hero
+   ========================================================================== */
+
+.cutting-mat-bg {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background-color: var(--mat-base);
+  background-image:
+    /* cuadrícula principal 80px */
+    linear-gradient(to right, var(--mat-grid-major) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mat-grid-major) 1px, transparent 1px),
+    /* subdivisión milimétrica 16px */
+    linear-gradient(to right, var(--mat-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--mat-grid) 1px, transparent 1px),
+    /* iluminación radial del área de trabajo */
+    radial-gradient(ellipse 70% 60% at 55% 42%, var(--mat-light) 0%, var(--mat-base) 55%, var(--mat-dark) 100%);
+  background-size:
+    var(--grid-major) var(--grid-major),
+    var(--grid-major) var(--grid-major),
+    var(--grid-minor) var(--grid-minor),
+    var(--grid-minor) var(--grid-minor),
+    100% 100%;
+  background-position: 28px 28px, 28px 28px, 28px 28px, 28px 28px, 0 0;
+}
+
+/* Textura de ruido sutil */
+.cutting-mat-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: screen;
+}
+
+/* Guías angulares 30° / 45° / 60° */
+.cutting-mat-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../assets/svg/cutting-mat-grid.svg") left bottom / cover no-repeat;
+  opacity: .9;
+}
+
+/* ---------- Reglas graduadas ---------- */
+.mat-ruler {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255, 255, 255, .42);
+  letter-spacing: .04em;
+}
+.mat-ruler--top {
+  top: 0;
+  left: 28px;
+  right: 0;
+  height: 22px;
+  border-bottom: 1px solid var(--mat-line);
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.45) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,.28) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,.18) 1px, transparent 1px);
+  background-size: var(--grid-major) 12px, 40px 8px, var(--grid-minor) 5px;
+  background-position: 0 bottom, 0 bottom, 0 bottom;
+  background-repeat: repeat-x;
+}
+.mat-ruler--left {
+  top: 28px;
+  left: 0;
+  bottom: 0;
+  width: 22px;
+  border-right: 1px solid var(--mat-line);
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.18) 1px, transparent 1px);
+  background-size: 12px var(--grid-major), 8px 40px, 5px var(--grid-minor);
+  background-position: right 0, right 0, right 0;
+  background-repeat: repeat-y;
+}
+.mat-ruler__num {
+  position: absolute;
+  line-height: 1;
+}
+.mat-ruler--top .mat-ruler__num { top: 3px; transform: translateX(3px); }
+.mat-ruler--left .mat-ruler__num { left: 3px; transform: translateY(3px); writing-mode: vertical-rl; rotate: 180deg; }
+.mat-ruler-corner {
+  position: absolute;
+  top: 0; left: 0;
+  width: 28px; height: 22px;
+  border-right: 1px solid var(--mat-line);
+  border-bottom: 1px solid var(--mat-line);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- Dianas de registro ---------- */
+.reg-target {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .55;
+}
+.reg-target::before,
+.reg-target::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, .7);
+}
+.reg-target::before { left: 50%; top: 0; bottom: 0; width: 1px; }
+.reg-target::after { top: 50%; left: 0; right: 0; height: 1px; }
+.reg-target span {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 50%;
+}
+.reg-target span::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .5);
+}
+
+/* ---------- Herramientas del taller (decorativas) ---------- */
+/* Sprite: un solo studio-tools.svg (1120×660) recortado por región con --x/--y/--w/--h y escala --s */
+.studio-tool {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  width: calc(var(--w) * 1px * var(--s));
+  height: calc(var(--h) * 1px * var(--s));
+  background: url("../assets/svg/studio-tools.svg") no-repeat;
+  background-size: calc(1120px * var(--s)) calc(660px * var(--s));
+  background-position: calc(var(--x) * -1px * var(--s)) calc(var(--y) * -1px * var(--s));
+}
+.studio-tool--lupa    { --x: 0;   --y: 0;   --w: 340; --h: 340; --s: .5;  right: 1.5%; top: 96px; rotate: -8deg; }
+.studio-tool--cuter   { --x: 356; --y: 0;   --w: 510; --h: 130; --s: .5;  left: 34%; bottom: 52px; rotate: -10deg; }
+.studio-tool--libreta { --x: 370; --y: 100; --w: 390; --h: 550; --s: .44; left: -70px; top: 300px; rotate: 12deg; }
+.studio-tool--muestras{ --x: 780; --y: 140; --w: 330; --h: 420; --s: .44; right: -40px; bottom: 90px; rotate: -10deg; }
+
+@media (max-width: 1279px) {
+  .studio-tool--cuter { left: 30%; bottom: 36px; }
+}
+
+/* ---------- Mesa de trabajo translúcida ---------- */
+.workbench {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: linear-gradient(160deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-mat), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.workbench__corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(255, 255, 255, .55);
+  border-style: solid;
+  border-width: 0;
+}
+.workbench__corner--tl { top: -8px;  left: -8px;  border-top-width: 1px; border-left-width: 1px; }
+.workbench__corner--tr { top: -8px;  right: -8px; border-top-width: 1px; border-right-width: 1px; }
+.workbench__corner--bl { bottom: -8px; left: -8px;  border-bottom-width: 1px; border-left-width: 1px; }
+.workbench__corner--br { bottom: -8px; right: -8px; border-bottom-width: 1px; border-right-width: 1px; }
+
+.wb-tab {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .02em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px dashed rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, .78);
+  transition: background .25s var(--ease-out), color .25s, border-color .25s;
+  white-space: nowrap;
+}
+.wb-tab:hover { color: #fff; border-color: rgba(255, 255, 255, .6); }
+.wb-tab[aria-selected="true"] {
+  background: #fff;
+  color: var(--mat-dark);
+  border: 1px solid #fff;
+  font-weight: 600;
+}
+
+/* Área de corte donde reposa la tarjeta */
+.wb-stage {
+  position: relative;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(to right, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 16px 16px,
+    linear-gradient(to bottom, rgba(255,255,255,.07) 1px, transparent 1px) 0 0 / 16px 16px,
+    rgba(20, 48, 32, .45);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.wb-stage__guide {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+
+/* ---------- Transición curva hacia la sección crema ---------- */
+.mat-curve {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 56px;
+  margin-top: -56px;
+  z-index: 2;
+  background: var(--paper-cream);
+  border-radius: var(--radius-curve) var(--radius-curve) 0 0;
+  box-shadow: 0 -18px 40px -24px rgba(0, 0, 0, .5);
+}
+.mat-curve svg { width: 120px; height: 20px; margin-top: 14px; }
